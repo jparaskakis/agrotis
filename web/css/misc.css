@@ -1,0 +1,232 @@
+/*------------------------------------------- NEW REQUEST MODAL SLIDER -------------------------------------------*/
+#slidershell1{
+    width: 80%;
+    height: 30px;
+    float: left;
+}
+.slider,
+.slidervertical {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    z-index: 100;
+}
+/* slidershell exists only
+to provide a positioning context for the range input and other elements.*/
+
+.slidershell {
+    border: 0 none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+/* .slidertrack is the visible track on which the user drags the thumb button. */
+
+.slidertrack {
+    position: absolute;
+    background: black;
+}
+/* .sliderfill adds color (or a gradient as seen here) to the track as the user
+	drags the thumb. */
+
+.sliderfill {
+
+    position: absolute;
+
+
+}
+/* .sliderthumb can be any css you like including an image.
+	The dimensions must match those found in the rule for
+	input[type=range]::-webkit-slider-thumb. */
+
+.sliderthumb {
+    width: 24px;
+    height: 24px;
+    background-color: #71338A;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 0 none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    pointer-events: none;
+}
+/* .slidervalue can be styled as you see fit */
+
+.slidervalue {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    font-size: 13px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 0 none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    pointer-events: none;
+}
+/* First we have to make transparent all the homePage elements of the range input.
+	We use color:transparent to eliminate the homePage tick marks in IE. */
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0 none;
+    background: transparent;
+    color: transparent;
+    overflow: visible;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 100%;
+    -moz-appearance: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0 none;
+    background: transparent;
+    color: transparent;
+    overflow: visible;
+}
+
+input[type=range] {
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0 none;
+    background: transparent;
+    color: transparent;
+    overflow: visible;
+}
+/* we need a separate rule for when the range input is to be vertical */
+
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+/* Make the thumbs the same size as your custom sliderthumb.
+	they will not be visible but they will be draggable. 	*/
+
+input[type=range]::-ms-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0px;
+    border: 0 none;
+    background: transparent;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0px;
+    border: 0 none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0px;
+    border: 0 none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+/* microsoft IE10+ and Edge - eliminates homePage fills before and after thumb */
+
+input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border: 0 none;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border: 0 none;
+}
+
+input[type=range]::-ms-tooltip {
+    display: none;
+}
+/* other rules you may need for page styling */
+
+body {
+    font-family: sans-serif;
+}
+
+.slider2column,
+td,
+tr,
+th {
+    width: 400px;
+    border: 0 none !important;
+}
+
+
+/*------------------------------------------- FLIP SWITCH -------------------------------------------*/
+
+.onoffswitch {
+    position: relative; width: 65px;
+    height: 30px;
+    float: left;
+    margin-right: 100;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+    height: 30px;
+    margin-top: -4px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 26px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #EEEEEE; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #71338A; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: -4px;
+    bottom: 5px;
+    right: 33px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}

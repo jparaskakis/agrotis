@@ -1,0 +1,163 @@
+
+.section hr{
+	border-color: #4B9C4D;
+}
+
+.topnav .navbar-nav > .active > a, .topnav .navbar-nav > .active > a:hover, .topnav .navbar-nav > .active > a:focus{
+	color: #4B9C4D;
+}
+
+.promo:hover .promo-icon {
+	background-color: #4B9C4D;
+}
+
+.service:hover > .fa-stack > .fa-circle {
+	color: #4B9C4D;
+}
+
+.ova_filters li:hover, .ova_filters li.active {
+	background-color: #4B9C4D;
+}
+
+.portfolio-grid li:hover .project-overlay {
+	background-color: #4B9C4D;
+}
+
+#project-controls li a:hover {
+	color: #4B9C4D;
+	border-color: #4B9C4D;
+}
+
+.plan.selected {
+	background-color: #4B9C4D;
+}
+
+.plan.selected .circle-price{
+	color: #4B9C4D;
+}
+
+.plan.selected ul li {
+	border-color: #4B9C4D;
+}
+
+.plan.selected .btn {
+	color: #4B9C4D;
+}
+
+.circle-price{
+	background-color: #4B9C4D;
+}
+
+#clients{
+	background-color: #4B9C4D;
+}
+
+.flex-control-paging li a:hover, .flex-control-paging li a.flex-active{
+	background-color: #4B9C4D;
+}
+
+.btn-custom {
+	color: #fff;
+	background-color: #4B9C4D;
+	border-color: #4B9C4D;
+}
+
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .open .dropdown-toggle.btn-custom {
+	color: #fff;
+	background-color: #d13b3b;
+	border-color: #d13b3b;
+}
+
+::selection {
+	background-color: #4B9C4D;
+	color: #fff;
+}
+
+
+hr.new{
+	border-color: #4B9C4D;
+}
+.k2wrap .catItemView div.catItemCommentsLink a:hover{
+	color: #4B9C4D;
+}
+
+.k2wrap h2.catItemTitle a:hover{
+	color: #4B9C4D;
+}
+
+.k2wrap .catItemView .catItemTagsBlock ul li a:hover{
+	background-color: #4B9C4D;	
+}
+.itemTagsBlock ul li a:hover{
+	background-color: #4B9C4D;		
+}
+
+.k2wrap .catItemView .catItemReadMore a{
+	color: #4B9C4D;	
+}
+
+.right .k2ItemsBlock ul li a{
+	color: #4B9C4D;	
+}
+
+.right div.k2CalendarBlock table.calendar td.calendarDateLinked a{
+	color: #4B9C4D;		
+}
+.right div.k2CalendarBlock table.calendar td.calendarToday{
+	background-color: #4B9C4D;		
+}
+
+
+.right table.calendar tr td.calendarNavMonthNext a,
+.right table.calendar tr td.calendarNavMonthPrev a{
+	color: #4B9C4D;			
+}
+
+.right div.k2TagCloudBlock a:hover{
+	background-color:#4B9C4D;
+	color:#fff;
+}
+.right .k2ArchivesBlock ul li a{
+	color: #4B9C4D;
+
+}
+.k2Pagination .pagenav{
+	color: #4B9C4D;
+}
+
+.itemView #comment-form input.button:hover{
+	background-color: #4B9C4D;	
+	border-color:#4B9C4D;	
+	color:#fff;
+}
+div.itemBackToTop a{
+	color:#4B9C4D;	
+}
+
+.genericView .componentheadinginnerpage{
+	color:#4B9C4D;		
+}
+.genericItemCategory a{
+	color:#4B9C4D;
+}
+.genericItemReadMore a{
+	color:#4B9C4D;	
+}
+h2.genericItemTitle a:hover{
+	color:#4B9C4D;		
+}
+.tagView h2.tagItemTitle a:hover{
+	color:#4B9C4D;			
+}
+
+.tagView .tagItemReadMore a{
+	color:#4B9C4D;				
+}
+.tagView .tagItemCategory a{
+	color:#4B9C4D;					
+}
+
+table.calendar tr td.calendarTodayLinked,
+table.calendar tr td.calendarTodayLinked:hover{
+	background-color:#4B9C4D;
+}

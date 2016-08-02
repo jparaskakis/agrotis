@@ -1,0 +1,416 @@
+
+.badge_inline_container{
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.badge_inline_image{
+    width: 50px;
+    height: 50px;
+    background-size: contain !important;
+    float: left;
+}
+
+.badge_inline_title{
+    width: auto;
+    line-height: 50px;
+    text-indent: 10px;
+    overflow: hidden;
+}
+
+.hidden_indicator_false{
+    height: 20px;
+    width: 20px;
+    background: #5A9839;
+    border-radius: 50%;
+    margin-top: 15px;
+
+}
+
+.hidden_indicator_true{
+    height: 20px;
+    width: 20px;
+    background: red;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.header{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #000;
+
+}
+
+.left_bar{
+    width: 310px;
+
+    padding-top: 35px;
+    float:left;
+}
+
+.right_bar{
+    width: 615px;
+    padding-left: 0px;
+    padding-top: 35px;
+    float:left;
+}
+.user_box{
+    width: 300px;
+    height: 200px;
+    background: #edeeee;
+}
+
+.cv_box{
+
+    width: 300px;
+    height: auto;
+    max-height: 180px;
+    background: transparent;
+}
+
+#main_content{
+    margin: 0 !important;
+}
+
+header {
+    margin-bottom: 0px !important;
+}
+
+#profile{
+    overflow: auto;
+}
+
+#profile_full{
+    /*position:fixed;*/
+    width: 100%;
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.social{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    color:#71338A;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.fb{
+    width: 200px;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+}
+
+.links{
+    font-size: 20px;
+    float: left;
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.avatar {
+    margin: 0px;
+    position: relative;
+    height: 90px;
+    width: 90px;
+    margin-top: 55px;
+    margin-left: -45px;
+    font-size: 15px;
+    background-repeat: no-repeat;
+    float: left;
+    border-radius: 50%;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.favourited{
+    width: 50px;
+    float: left;
+    margin-top: 15px;
+    margin-left: -26px;
+    font-size: 13px;
+    color:#96969A;
+}
+
+.projects{
+    float: left;
+    position: relative;
+    width: 200px;
+    margin-top: 10px;
+    font-size:13px;
+}
+
+.username{
+    float: left;
+    position: relative;
+    width: 235px;
+    margin-left: 20px;
+    margin-top: 18px;
+    font-size:20px;
+    font-weight: bold;
+}
+
+.user_group{
+    float: left;
+    position: relative;
+    width: 170px;
+    margin-left: 20px;
+    font-size:12px;
+
+}
+
+.member_since{
+    float: left;
+    position: relative;
+    width: 230px;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.online_now{
+    width: 250px;
+    float: left;
+    font-size: 13px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.online_circle{
+    font-size: 13px;
+    color: #75A754;
+
+}
+
+.image_container{
+    width: 100%;
+    height: 200px;
+    float:left;
+    margin-top: 10px;
+    overflow: hidden;
+
+}
+
+.image_big{
+    width: 260px;
+    height: 200px;
+    float: left;
+    margin-right: 37px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+.image_small{
+    width: 140px;
+    height: 200px;
+    float: left;
+    margin-right: 37px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+.image_titles{
+    width: 100%;
+    height: 35px;
+    float: left;
+}
+
+.title_big{
+    width: 260px;
+    height: 35px;
+    float: left;
+    margin-right: 27px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    color: #96969A;
+}
+
+.title_small{
+    width: 140px;
+    height: 35px;
+    float: left;
+    margin-right: 27px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    color: #96969A;
+
+}
+
+.projects_container{
+    width: 100%;
+    height: 160px;
+    float: left;
+    overflow: hidden;
+
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    -webkit-transition: 1s;
+    transition: 1s;
+
+}
+
+.box{
+    width: 150px;
+    height: 140px;
+    margin-bottom: 10px;
+    margin-right: 65px;
+}
+.thumbnail{
+    width: 150px;
+    min-width: 150px;
+    height: 140px;
+    padding: 0;
+    border: 0px;
+    border-radius: 0;
+    background-size: cover;
+    background-position: center;
+}
+div.existingProject{
+    height: 40px;
+    background-image: url("/bundles/framework/images/projectTitle.png");
+    background-size: 100% 40px;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    padding: 0px !important;
+    font-size: 20px;
+    float: left;
+    width: 100%;
+}
+
+.projInfo_Line1{
+    color: #FFF;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    padding: 2px !important;
+    overflow: hidden;
+}
+
+.evaluations{
+    width: 100%;
+    height: 350px;
+    float: left;
+}
+
+.evaluation{
+    width: 150px;
+    height: 350px;
+}
+
+.avatar2 {
+
+    margin: 0px;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    margin-top: 15px;
+    margin-left: 35px;
+    font-size: 15px;
+    background-repeat: no-repeat;
+    float: left;
+    border-radius: 50%;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.username2{
+    height: 30px;
+    line-height: 30px;
+    color: #71338A;
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.sep{
+    margin: 0px;
+    position: relative;
+    height: 15px;
+    width: 150px;
+    margin-top: 2px;
+    font-size: 15px;
+    background-repeat: no-repeat;
+    background-image: url("/bundles/framework/images/portfolio/thetwist.png");
+    background-size: 150px 15px;
+    background-position: center center;
+    float: left;
+}
+
+.ranking{
+    width: 150px;
+    text-align: center;
+    font-size: 48px;
+    height: 50px;
+    float: left;
+}
+
+.number_ranking{
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    color: #FFF;
+    z-index: 23;
+    float: left;
+    margin-top: -32px;
+    position: relative;
+    width: 100%;
+    padding-left: 4px;
+}
+
+.eval{
+    width: 100%;
+    float: left;
+    font-size: 13px;
+    text-align: center;
+}
+
+.showAll{
+    font-size: 13px;
+    float: right;
+}
+
+.uploadProfile{
+    width: 300px;
+    height: 200px;
+    font-size: 24px;
+    background: #edeeee;
+}
+
+.avatar3 {
+    margin: 0px;
+    position: relative;
+    height: 140px;
+    width: 140px;
+    margin-top: 20px;
+    margin-left: 80px;
+    font-size: 15px;
+    background-repeat: no-repeat;
+    background-image: url("/bundles/framework/images/user1.jpg");
+    background-size: 100% auto;
+    background-position: center !important;
+    float: left;
+    border-radius: 50%;
+}
+
+.faupload{
+    position: relative;
+    float: left;
+    margin-top: 160px;
+    margin-left: 30px;
+}
+
+.newprojectlabel{height: 30px; line-height: 30px; font-size: 16px;   width: 177px;}
+.newprojectinput{border: 0px; background-color: #F6F7F7; height: 30px; line-height: 30px; padding-left: 10px; width: 100%; font-size: 13px;}
+.newprojectinput_textarea{border: 0px; background-color: #F6F7F7; height: 150px; line-height: 30px; padding-left: 10px; width: 100%; font-size: 13px;}
+.qt_save_button{width:100px; height: 60px; line-height: 60px; color: #ffffff; background-color: #5A9839 ; text-align: center; font-size: 20px;}
+.qt_save_button:hover{cursor: pointer;}
