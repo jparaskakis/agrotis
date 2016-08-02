@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'dashboard' %}
+
+{#
+    the homepage is a special page which displays neither a header nor a footer.
+    this is done with the 'trick' of defining empty Twig blocks without any content
+#}
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.standalone.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>
+    <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
+
+
+    <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/ag_dashboard.css') }}">
+
+
+{% endblock %}

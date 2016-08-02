@@ -1,6 +1,6 @@
 <?php
 
-/* default/dashboard.html.twig */
+/* default/dashboard_buis.html.twig */
 class __TwigTemplate_b6a04b78875e61592b75b047e4c1973a5e2f1c3dc88c54a285e2f3832e90061b extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_b6a04b78875e61592b75b047e4c1973a5e2f1c3dc88c54a285e2f3832e9
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "default/dashboard.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "default/dashboard_buis.html.twig", 1);
         $this->blocks = array(
             'body_id' => array($this, 'block_body_id'),
             'header' => array($this, 'block_header'),
@@ -25,7 +25,7 @@ class __TwigTemplate_b6a04b78875e61592b75b047e4c1973a5e2f1c3dc88c54a285e2f3832e9
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_462f4b0dfaeae38ea28ca488b06bf64461791148eafa0b6773c54565882c3790 = $this->env->getExtension("native_profiler");
-        $__internal_462f4b0dfaeae38ea28ca488b06bf64461791148eafa0b6773c54565882c3790->enter($__internal_462f4b0dfaeae38ea28ca488b06bf64461791148eafa0b6773c54565882c3790_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/dashboard.html.twig"));
+        $__internal_462f4b0dfaeae38ea28ca488b06bf64461791148eafa0b6773c54565882c3790->enter($__internal_462f4b0dfaeae38ea28ca488b06bf64461791148eafa0b6773c54565882c3790_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/dashboard_buis.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -198,7 +198,7 @@ class __TwigTemplate_b6a04b78875e61592b75b047e4c1973a5e2f1c3dc88c54a285e2f3832e9
 
     public function getTemplateName()
     {
-        return "default/dashboard.html.twig";
+        return "default/dashboard_buis.html.twig";
     }
 
     public function isTraitable()

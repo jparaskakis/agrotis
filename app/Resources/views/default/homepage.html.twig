@@ -18,7 +18,12 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     {% endblock %}
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>
+    {% if 'localhost' in app.request.host  %}
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+    {% else %}
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>
+    {% endif %}
+
     <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
     <script src="{{ asset('js/utilGlobal.js') }}"></script>
 
@@ -325,7 +330,7 @@
                         <li><a href="https://twitter.com/" target="_blank" data-mce-href="https://twitter.com/">
                                 <span class="social-icon"><i class="fa fa-twitter"></i></span></a><br data-mce-bogus="1"></li>
                     </ul>
-                    <p class="center grey">2015 © Agrot-IS. All rights reserved.</p></div>
+                    <p class="center grey">2016 © Agrot-IS. All rights reserved.</p></div>
             </footer>
         </div>
 
@@ -559,7 +564,7 @@
                     } else {
                         $("#username").val(username);
                         $("#password").val(password);
-                        $("#login_form").submit();
+//                        $("#login_form").submit();
                     }
 
 

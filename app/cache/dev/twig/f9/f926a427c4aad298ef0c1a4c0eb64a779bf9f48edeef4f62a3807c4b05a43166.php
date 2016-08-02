@@ -18,8 +18,8 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cc5d3b5477d5c0f41a467b48ddb3d5dac7bb4546c0095577b4b7f434d8874059 = $this->env->getExtension("native_profiler");
-        $__internal_cc5d3b5477d5c0f41a467b48ddb3d5dac7bb4546c0095577b4b7f434d8874059->enter($__internal_cc5d3b5477d5c0f41a467b48ddb3d5dac7bb4546c0095577b4b7f434d8874059_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/homepage.html.twig"));
+        $__internal_6a2170e25aa19ae2a1dd5ca92513ca4cb470f854a092a87ce18e0ba66b407890 = $this->env->getExtension("native_profiler");
+        $__internal_6a2170e25aa19ae2a1dd5ca92513ca4cb470f854a092a87ce18e0ba66b407890->enter($__internal_6a2170e25aa19ae2a1dd5ca92513ca4cb470f854a092a87ce18e0ba66b407890_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/homepage.html.twig"));
 
         // line 1
         echo "
@@ -37,13 +37,25 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 20
         echo "
-    <script async defer src=\"https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation\" type=\"text/javascript\"></script>
+    ";
+        // line 21
+        if (twig_in_filter("localhost", $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "host", array()))) {
+            // line 22
+            echo "        <script src=\"http://maps.googleapis.com/maps/api/js\"></script>
+    ";
+        } else {
+            // line 24
+            echo "        <script async defer src=\"https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation\" type=\"text/javascript\"></script>
+    ";
+        }
+        // line 26
+        echo "
     <script src=\"";
-        // line 22
+        // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery-1.11.0.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 23
+        // line 28
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/utilGlobal.js"), "html", null, true);
         echo "\"></script>
 
@@ -174,7 +186,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
         <div class=\"modal-content\" style=\"height: 392px\">
             <div class=\"login_success\">Password Changed</div>
             <form id=\"login_form\" action=\"";
-        // line 151
+        // line 156
         echo $this->env->getExtension('routing')->getPath("login_check");
         echo "\" method=\"post\" style=\"width: 350px; margin-top: 22px;\">
                 <fieldset style=\"height: 300px;\">
@@ -190,7 +202,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
                     </div>
                     <input type=\"hidden\" name=\"_csrf_token\"
                            value=\"";
-        // line 164
+        // line 169
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"/>
                     <button type=\"submit\" class=\"login-but btn btn-primary\">
@@ -227,11 +239,11 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
                         <select id=\"account_type\">
                             <option value=\"0\">I am a/an...</option>
                             ";
-        // line 198
+        // line 203
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 199
+            // line 204
             echo "                                <option value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "id", array()), "html", null, true);
             echo "\">";
@@ -242,7 +254,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 201
+        // line 206
         echo "                        </select>
                     </div>
                     <div class=\"form-group\">
@@ -267,23 +279,23 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 
 <div class=\"col-md-12\" style=\"padding: 0px !important;\">
     ";
-        // line 224
+        // line 229
         $this->displayBlock('body', $context, $blocks);
-        // line 340
+        // line 345
         echo "</div>
 
 <script src=\"http://code.jquery.com/jquery-1.11.0.min.js\"></script>
 <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
 <script src=\"";
-        // line 344
+        // line 349
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/app.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 345
+        // line 350
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/modernizr.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 346
+        // line 351
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap-datepicker.js"), "html", null, true);
         echo "\"></script>
 <script>
@@ -291,7 +303,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
     var host = location.host;
 
     var userid = '";
-        // line 351
+        // line 356
         echo twig_escape_filter($this->env, (isset($context["userid"]) ? $context["userid"] : $this->getContext($context, "userid")), "html", null, true);
         echo "';
     if(host.indexOf(\"localhost\") != -1 || host.indexOf(\"127.0.0.1\") != -1 ){
@@ -388,15 +400,15 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 
 
     var error = '";
-        // line 445
+        // line 450
         echo twig_escape_filter($this->env, (isset($context["error"]) ? $context["error"] : $this->getContext($context, "error")), "html", null, true);
         echo "';
     var username = '";
-        // line 446
+        // line 451
         echo twig_escape_filter($this->env, (isset($context["uid"]) ? $context["uid"] : $this->getContext($context, "uid")), "html", null, true);
         echo "';
     var success = '";
-        // line 447
+        // line 452
         echo twig_escape_filter($this->env, (isset($context["success"]) ? $context["success"] : $this->getContext($context, "success")), "html", null, true);
         echo "';
 
@@ -513,7 +525,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
                     } else {
                         \$(\"#username\").val(username);
                         \$(\"#password\").val(password);
-                        \$(\"#login_form\").submit();
+//                        \$(\"#login_form\").submit();
                     }
 
 
@@ -527,27 +539,27 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 </script>
 ";
         
-        $__internal_cc5d3b5477d5c0f41a467b48ddb3d5dac7bb4546c0095577b4b7f434d8874059->leave($__internal_cc5d3b5477d5c0f41a467b48ddb3d5dac7bb4546c0095577b4b7f434d8874059_prof);
+        $__internal_6a2170e25aa19ae2a1dd5ca92513ca4cb470f854a092a87ce18e0ba66b407890->leave($__internal_6a2170e25aa19ae2a1dd5ca92513ca4cb470f854a092a87ce18e0ba66b407890_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_1e43c4af86293e65e1977098caac9a1d98a1110f353736f77a2a2507f72acc63 = $this->env->getExtension("native_profiler");
-        $__internal_1e43c4af86293e65e1977098caac9a1d98a1110f353736f77a2a2507f72acc63->enter($__internal_1e43c4af86293e65e1977098caac9a1d98a1110f353736f77a2a2507f72acc63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_60ea6754e336b4e8b0d9c435e12699c2ac96c3af665181b79607db5351619814 = $this->env->getExtension("native_profiler");
+        $__internal_60ea6754e336b4e8b0d9c435e12699c2ac96c3af665181b79607db5351619814->enter($__internal_60ea6754e336b4e8b0d9c435e12699c2ac96c3af665181b79607db5351619814_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Agrot-IS Platform";
         
-        $__internal_1e43c4af86293e65e1977098caac9a1d98a1110f353736f77a2a2507f72acc63->leave($__internal_1e43c4af86293e65e1977098caac9a1d98a1110f353736f77a2a2507f72acc63_prof);
+        $__internal_60ea6754e336b4e8b0d9c435e12699c2ac96c3af665181b79607db5351619814->leave($__internal_60ea6754e336b4e8b0d9c435e12699c2ac96c3af665181b79607db5351619814_prof);
 
     }
 
     // line 8
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_dbefe28a1bdf6bcc9a4ef6e2392ddea89c49a410af360518b3540e25c966a504 = $this->env->getExtension("native_profiler");
-        $__internal_dbefe28a1bdf6bcc9a4ef6e2392ddea89c49a410af360518b3540e25c966a504->enter($__internal_dbefe28a1bdf6bcc9a4ef6e2392ddea89c49a410af360518b3540e25c966a504_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7182f36483ddade1113c5c767287fc62e06229ad5c48c495f87f923f116b9f95 = $this->env->getExtension("native_profiler");
+        $__internal_7182f36483ddade1113c5c767287fc62e06229ad5c48c495f87f923f116b9f95->enter($__internal_7182f36483ddade1113c5c767287fc62e06229ad5c48c495f87f923f116b9f95_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 9
         echo "        <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">
@@ -580,33 +592,33 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
         <link rel=\"stylesheet\" href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css\">
     ";
         
-        $__internal_dbefe28a1bdf6bcc9a4ef6e2392ddea89c49a410af360518b3540e25c966a504->leave($__internal_dbefe28a1bdf6bcc9a4ef6e2392ddea89c49a410af360518b3540e25c966a504_prof);
+        $__internal_7182f36483ddade1113c5c767287fc62e06229ad5c48c495f87f923f116b9f95->leave($__internal_7182f36483ddade1113c5c767287fc62e06229ad5c48c495f87f923f116b9f95_prof);
 
     }
 
-    // line 224
+    // line 229
     public function block_body($context, array $blocks = array())
     {
-        $__internal_63f8cc03113bcd227e4e9a1eb6d0774dbf8b68c129cebbbb843ac83af402ffbc = $this->env->getExtension("native_profiler");
-        $__internal_63f8cc03113bcd227e4e9a1eb6d0774dbf8b68c129cebbbb843ac83af402ffbc->enter($__internal_63f8cc03113bcd227e4e9a1eb6d0774dbf8b68c129cebbbb843ac83af402ffbc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f04621b5fd730e4a6a8125594ad9a456f18efb20e60b3bdc6818bebfde809ac8 = $this->env->getExtension("native_profiler");
+        $__internal_f04621b5fd730e4a6a8125594ad9a456f18efb20e60b3bdc6818bebfde809ac8->enter($__internal_f04621b5fd730e4a6a8125594ad9a456f18efb20e60b3bdc6818bebfde809ac8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 225
+        // line 230
         echo "
         <div class=\"navigation_bar\">
             ";
-        // line 227
+        // line 232
         if ((null === $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()))) {
-            // line 228
+            // line 233
             echo "                <div class=\"menu_item\" style=\"float: right\" onclick=\"displayLogin()\">Login</div>
                 <div class=\"menu_item\" style=\"float: right\" onclick=\"register()\">Register</div>
             ";
         } else {
-            // line 231
+            // line 236
             echo "                ";
-            // line 232
+            // line 237
             echo "                <div class=\"avatar_placeholder\">
                     <div class=\"avatar\" style=\"background: url('";
-            // line 233
+            // line 238
             echo twig_escape_filter($this->env, (isset($context["avatar"]) ? $context["avatar"] : $this->getContext($context, "avatar")), "html", null, true);
             echo "'); background-size: cover;\">
                         <ul>
@@ -617,7 +629,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
                 </div>
             ";
         }
-        // line 241
+        // line 246
         echo "            <div class=\"logo\"></div>
             <div class=\"menu_item pricing\">Pricing</div>
             <div class=\"menu_item support\">Support</div>
@@ -705,7 +717,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
                         <li><a href=\"https://twitter.com/\" target=\"_blank\" data-mce-href=\"https://twitter.com/\">
                                 <span class=\"social-icon\"><i class=\"fa fa-twitter\"></i></span></a><br data-mce-bogus=\"1\"></li>
                     </ul>
-                    <p class=\"center grey\">2015 © Agrot-IS. All rights reserved.</p></div>
+                    <p class=\"center grey\">2016 © Agrot-IS. All rights reserved.</p></div>
             </footer>
         </div>
 
@@ -718,7 +730,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 
     ";
         
-        $__internal_63f8cc03113bcd227e4e9a1eb6d0774dbf8b68c129cebbbb843ac83af402ffbc->leave($__internal_63f8cc03113bcd227e4e9a1eb6d0774dbf8b68c129cebbbb843ac83af402ffbc_prof);
+        $__internal_f04621b5fd730e4a6a8125594ad9a456f18efb20e60b3bdc6818bebfde809ac8->leave($__internal_f04621b5fd730e4a6a8125594ad9a456f18efb20e60b3bdc6818bebfde809ac8_prof);
 
     }
 
@@ -734,7 +746,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 
     public function getDebugInfo()
     {
-        return array (  621 => 241,  610 => 233,  607 => 232,  605 => 231,  600 => 228,  598 => 227,  594 => 225,  588 => 224,  576 => 15,  572 => 14,  568 => 13,  564 => 12,  560 => 11,  556 => 10,  553 => 9,  547 => 8,  535 => 5,  400 => 447,  396 => 446,  392 => 445,  295 => 351,  287 => 346,  283 => 345,  279 => 344,  273 => 340,  271 => 224,  246 => 201,  235 => 199,  231 => 198,  194 => 164,  178 => 151,  47 => 23,  43 => 22,  39 => 20,  37 => 8,  31 => 5,  25 => 1,);
+        return array (  633 => 246,  622 => 238,  619 => 237,  617 => 236,  612 => 233,  610 => 232,  606 => 230,  600 => 229,  588 => 15,  584 => 14,  580 => 13,  576 => 12,  572 => 11,  568 => 10,  565 => 9,  559 => 8,  547 => 5,  412 => 452,  408 => 451,  404 => 450,  307 => 356,  299 => 351,  295 => 350,  291 => 349,  285 => 345,  283 => 229,  258 => 206,  247 => 204,  243 => 203,  206 => 169,  190 => 156,  59 => 28,  55 => 27,  52 => 26,  48 => 24,  44 => 22,  42 => 21,  39 => 20,  37 => 8,  31 => 5,  25 => 1,);
     }
 }
 /* */
@@ -757,7 +769,12 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 /*         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">*/
 /*     {% endblock %}*/
 /* */
-/*     <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>*/
+/*     {% if 'localhost' in app.request.host  %}*/
+/*         <script src="http://maps.googleapis.com/maps/api/js"></script>*/
+/*     {% else %}*/
+/*         <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>*/
+/*     {% endif %}*/
+/* */
 /*     <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>*/
 /*     <script src="{{ asset('js/utilGlobal.js') }}"></script>*/
 /* */
@@ -1064,7 +1081,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 /*                         <li><a href="https://twitter.com/" target="_blank" data-mce-href="https://twitter.com/">*/
 /*                                 <span class="social-icon"><i class="fa fa-twitter"></i></span></a><br data-mce-bogus="1"></li>*/
 /*                     </ul>*/
-/*                     <p class="center grey">2015 © Agrot-IS. All rights reserved.</p></div>*/
+/*                     <p class="center grey">2016 © Agrot-IS. All rights reserved.</p></div>*/
 /*             </footer>*/
 /*         </div>*/
 /* */
@@ -1298,7 +1315,7 @@ class __TwigTemplate_2c74e3465b1e5141ba2056a453cc478634abfdf637f5374e1b65c1ede1d
 /*                     } else {*/
 /*                         $("#username").val(username);*/
 /*                         $("#password").val(password);*/
-/*                         $("#login_form").submit();*/
+/* //                        $("#login_form").submit();*/
 /*                     }*/
 /* */
 /* */

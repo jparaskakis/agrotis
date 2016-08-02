@@ -1,6 +1,6 @@
 <?php
 
-/* default/dashboard.html.twig */
+/* default/dashboard_buis.html.twig */
 class __TwigTemplate_641857868358520df05bba7f69e70fa17a0dfe6ab13b8993eb2a53bc45ada316 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_641857868358520df05bba7f69e70fa17a0dfe6ab13b8993eb2a53bc45a
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "default/dashboard.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "default/dashboard_buis.html.twig", 1);
         $this->blocks = array(
             'body_id' => array($this, 'block_body_id'),
             'header' => array($this, 'block_header'),
@@ -168,7 +168,7 @@ class __TwigTemplate_641857868358520df05bba7f69e70fa17a0dfe6ab13b8993eb2a53bc45a
 
     public function getTemplateName()
     {
-        return "default/dashboard.html.twig";
+        return "default/dashboard_buis.html.twig";
     }
 
     public function isTraitable()

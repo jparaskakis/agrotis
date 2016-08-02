@@ -50,7 +50,22 @@ class DefaultController extends Controller
             return $this->redirect($this->generateUrl('homepage'));
         }
 
-        return $this->render('default/dashboard.html.twig');
+        if($this->getUser()->getAccountType()->getId() == 2){
+            return $this->render('default/dashboard_buis.html.twig',
+                array(
+                    "avatar" => $this->getUser()->getAvatarUrl(),
+                    "username" => $this->getUser()->getUsername(),
+                ));
+        }else if($this->getUser()->getAccountType()->getId() == 1){
+            return $this->render('default/dashboard_prod.html.twig',
+                array(
+                    "avatar" => $this->getUser()->getAvatarUrl(),
+                    "username" => $this->getUser()->getUsername(),
+                ));
+        }
+
+        return $this->redirect($this->generateUrl('homepage'));
+
     }
 
     /**
@@ -154,7 +169,7 @@ class DefaultController extends Controller
         $newUser->setRoles(['ROLE_USER']);
         $newUser->setRegistrationLat(floatval($_REQUEST['lat']));
         $newUser->setRegistrationLon(floatval($_REQUEST['lon']));
-
+        $newUser->setAvatar('http://62.210.36.88/agrotis/public_assets/avatar.jpg');
 
 
         if (isset($_REQUEST['account_type'])) {

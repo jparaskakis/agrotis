@@ -1,0 +1,96 @@
+.agcontainer{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    background: transparent;
+}
+
+.agcontainer .sidebar{
+
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    background: rgba(90, 152, 57, 1);
+}
+
+.content{
+    height: 100%;
+    position: fixed;
+    top:0px;
+    background: transparent;
+}
+
+.sidebar .avatar{
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+.line{
+    height:30px;
+    width: 100%;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.sidebar_actions{
+    list-style: none;
+
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-top: 40px !important;
+}
+
+.sidebar_action{
+    list-style: none;
+    height: 40px;
+    width: 100%;
+    text-align: left;
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+    line-height: 40px;
+    margin-bottom: 0px !important;
+    padding-left: 30px;
+
+}
+
+.sidebar_action.active{
+ border-left: 5px solid white;
+}
+
+.menu-icon {
+    float: right;
+    padding-right: 29px;
+    line-height: 40px;
+    width: 70px;
+}
+
+.position_bottom{
+    bottom: 10px;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: white;
+}
+
+.sidebar_action:hover{
+    border-left: 5px solid white;
+}

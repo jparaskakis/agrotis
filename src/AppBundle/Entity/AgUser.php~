@@ -659,4 +659,88 @@ class AgUser extends BaseUser
     {
         return $this->accountType;
     }
+    /**
+     * @var string
+     */
+    private $avatarUrl;
+
+    /**
+     * @var float
+     */
+    private $registrationLat;
+
+    /**
+     * @var float
+     */
+    private $registrationLon;
+
+
+    /**
+     * Set avatarUrl
+     *
+     * @param string $avatarUrl
+     * @return AgUser
+     */
+    public function setAvatarUrl($avatarUrl)
+    {
+        $this->avatarUrl = $avatarUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get avatarUrl
+     *
+     * @return string 
+     */
+    public function getAvatarUrl()
+    {
+        return $this->avatarUrl;
+    }
+
+    /**
+     * Set registrationLat
+     *
+     * @param float $registrationLat
+     * @return AgUser
+     */
+    public function setRegistrationLat($registrationLat)
+    {
+        $this->registrationLat = $registrationLat;
+
+        return $this;
+    }
+
+    /**
+     * Get registrationLat
+     *
+     * @return float 
+     */
+    public function getRegistrationLat()
+    {
+        return $this->registrationLat;
+    }
+
+    /**
+     * Set registrationLon
+     *
+     * @param float $registrationLon
+     * @return AgUser
+     */
+    public function setRegistrationLon($registrationLon)
+    {
+        $this->registrationLon = $registrationLon;
+
+        return $this;
+    }
+
+    /**
+     * Get registrationLon
+     *
+     * @return float 
+     */
+    public function getRegistrationLon()
+    {
+        return $this->registrationLon;
+    }
 }
