@@ -79,3 +79,7 @@ a6dade,127.0.0.1,POST,http://localhost:8000/createUser,1470143263,,200
 415da1,127.0.0.1,POST,http://localhost:8000/createUser,1470143280,,200
 7c1db2,127.0.0.1,POST,http://localhost:8000/login_check,1470143283,,302
 7e2dd7,127.0.0.1,GET,http://localhost:8000/dashboard,1470143284,,200
+0354e3,127.0.0.1,GET,http://localhost:8000/,1470143869,,200
+2b49b7,127.0.0.1,GET,http://localhost:8000/,1470143873,,200
+cbda08,127.0.0.1,GET,http://localhost:8000/logout,1470143881,,302
+d7b5e9,127.0.0.1,GET,http://localhost:8000/,1470143881,,200
