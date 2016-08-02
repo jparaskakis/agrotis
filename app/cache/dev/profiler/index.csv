@@ -1,0 +1,6 @@
+ab8627,127.0.0.1,GET,http://localhost:8000/api/createUser,1470132585,cabead,200
+cabead,127.0.0.1,GET,http://localhost:8000/api/createUser,1470132585,,404
+530641,127.0.0.1,GET,http://localhost:8000/api/createUser,1470132666,25bfdf,200
+25bfdf,127.0.0.1,GET,http://localhost:8000/api/createUser,1470132666,,500
+6a92d0,127.0.0.1,GET,http://localhost:8000/api/createUser,1470132748,97ceb4,200
+97ceb4,127.0.0.1,GET,http://localhost:8000/api/createUser,1470132748,,404
