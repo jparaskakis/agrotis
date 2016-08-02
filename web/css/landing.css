@@ -3,6 +3,29 @@
     src: url(/bundles/framework/font/OpenDyslexic-Bold.ttf);
 
 }
+
+.loader{
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    height: 200px;
+    position: absolute;
+    float: left;
+    z-index:1;
+}
+
+.loader .icon{
+    background: url(/images/logo.png);
+    width: 100%;
+    height: 50px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top:50%;
+    margin-top: -50px;
+}
+
+
 body {
     background-color: #fff;
     padding-right: 0px !important;
@@ -1525,6 +1548,57 @@ footer .social-list a:hover .social-icon {
 
 }
 
+
+@-webkit-keyframes rotating
+    /* Safari and Chrome */
+
+{
+    from {
+        -ms-transform: rotateY(1deg);
+        -moz-transform: rotateY(1deg);
+        -webkit-transform: -webkit-rotateY(1deg);
+        -o-transform: rotateY(1deg);
+        transform: rotateY(1deg);
+        /*-webkit-backface-visibility: visible;
+        backface-visibility: visible;*/
+    }
+    to {
+        -ms-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -webkit-transform: -webkit-rotateY(360deg);
+        -o-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+        /*-webkit-backface-visibility: visible;
+        backface-visibility: visible;*/
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: -webkit-rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+    to {
+        -ms-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -webkit-transform: -webkit-rotateY(360deg);
+        -o-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+}
+.rotating {
+    -webkit-animation: rotating 2s linear infinite forwards;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite forwards;
+}
 
 
 

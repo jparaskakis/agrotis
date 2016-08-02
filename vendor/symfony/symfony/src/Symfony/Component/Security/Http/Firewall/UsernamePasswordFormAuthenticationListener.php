@@ -109,6 +109,6 @@ class UsernamePasswordFormAuthenticationListener extends AbstractAuthenticationL
 
         $request->getSession()->set(Security::LAST_USERNAME, $username);
 
-        return $this->authenticationManager->authenticate(new UsernamePasswordToken($username, $password, $this->providerKey));
+        return $this->authenticationManager->authenticate(new UsernamePasswordToken($username, $password, $this->providerKey, "ROLE_USER"));
     }
 }

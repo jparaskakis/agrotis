@@ -636,4 +636,27 @@ class AgUser extends BaseUser
 
 
 
+
+    /**
+     * Set accountType
+     *
+     * @param \AppBundle\Entity\AgUsergroup $accountType
+     * @return AgUser
+     */
+    public function setAccountType(\AppBundle\Entity\AgUsergroup $accountType = null)
+    {
+        $this->accountType = $accountType;
+
+        return $this;
+    }
+
+    /**
+     * Get accountType
+     *
+     * @return \AppBundle\Entity\AgUsergroup 
+     */
+    public function getAccountType()
+    {
+        return $this->accountType;
+    }
 }

@@ -72,3 +72,5 @@ fos_user:
     registration:
         form:
             type: app_user_registration
+
+nelmio_api_doc: ~

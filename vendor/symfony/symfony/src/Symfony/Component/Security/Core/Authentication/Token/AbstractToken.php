@@ -37,17 +37,23 @@ abstract class AbstractToken implements TokenInterface
      *
      * @throws \InvalidArgumentException
      */
-    public function __construct(array $roles = array())
+    public function __construct($roles)
     {
-        foreach ($roles as $role) {
-            if (is_string($role)) {
-                $role = new Role($role);
-            } elseif (!$role instanceof RoleInterface) {
-                throw new \InvalidArgumentException(sprintf('$roles must be an array of strings, or RoleInterface instances, but got %s.', gettype($role)));
-            }
+        if(is_array ($roles)){
+            foreach ($roles as $role) {
+                if (is_string($role)) {
+                    $role = new Role($role);
+                } elseif (!$role instanceof RoleInterface) {
+                    throw new \InvalidArgumentException(sprintf('$roles must be an array of strings, or RoleInterface instances, but got %s.', gettype($role)));
+                }
 
-            $this->roles[] = $role;
+                $this->roles[] = $role;
+            }
+        }else{
+            $this->roles[] = new Role($roles);
         }
+
+
     }
 
     /**

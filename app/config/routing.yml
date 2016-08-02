@@ -1,9 +1,9 @@
 admin_login_check:
     path: /admin/login_check
 
-admin_login:
-    path: /admin/login
-    defaults: { _controller: AppBundle:SecurityAdmin:login }
+#admin_login:
+#    path: /admin/login
+#    defaults: { _controller: AppBundle:SecurityAdmin:login }
 
 login_check:
     path: /login_check
@@ -37,6 +37,7 @@ controller:
     type:     annotation
     prefix:   /
 
-
-
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api
 

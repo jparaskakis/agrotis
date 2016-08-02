@@ -105,17 +105,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/admin/login')) {
-            // admin_login_check
-            if ($pathinfo === '/admin/login_check') {
-                return array('_route' => 'admin_login_check');
-            }
-
-            // admin_login
-            if ($pathinfo === '/admin/login') {
-                return array (  '_controller' => 'AppBundle:SecurityAdmin:login',  '_route' => 'admin_login',);
-            }
-
+        // admin_login_check
+        if ($pathinfo === '/admin/login_check') {
+            return array('_route' => 'admin_login_check');
         }
 
         if (0 === strpos($pathinfo, '/log')) {
@@ -293,6 +285,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
         }
+
+        // createUser
+        if ($pathinfo === '/createUser') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createUserAction',  '_route' => 'createUser',);
+        }
+
+        // nelmio_api_doc_index
+        if (0 === strpos($pathinfo, '/api') && preg_match('#^/api(?:/(?P<view>[^/]++))?$#s', $pathinfo, $matches)) {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_nelmio_api_doc_index;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'nelmio_api_doc_index')), array (  '_controller' => 'Nelmio\\ApiDocBundle\\Controller\\ApiDocController::indexAction',  'view' => 'default',));
+        }
+        not_nelmio_api_doc_index:
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }

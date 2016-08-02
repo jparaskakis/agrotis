@@ -8,7 +8,6 @@
 
 namespace AppBundle\Controller\Api;
 
-use AppBundle\Entity\AgUser;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,6 +16,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use AppBundle\Controller\LibraryController;
+
 
 
 
@@ -25,11 +27,11 @@ class UserController extends Controller
 {
 
     /**
-     * @Route("/api/createUser", name="createUser_")
-     * @Template()
+     * @Route("/createUser", name="createUser")
      */
     public function createUserAction(Request $request)
     {
+
 
         $em = $this->getDoctrine()->getManager();
 

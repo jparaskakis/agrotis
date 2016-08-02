@@ -3,6 +3,7 @@
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
+
 class AppKernel extends Kernel
 {
     public function registerBundles()
@@ -17,6 +18,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

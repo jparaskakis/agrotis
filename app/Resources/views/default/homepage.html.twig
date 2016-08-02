@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     {% endblock %}
 
-
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
     <script src="{{ asset('js/utilGlobal.js') }}"></script>
 
@@ -166,7 +166,6 @@
                         Sign In
                     </button>
                     <br>
-                    <div class="register_left" onclick="remindPass()" style="clear: both;">Forgot password</div>
                 </fieldset>
             </form>
         </div>
@@ -176,7 +175,7 @@
 <div class="modal fade" id="register_modal" role="dialog">
     <div class="modal-dialog" style="width: 400px;">
         <!-- Modal content-->
-        <div class="modal-content" style="height: 560px">
+        <div class="modal-content" style="height: 780px">
             <form id="registration_form" style="width: 350px;margin-top: 19px;">
                 <fieldset>
                     <legend><div class="modal_logo"></div><div class="modal_action">Register Form</div></legend>
@@ -200,6 +199,11 @@
                                 <option value="{{ category.id }}">{{ category.description }}</option>
                             {% endfor %}
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="loader"><div class="icon rotating"></div> </div>
+                        <div id="googleMap" style="width:100%;height:200px;" ></div>
+
                     </div>
                     <div style="margin-top: 15px" onclick="registeUser()"
                          class="login-but btn btn-primary"> Sign Up
@@ -385,10 +389,49 @@
     }
 
     function register() {
+        getLocation();
         $("#register_modal").modal("show")
 
     }
 
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+    }
+
+    function showPosition(position) {
+        initialize( position.coords.latitude,  position.coords.longitude)
+    }
+
+    var USER_LAT = -1;
+    var USER_LON = -1;
+    function initialize(lat, lon) {
+        USER_LAT = lat;
+        USER_LON = lon;
+        var mapProp = {
+            center:new google.maps.LatLng(lat,lon),
+            zoom:15,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+
+
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var myLatLng = {lat: lat, lng: lon};
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Your position'
+        });
+
+        $("#googleMap").css("display", "block")
+        setTimeout(function(){$(".loader").css("display", "none")}, 1500)
+
+
+    }
 
     function logout() {
         window.location = "/logout";
@@ -477,14 +520,16 @@
 
         if (can_go_through) {
             jQuery.ajax({
-                url: SERVER_ADDR + "api/createUser",
+                url: SERVER_ADDR + "createUser",
                 type: 'POST',
                 dataType: "json",
                 data: {
                     username: username,
                     password: password,
                     email: email,
-                    account_type: account
+                    account_type: account,
+                    lat: USER_LAT,
+                    lon: USER_LON,
                 },
                 headers: {'Access-Control-Allow-Origin': '*'},
                 crossDomain: true,
@@ -514,7 +559,7 @@
                     } else {
                         $("#username").val(username);
                         $("#password").val(password);
-//                        $("#login_form").submit();
+                        $("#login_form").submit();
                     }
 
 
