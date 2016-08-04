@@ -743,4 +743,144 @@ class AgUser extends BaseUser
     {
         return $this->registrationLon;
     }
+    /**
+     * @var string
+     */
+    private $fname;
+
+    /**
+     * @var string
+     */
+    private $lname;
+
+    /**
+     * @var string
+     */
+    private $phone;
+
+    /**
+     * @var string
+     */
+    private $address;
+
+    /**
+     * @var string
+     */
+    private $companyName;
+
+
+    /**
+     * Set fname
+     *
+     * @param string $fname
+     * @return AgUser
+     */
+    public function setFname($fname)
+    {
+        $this->fname = $fname;
+
+        return $this;
+    }
+
+    /**
+     * Get fname
+     *
+     * @return string 
+     */
+    public function getFname()
+    {
+        return $this->fname;
+    }
+
+    /**
+     * Set lname
+     *
+     * @param string $lname
+     * @return AgUser
+     */
+    public function setLname($lname)
+    {
+        $this->lname = $lname;
+
+        return $this;
+    }
+
+    /**
+     * Get lname
+     *
+     * @return string 
+     */
+    public function getLname()
+    {
+        return $this->lname;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param string $phone
+     * @return AgUser
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string 
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set address
+     *
+     * @param string $address
+     * @return AgUser
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return string 
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Set companyName
+     *
+     * @param string $companyName
+     * @return AgUser
+     */
+    public function setCompanyName($companyName)
+    {
+        $this->companyName = $companyName;
+
+        return $this;
+    }
+
+    /**
+     * Get companyName
+     *
+     * @return string 
+     */
+    public function getCompanyName()
+    {
+        return $this->companyName;
+    }
 }

@@ -286,9 +286,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // createUser
-        if ($pathinfo === '/createUser') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createUserAction',  '_route' => 'createUser',);
+        // getUser
+        if ($pathinfo === '/getUser') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::getUserAction',  '_route' => 'getUser',);
+        }
+
+        if (0 === strpos($pathinfo, '/create')) {
+            // createUser
+            if ($pathinfo === '/createUser') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createUserAction',  '_route' => 'createUser',);
+            }
+
+            // createProduct
+            if ($pathinfo === '/createProduct') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createProductAction',  '_route' => 'createProduct',);
+            }
+
+        }
+
+        // updateUser
+        if ($pathinfo === '/updateUser') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::updateUserAction',  '_route' => 'updateUser',);
         }
 
         // nelmio_api_doc_index

@@ -30,6 +30,11 @@
     <field name="avatarUrl" type="string" column="avatar_url" length="245" nullable="true"/>
     <field name="registrationLat" type="float" column="registration_lat" precision="10" scale="0" nullable="true"/>
     <field name="registrationLon" type="float" column="registration_lon" precision="10" scale="0" nullable="true"/>
+    <field name="fname" type="string" column="fname" length="45" nullable="true"/>
+    <field name="lname" type="string" column="lname" length="45" nullable="true"/>
+    <field name="phone" type="string" column="phone" length="45" nullable="true"/>
+    <field name="address" type="string" column="address" length="45" nullable="true"/>
+    <field name="companyName" type="string" column="company_name" length="45" nullable="true"/>
     <many-to-one field="accountType" target-entity="AgUsergroup">
       <join-columns>
         <join-column name="account_type" referenced-column-name="id"/>

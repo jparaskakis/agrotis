@@ -22,8 +22,11 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>
+    {% if 'localhost' in app.request.host  %}
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+    {% else %}
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>
+    {% endif %}
     <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
 
 
