@@ -93,7 +93,7 @@
                 <div class="error_message"></div>
                 <form id="profile_form" style="width: 400px;margin-top: 40px;">
                     <fieldset>
-                        <legend><div class="modal_logo"></div><div class="modal_action">Add new Product</div></legend>
+                        <legend><div class="modal_logo"></div><div class="modal_action">Add new Crop</div></legend>
                         <div class="form-group">
                             <div class="col-md-12" style="margin-top: 10px;">
                                 <label for="p_producer">Producer</label><label id="username_error" class="error_register">Username Exists</label>
@@ -152,6 +152,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.standalone.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-table.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
     <!-- Fonts -->
@@ -169,6 +170,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="{{ asset('js/modernizr.js') }}"></script>
     <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-table.js') }}"></script>
 
     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
 
@@ -182,9 +184,9 @@
             <ul class="sidebar_actions">
                 <li id="dashboard" class="sidebar_action" onclick="displayDashboard()">Dashboard<span class="menu-icon fa fa-tachometer"></span></li>
                 <li id="profile" class="sidebar_action" onclick="displayProfile()">Profile<span class="menu-icon fa fa-user"></span></li>
-                <li id="product" class="sidebar_action" onclick="displayProduct()">Add Product<span class="menu-icon fa fa-plus"></span></li>
+                <li id="product" class="sidebar_action" onclick="displayProduct()">Add Crop<span class="menu-icon fa fa-plus"></span></li>
                 <li id="offers" class="sidebar_action" onclick="displayOffers()">View Offers<span class="menu-icon fa fa-location-arrow"></span></li>
-                <li id="products" class="sidebar_action" onclick="displayProducts()">View Products<span class="menu-icon fa fa-tasks"></span></li>
+                <li id="products" class="sidebar_action" onclick="displayProducts()">View Crops<span class="menu-icon fa fa-tasks"></span></li>
             </ul>
             <p class="position_bottom center grey">2016 © Agrot-IS. All rights reserved.</p></div>
         </div>
@@ -210,6 +212,9 @@
         }
 
         function displayDashboard(){
+            var url = location.href;
+            location.href = "#dashboard";
+
             var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';
             $(".content").html(INNER_HTML);
             getLocation();
@@ -223,7 +228,11 @@
         }
 
         function displayProfile(){
-
+            var url = location.href;
+            location.href = "#profile";
+            var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';
+            $(".content").html(INNER_HTML);
+            getLocation();
 
             $("#r_username").val(USER_OBJ.getAttribute("username"))
             $("#r_email").val(USER_OBJ.getAttribute("email"))
@@ -285,7 +294,7 @@
 
 
             jQuery.ajax({
-                url: SERVER_ADDR+"createProduct",
+                url: SERVER_ADDR+"createCrop",
                 type: 'POST',
                 dataType: "json",
                 data: {
@@ -329,6 +338,14 @@
         }
 
         function displayProduct(){
+
+            var url = location.href;
+            location.href = "#product";
+
+            var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';
+            $(".content").html(INNER_HTML);
+            getLocation();
+
             $("#add_product_modal").modal('show')
 
             $(".sidebar_action").removeClass("active");
@@ -336,11 +353,118 @@
         }
 
         function displayOffers(){
+
+            var url = location.href;
+            location.href = "#offers";
+
+            var INNER_HTML = '<div class="row">' +
+                    '<div class="col-lg-12">' +
+                    '<div class="panel panel-default">' +
+                    '<div class="panel-heading">Producer Offers</div>' +
+                    '<div class="panel-body">' +
+                    '<table id="allOffers" data-toggle="table" data-url="x" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="id" data-sort-order="desc">' +
+                    '<thead>' +
+                    '<tr>' +
+                    '<th data-field="id" data-sortable="true" style="max-width: 50px">Id</th>' +
+                    '<th data-field="business" data-sortable="false">Business Name</th>' +
+                    '<th data-field="cropProduct" data-sortable="true">Product</th>' +
+                    '<th data-field="cropId" data-sortable="true">Crop ID</th>' +
+                    '<th data-field="totalAmount" data-sortable="true">Crop Amount</th>' +
+                    '<th data-field="amount" data-sortable="true">Amount</th>' +
+                    '<th data-field="reserve" data-sortable="true">Crop Reserve</th>' +
+                    '<th data-field="price" data-sortable="true">Price</th>' +
+                    '<th data-field="message" data-sortable="true">Buyer Message</th>' +
+                    '<th data-field="cropPD" data-sortable="true">Production Date</th>' +
+                    '<th data-field="cropED" data-sortable="true">Expiration Date</th>' +
+                    '<th data-field="edit" data-sortable="true" class="alignright">Actions</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    '</table>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+
+            $(".content").html(INNER_HTML);
+
+            $('#allOffers').bootstrapTable({
+                data: {{ offers_json | raw }},
+                pageSize: 30,
+                onClickRow: function (row, $element) {
+                    ROW_CLICKED = $element
+                }
+            });
+
             $(".sidebar_action").removeClass("active");
             $("#offers").addClass("active")
         }
 
+        function acceptOffer(offerId){
+            respondToOffer("true", offerId);
+        }
+
+        function deleteOffer(offerId){
+            respondToOffer("false", offerId);
+        }
+
+        function respondToOffer(accepted, offerId){
+            $.ajax({
+                url: SERVER_ADDR + "respondToOffer",
+                type: 'POST',
+                dataType: "json",
+                data: {
+                    username_toSearch: '{{ username }}',
+                    isAccepted: accepted,
+                    offer_id: offerId,
+                },
+                headers: {'Access-Control-Allow-Origin': '*'},
+                crossDomain: true,
+                complete: function (data) {
+                    window.location.reload(true)
+                }
+            });
+        }
+
         function displayProducts(){
+
+            var url = location.href;
+            location.href = "#crops";
+
+            var INNER_HTML = '<div class="row">' +
+                    '<div class="col-lg-12">' +
+                    '<div class="panel panel-default">' +
+                    '<div class="panel-heading">Producer Offers</div>' +
+                    '<div class="panel-body">' +
+                    '<table id="allCrops" data-toggle="table" data-url="x" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="id" data-sort-order="desc">' +
+                    '<thead>' +
+                    '<tr>' +
+                    '<th data-field="id" data-sortable="true" style="max-width: 50px">Id</th>' +
+                    '<th data-field="cropProduct" data-sortable="true">Product</th>' +
+                    '<th data-field="totalAmount" data-sortable="true">Crop Amount</th>' +
+                    '<th data-field="amount" data-sortable="true">Available</th>' +
+                    '<th data-field="reserve" data-sortable="true">Crop Reserve</th>' +
+                    '<th data-field="price" data-sortable="true">Price</th>' +
+                    '<th data-field="cropPD" data-sortable="true">Production Date</th>' +
+                    '<th data-field="cropED" data-sortable="true">Expiration Date</th>' +
+                    '<th data-field="edit" data-sortable="true" class="alignright">Actions</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    '</table>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+
+            $(".content").html(INNER_HTML);
+
+            $('#allCrops').bootstrapTable({
+                data: {{ crops_json | raw }},
+                pageSize: 30,
+                onClickRow: function (row, $element) {
+                    ROW_CLICKED = $element
+                }
+            });
+
             $(".sidebar_action").removeClass("active")
             $("#products").addClass("active")
         }
@@ -348,7 +472,7 @@
         $( document ).ready(function() {
             resize();
             getUser();
-            displayDashboard();
+//            displayDashboard();
 
             var dateToday = new Date();
             $('#rEdate').datepicker({
@@ -357,6 +481,22 @@
             $('#rPdate').datepicker({
                 format: 'dd/mm/yyyy',
             });
+
+            var hash = window.location.hash.substring(1);
+            console.log(hash)
+            if(!hash || hash === "" || hash === "dashboard" ){
+                displayDashboard();
+            }else if(hash === "profile"){
+                displayProfile();
+            }else if(hash === "product"){
+                displayProduct();
+            }else if(hash === "offers"){
+                displayOffers()
+            }else if(hash === "crops"){
+                displayProducts();
+            }else{
+                displayDashboard();
+            }
         });
 
 
@@ -518,7 +658,7 @@
             var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
             {% for offer in offers %}
-            var myLatLng = {lat: {{ offer.user.registrationLat }}, lng: {{ offer.user.registrationLon }}};
+            var myLatLng = {lat: {{ offer.business.registrationLat }}, lng: {{ offer.business.registrationLon }}};
             var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,

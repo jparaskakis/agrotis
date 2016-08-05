@@ -24,54 +24,54 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_57a0be4a84feb383feb2c7bbb7ca701bb3283e3f1927de2e6d7af8380ca7c210 = $this->env->getExtension("native_profiler");
-        $__internal_57a0be4a84feb383feb2c7bbb7ca701bb3283e3f1927de2e6d7af8380ca7c210->enter($__internal_57a0be4a84feb383feb2c7bbb7ca701bb3283e3f1927de2e6d7af8380ca7c210_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/dashboard_prod.html.twig"));
+        $__internal_cf1a3f6718bbd26b83544008208fc93f0f7d2d5b281dbd86ea514dc903d15bc4 = $this->env->getExtension("native_profiler");
+        $__internal_cf1a3f6718bbd26b83544008208fc93f0f7d2d5b281dbd86ea514dc903d15bc4->enter($__internal_cf1a3f6718bbd26b83544008208fc93f0f7d2d5b281dbd86ea514dc903d15bc4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/dashboard_prod.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_57a0be4a84feb383feb2c7bbb7ca701bb3283e3f1927de2e6d7af8380ca7c210->leave($__internal_57a0be4a84feb383feb2c7bbb7ca701bb3283e3f1927de2e6d7af8380ca7c210_prof);
+        $__internal_cf1a3f6718bbd26b83544008208fc93f0f7d2d5b281dbd86ea514dc903d15bc4->leave($__internal_cf1a3f6718bbd26b83544008208fc93f0f7d2d5b281dbd86ea514dc903d15bc4_prof);
 
     }
 
     // line 3
     public function block_body_id($context, array $blocks = array())
     {
-        $__internal_de76e1f5c9b5858ca585beea46aa86d01591a29557d7ccc42c89538887362bb7 = $this->env->getExtension("native_profiler");
-        $__internal_de76e1f5c9b5858ca585beea46aa86d01591a29557d7ccc42c89538887362bb7->enter($__internal_de76e1f5c9b5858ca585beea46aa86d01591a29557d7ccc42c89538887362bb7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body_id"));
+        $__internal_046641d14be78b3f2cb2cff88b45ff08c30c04c39974b4c20d4c4666f97d0bfa = $this->env->getExtension("native_profiler");
+        $__internal_046641d14be78b3f2cb2cff88b45ff08c30c04c39974b4c20d4c4666f97d0bfa->enter($__internal_046641d14be78b3f2cb2cff88b45ff08c30c04c39974b4c20d4c4666f97d0bfa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body_id"));
 
         echo "dashboard";
         
-        $__internal_de76e1f5c9b5858ca585beea46aa86d01591a29557d7ccc42c89538887362bb7->leave($__internal_de76e1f5c9b5858ca585beea46aa86d01591a29557d7ccc42c89538887362bb7_prof);
+        $__internal_046641d14be78b3f2cb2cff88b45ff08c30c04c39974b4c20d4c4666f97d0bfa->leave($__internal_046641d14be78b3f2cb2cff88b45ff08c30c04c39974b4c20d4c4666f97d0bfa_prof);
 
     }
 
     // line 9
     public function block_header($context, array $blocks = array())
     {
-        $__internal_0f102e32d053648ac083fcf0d7e27a5d0dbafd0969897212247b9fff58f6da25 = $this->env->getExtension("native_profiler");
-        $__internal_0f102e32d053648ac083fcf0d7e27a5d0dbafd0969897212247b9fff58f6da25->enter($__internal_0f102e32d053648ac083fcf0d7e27a5d0dbafd0969897212247b9fff58f6da25_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_c3ca890edcdef745e0b0289dc5d4a7090ff8e620d48fcf92a7daee82103bf356 = $this->env->getExtension("native_profiler");
+        $__internal_c3ca890edcdef745e0b0289dc5d4a7090ff8e620d48fcf92a7daee82103bf356->enter($__internal_c3ca890edcdef745e0b0289dc5d4a7090ff8e620d48fcf92a7daee82103bf356_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         
-        $__internal_0f102e32d053648ac083fcf0d7e27a5d0dbafd0969897212247b9fff58f6da25->leave($__internal_0f102e32d053648ac083fcf0d7e27a5d0dbafd0969897212247b9fff58f6da25_prof);
+        $__internal_c3ca890edcdef745e0b0289dc5d4a7090ff8e620d48fcf92a7daee82103bf356->leave($__internal_c3ca890edcdef745e0b0289dc5d4a7090ff8e620d48fcf92a7daee82103bf356_prof);
 
     }
 
     // line 10
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_366b38f6391ec99b9f7f1253587940d8924358c098053a08788acacb162579c5 = $this->env->getExtension("native_profiler");
-        $__internal_366b38f6391ec99b9f7f1253587940d8924358c098053a08788acacb162579c5->enter($__internal_366b38f6391ec99b9f7f1253587940d8924358c098053a08788acacb162579c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_6391deb13ccd5e682d907c098bd1574ad57e99f4584e338d65c4fcbe6e81e2ab = $this->env->getExtension("native_profiler");
+        $__internal_6391deb13ccd5e682d907c098bd1574ad57e99f4584e338d65c4fcbe6e81e2ab->enter($__internal_6391deb13ccd5e682d907c098bd1574ad57e99f4584e338d65c4fcbe6e81e2ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         
-        $__internal_366b38f6391ec99b9f7f1253587940d8924358c098053a08788acacb162579c5->leave($__internal_366b38f6391ec99b9f7f1253587940d8924358c098053a08788acacb162579c5_prof);
+        $__internal_6391deb13ccd5e682d907c098bd1574ad57e99f4584e338d65c4fcbe6e81e2ab->leave($__internal_6391deb13ccd5e682d907c098bd1574ad57e99f4584e338d65c4fcbe6e81e2ab_prof);
 
     }
 
     // line 12
     public function block_body($context, array $blocks = array())
     {
-        $__internal_50316a312300e5204604e6379b3a27606301afd40cff55c20567a3395a56c370 = $this->env->getExtension("native_profiler");
-        $__internal_50316a312300e5204604e6379b3a27606301afd40cff55c20567a3395a56c370->enter($__internal_50316a312300e5204604e6379b3a27606301afd40cff55c20567a3395a56c370_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_34befad6d278973091872ffe4a866d2b739a08895b7aeee6642dfd9c00e56a2c = $this->env->getExtension("native_profiler");
+        $__internal_34befad6d278973091872ffe4a866d2b739a08895b7aeee6642dfd9c00e56a2c->enter($__internal_34befad6d278973091872ffe4a866d2b739a08895b7aeee6642dfd9c00e56a2c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 13
         echo "
@@ -245,9 +245,13 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         // line 154
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/bootstrap-datepicker3.standalone.css"), "html", null, true);
         echo "\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 155
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/bootstrap-table.css"), "html", null, true);
+        echo "\">
 
     <link rel=\"stylesheet\" href=\"";
-        // line 156
+        // line 157
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/modal.css"), "html", null, true);
         echo "\">
     <!-- Fonts -->
@@ -255,41 +259,45 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
     <link rel=\"stylesheet\" href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css\">
 
     ";
-        // line 161
+        // line 162
         if (twig_in_filter("localhost", $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "host", array()))) {
-            // line 162
+            // line 163
             echo "        <script src=\"http://maps.googleapis.com/maps/api/js\"></script>
     ";
         } else {
-            // line 164
+            // line 165
             echo "        <script async defer src=\"https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation\" type=\"text/javascript\"></script>
     ";
         }
-        // line 166
-        echo "    ";
         // line 167
+        echo "    ";
+        // line 168
         echo "
     <script src=\"";
-        // line 168
+        // line 169
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery-1.11.0.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
     <script src=\"";
-        // line 170
+        // line 171
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/modernizr.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 171
+        // line 172
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap-datepicker.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 173
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap-table.js"), "html", null, true);
         echo "\"></script>
 
     <link rel=\"stylesheet\" href=\"";
-        // line 173
+        // line 175
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/modal.css"), "html", null, true);
         echo "\">
 
     <link rel=\"stylesheet\" href=\"";
-        // line 175
+        // line 177
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/ag_dashboard.css"), "html", null, true);
         echo "\">
 
@@ -297,19 +305,19 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
     <div class=\"agcontainer\">
         <div class=\"sidebar\">
             <div class=\"avatar\" style=\"background: url('";
-        // line 180
+        // line 182
         echo twig_escape_filter($this->env, (isset($context["avatar"]) ? $context["avatar"] : $this->getContext($context, "avatar")), "html", null, true);
         echo "')\"></div>
             <div class=\"line\">";
-        // line 181
+        // line 183
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "</div>
             <ul class=\"sidebar_actions\">
                 <li id=\"dashboard\" class=\"sidebar_action\" onclick=\"displayDashboard()\">Dashboard<span class=\"menu-icon fa fa-tachometer\"></span></li>
                 <li id=\"profile\" class=\"sidebar_action\" onclick=\"displayProfile()\">Profile<span class=\"menu-icon fa fa-user\"></span></li>
-                <li id=\"product\" class=\"sidebar_action\" onclick=\"displayProduct()\">Add Product<span class=\"menu-icon fa fa-plus\"></span></li>
+                <li id=\"product\" class=\"sidebar_action\" onclick=\"displayProduct()\">Add Crop<span class=\"menu-icon fa fa-plus\"></span></li>
                 <li id=\"offers\" class=\"sidebar_action\" onclick=\"displayOffers()\">View Offers<span class=\"menu-icon fa fa-location-arrow\"></span></li>
-                <li id=\"products\" class=\"sidebar_action\" onclick=\"displayProducts()\">View Products<span class=\"menu-icon fa fa-tasks\"></span></li>
+                <li id=\"products\" class=\"sidebar_action\" onclick=\"displayProducts()\">View Crops<span class=\"menu-icon fa fa-tasks\"></span></li>
             </ul>
             <p class=\"position_bottom center grey\">2016 © Agrot-IS. All rights reserved.</p></div>
         </div>
@@ -335,6 +343,9 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         }
 
         function displayDashboard(){
+            var url = location.href;
+            location.href = \"#dashboard\";
+
             var INNER_HTML = '<div id=\"googleMap\" style=\"width:100%;height:100%;\" ></div>';
             \$(\".content\").html(INNER_HTML);
             getLocation();
@@ -348,7 +359,11 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         }
 
         function displayProfile(){
-
+            var url = location.href;
+            location.href = \"#profile\";
+            var INNER_HTML = '<div id=\"googleMap\" style=\"width:100%;height:100%;\" ></div>';
+            \$(\".content\").html(INNER_HTML);
+            getLocation();
 
             \$(\"#r_username\").val(USER_OBJ.getAttribute(\"username\"))
             \$(\"#r_email\").val(USER_OBJ.getAttribute(\"email\"))
@@ -410,12 +425,12 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
 
             jQuery.ajax({
-                url: SERVER_ADDR+\"createProduct\",
+                url: SERVER_ADDR+\"createCrop\",
                 type: 'POST',
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 292
+        // line 301
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     product: product,
@@ -457,6 +472,14 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         }
 
         function displayProduct(){
+
+            var url = location.href;
+            location.href = \"#product\";
+
+            var INNER_HTML = '<div id=\"googleMap\" style=\"width:100%;height:100%;\" ></div>';
+            \$(\".content\").html(INNER_HTML);
+            getLocation();
+            
             \$(\"#add_product_modal\").modal('show')
 
             \$(\".sidebar_action\").removeClass(\"active\");
@@ -464,11 +487,127 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         }
 
         function displayOffers(){
+
+            var url = location.href;
+            location.href = \"#offers\";
+
+            var INNER_HTML = '<div class=\"row\">' +
+                    '<div class=\"col-lg-12\">' +
+                    '<div class=\"panel panel-default\">' +
+                    '<div class=\"panel-heading\">Producer Offers</div>' +
+                    '<div class=\"panel-body\">' +
+                    '<table id=\"allOffers\" data-toggle=\"table\" data-url=\"x\" data-show-toggle=\"true\" data-show-columns=\"true\" data-search=\"true\" data-select-item-name=\"toolbar1\" data-pagination=\"true\" data-sort-name=\"id\" data-sort-order=\"desc\">' +
+                    '<thead>' +
+                    '<tr>' +
+                    '<th data-field=\"id\" data-sortable=\"true\" style=\"max-width: 50px\">Id</th>' +
+                    '<th data-field=\"business\" data-sortable=\"false\">Business Name</th>' +
+                    '<th data-field=\"cropProduct\" data-sortable=\"true\">Product</th>' +
+                    '<th data-field=\"cropId\" data-sortable=\"true\">Crop ID</th>' +
+                    '<th data-field=\"totalAmount\" data-sortable=\"true\">Crop Amount</th>' +
+                    '<th data-field=\"amount\" data-sortable=\"true\">Amount</th>' +
+                    '<th data-field=\"reserve\" data-sortable=\"true\">Crop Reserve</th>' +
+                    '<th data-field=\"price\" data-sortable=\"true\">Price</th>' +
+                    '<th data-field=\"message\" data-sortable=\"true\">Buyer Message</th>' +
+                    '<th data-field=\"cropPD\" data-sortable=\"true\">Production Date</th>' +
+                    '<th data-field=\"cropED\" data-sortable=\"true\">Expiration Date</th>' +
+                    '<th data-field=\"edit\" data-sortable=\"true\" class=\"alignright\">Actions</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    '</table>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+
+            \$(\".content\").html(INNER_HTML);
+
+            \$('#allOffers').bootstrapTable({
+                data: ";
+        // line 391
+        echo (isset($context["offers_json"]) ? $context["offers_json"] : $this->getContext($context, "offers_json"));
+        echo ",
+                pageSize: 30,
+                onClickRow: function (row, \$element) {
+                    ROW_CLICKED = \$element
+                }
+            });
+
             \$(\".sidebar_action\").removeClass(\"active\");
             \$(\"#offers\").addClass(\"active\")
         }
 
+        function acceptOffer(offerId){
+            respondToOffer(\"true\", offerId);
+        }
+
+        function deleteOffer(offerId){
+            respondToOffer(\"false\", offerId);
+        }
+
+        function respondToOffer(accepted, offerId){
+            \$.ajax({
+                url: SERVER_ADDR + \"respondToOffer\",
+                type: 'POST',
+                dataType: \"json\",
+                data: {
+                    username_toSearch: '";
+        // line 416
+        echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
+        echo "',
+                    isAccepted: accepted,
+                    offer_id: offerId,
+                },
+                headers: {'Access-Control-Allow-Origin': '*'},
+                crossDomain: true,
+                complete: function (data) {
+                    window.location.reload(true)
+                }
+            });
+        }
+
         function displayProducts(){
+
+            var url = location.href;
+            location.href = \"#crops\";
+
+            var INNER_HTML = '<div class=\"row\">' +
+                    '<div class=\"col-lg-12\">' +
+                    '<div class=\"panel panel-default\">' +
+                    '<div class=\"panel-heading\">Producer Offers</div>' +
+                    '<div class=\"panel-body\">' +
+                    '<table id=\"allCrops\" data-toggle=\"table\" data-url=\"x\" data-show-toggle=\"true\" data-show-columns=\"true\" data-search=\"true\" data-select-item-name=\"toolbar1\" data-pagination=\"true\" data-sort-name=\"id\" data-sort-order=\"desc\">' +
+                    '<thead>' +
+                    '<tr>' +
+                    '<th data-field=\"id\" data-sortable=\"true\" style=\"max-width: 50px\">Id</th>' +
+                    '<th data-field=\"cropProduct\" data-sortable=\"true\">Product</th>' +
+                    '<th data-field=\"totalAmount\" data-sortable=\"true\">Crop Amount</th>' +
+                    '<th data-field=\"amount\" data-sortable=\"true\">Available</th>' +
+                    '<th data-field=\"reserve\" data-sortable=\"true\">Crop Reserve</th>' +
+                    '<th data-field=\"price\" data-sortable=\"true\">Price</th>' +
+                    '<th data-field=\"cropPD\" data-sortable=\"true\">Production Date</th>' +
+                    '<th data-field=\"cropED\" data-sortable=\"true\">Expiration Date</th>' +
+                    '<th data-field=\"edit\" data-sortable=\"true\" class=\"alignright\">Actions</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    '</table>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+
+            \$(\".content\").html(INNER_HTML);
+
+            \$('#allCrops').bootstrapTable({
+                data: ";
+        // line 461
+        echo (isset($context["crops_json"]) ? $context["crops_json"] : $this->getContext($context, "crops_json"));
+        echo ",
+                pageSize: 30,
+                onClickRow: function (row, \$element) {
+                    ROW_CLICKED = \$element
+                }
+            });
+
             \$(\".sidebar_action\").removeClass(\"active\")
             \$(\"#products\").addClass(\"active\")
         }
@@ -476,7 +615,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         \$( document ).ready(function() {
             resize();
             getUser();
-            displayDashboard();
+//            displayDashboard();
 
             var dateToday = new Date();
             \$('#rEdate').datepicker({
@@ -485,6 +624,22 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
             \$('#rPdate').datepicker({
                 format: 'dd/mm/yyyy',
             });
+
+            var hash = window.location.hash.substring(1);
+            console.log(hash)
+            if(!hash || hash === \"\" || hash === \"dashboard\" ){
+                displayDashboard();
+            }else if(hash === \"profile\"){
+                displayProfile();
+            }else if(hash === \"product\"){
+                displayProduct();
+            }else if(hash === \"offers\"){
+                displayOffers()
+            }else if(hash === \"crops\"){
+                displayProducts();
+            }else{
+                displayDashboard();
+            }
         });
 
 
@@ -509,7 +664,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 dataType: \"json\",
                 data: {
                     username: '";
-        // line 383
+        // line 523
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                 },
@@ -572,7 +727,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 443
+        // line 583
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     username: username,
@@ -652,21 +807,21 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
             var map=new google.maps.Map(document.getElementById(\"googleMap\"),mapProp);
 
             ";
-        // line 520
+        // line 660
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["offers"]) ? $context["offers"] : $this->getContext($context, "offers")));
         foreach ($context['_seq'] as $context["_key"] => $context["offer"]) {
-            // line 521
+            // line 661
             echo "            var myLatLng = {lat: ";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["offer"], "user", array()), "registrationLat", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["offer"], "business", array()), "registrationLat", array()), "html", null, true);
             echo ", lng: ";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["offer"], "user", array()), "registrationLon", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["offer"], "business", array()), "registrationLon", array()), "html", null, true);
             echo "};
             var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,
                 title: '";
-            // line 525
+            // line 665
             echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "message", array()), "html", null, true);
             echo "'
             });
@@ -675,7 +830,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offer'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 528
+        // line 668
         echo "        }
 
         function showPosition(position) {
@@ -732,7 +887,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
     </script>
 ";
         
-        $__internal_50316a312300e5204604e6379b3a27606301afd40cff55c20567a3395a56c370->leave($__internal_50316a312300e5204604e6379b3a27606301afd40cff55c20567a3395a56c370_prof);
+        $__internal_34befad6d278973091872ffe4a866d2b739a08895b7aeee6642dfd9c00e56a2c->leave($__internal_34befad6d278973091872ffe4a866d2b739a08895b7aeee6642dfd9c00e56a2c_prof);
 
     }
 
@@ -748,7 +903,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
     public function getDebugInfo()
     {
-        return array (  679 => 528,  670 => 525,  660 => 521,  656 => 520,  576 => 443,  513 => 383,  419 => 292,  305 => 181,  301 => 180,  293 => 175,  288 => 173,  283 => 171,  279 => 170,  274 => 168,  271 => 167,  269 => 166,  265 => 164,  261 => 162,  259 => 161,  251 => 156,  246 => 154,  242 => 153,  238 => 152,  234 => 151,  193 => 112,  182 => 110,  178 => 109,  166 => 100,  77 => 13,  71 => 12,  60 => 10,  49 => 9,  37 => 3,  11 => 1,);
+        return array (  834 => 668,  825 => 665,  815 => 661,  811 => 660,  731 => 583,  668 => 523,  603 => 461,  555 => 416,  527 => 391,  434 => 301,  313 => 183,  309 => 182,  301 => 177,  296 => 175,  291 => 173,  287 => 172,  283 => 171,  278 => 169,  275 => 168,  273 => 167,  269 => 165,  265 => 163,  263 => 162,  255 => 157,  250 => 155,  246 => 154,  242 => 153,  238 => 152,  234 => 151,  193 => 112,  182 => 110,  178 => 109,  166 => 100,  77 => 13,  71 => 12,  60 => 10,  49 => 9,  37 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -905,6 +1060,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*     <link rel="stylesheet" href="{{ asset('css/style.css') }}">*/
 /*     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.css') }}">*/
 /*     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.standalone.css') }}">*/
+/*     <link rel="stylesheet" href="{{ asset('css/bootstrap-table.css') }}">*/
 /* */
 /*     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">*/
 /*     <!-- Fonts -->*/
@@ -922,6 +1078,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>*/
 /*     <script src="{{ asset('js/modernizr.js') }}"></script>*/
 /*     <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>*/
+/*     <script src="{{ asset('js/bootstrap-table.js') }}"></script>*/
 /* */
 /*     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">*/
 /* */
@@ -935,9 +1092,9 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*             <ul class="sidebar_actions">*/
 /*                 <li id="dashboard" class="sidebar_action" onclick="displayDashboard()">Dashboard<span class="menu-icon fa fa-tachometer"></span></li>*/
 /*                 <li id="profile" class="sidebar_action" onclick="displayProfile()">Profile<span class="menu-icon fa fa-user"></span></li>*/
-/*                 <li id="product" class="sidebar_action" onclick="displayProduct()">Add Product<span class="menu-icon fa fa-plus"></span></li>*/
+/*                 <li id="product" class="sidebar_action" onclick="displayProduct()">Add Crop<span class="menu-icon fa fa-plus"></span></li>*/
 /*                 <li id="offers" class="sidebar_action" onclick="displayOffers()">View Offers<span class="menu-icon fa fa-location-arrow"></span></li>*/
-/*                 <li id="products" class="sidebar_action" onclick="displayProducts()">View Products<span class="menu-icon fa fa-tasks"></span></li>*/
+/*                 <li id="products" class="sidebar_action" onclick="displayProducts()">View Crops<span class="menu-icon fa fa-tasks"></span></li>*/
 /*             </ul>*/
 /*             <p class="position_bottom center grey">2016 © Agrot-IS. All rights reserved.</p></div>*/
 /*         </div>*/
@@ -963,6 +1120,9 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*         }*/
 /* */
 /*         function displayDashboard(){*/
+/*             var url = location.href;*/
+/*             location.href = "#dashboard";*/
+/* */
 /*             var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';*/
 /*             $(".content").html(INNER_HTML);*/
 /*             getLocation();*/
@@ -976,7 +1136,11 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*         }*/
 /* */
 /*         function displayProfile(){*/
-/* */
+/*             var url = location.href;*/
+/*             location.href = "#profile";*/
+/*             var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';*/
+/*             $(".content").html(INNER_HTML);*/
+/*             getLocation();*/
 /* */
 /*             $("#r_username").val(USER_OBJ.getAttribute("username"))*/
 /*             $("#r_email").val(USER_OBJ.getAttribute("email"))*/
@@ -1038,7 +1202,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /* */
 /* */
 /*             jQuery.ajax({*/
-/*                 url: SERVER_ADDR+"createProduct",*/
+/*                 url: SERVER_ADDR+"createCrop",*/
 /*                 type: 'POST',*/
 /*                 dataType: "json",*/
 /*                 data: {*/
@@ -1082,6 +1246,14 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*         }*/
 /* */
 /*         function displayProduct(){*/
+/* */
+/*             var url = location.href;*/
+/*             location.href = "#product";*/
+/* */
+/*             var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';*/
+/*             $(".content").html(INNER_HTML);*/
+/*             getLocation();*/
+/*             */
 /*             $("#add_product_modal").modal('show')*/
 /* */
 /*             $(".sidebar_action").removeClass("active");*/
@@ -1089,11 +1261,118 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*         }*/
 /* */
 /*         function displayOffers(){*/
+/* */
+/*             var url = location.href;*/
+/*             location.href = "#offers";*/
+/* */
+/*             var INNER_HTML = '<div class="row">' +*/
+/*                     '<div class="col-lg-12">' +*/
+/*                     '<div class="panel panel-default">' +*/
+/*                     '<div class="panel-heading">Producer Offers</div>' +*/
+/*                     '<div class="panel-body">' +*/
+/*                     '<table id="allOffers" data-toggle="table" data-url="x" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="id" data-sort-order="desc">' +*/
+/*                     '<thead>' +*/
+/*                     '<tr>' +*/
+/*                     '<th data-field="id" data-sortable="true" style="max-width: 50px">Id</th>' +*/
+/*                     '<th data-field="business" data-sortable="false">Business Name</th>' +*/
+/*                     '<th data-field="cropProduct" data-sortable="true">Product</th>' +*/
+/*                     '<th data-field="cropId" data-sortable="true">Crop ID</th>' +*/
+/*                     '<th data-field="totalAmount" data-sortable="true">Crop Amount</th>' +*/
+/*                     '<th data-field="amount" data-sortable="true">Amount</th>' +*/
+/*                     '<th data-field="reserve" data-sortable="true">Crop Reserve</th>' +*/
+/*                     '<th data-field="price" data-sortable="true">Price</th>' +*/
+/*                     '<th data-field="message" data-sortable="true">Buyer Message</th>' +*/
+/*                     '<th data-field="cropPD" data-sortable="true">Production Date</th>' +*/
+/*                     '<th data-field="cropED" data-sortable="true">Expiration Date</th>' +*/
+/*                     '<th data-field="edit" data-sortable="true" class="alignright">Actions</th>' +*/
+/*                     '</tr>' +*/
+/*                     '</thead>' +*/
+/*                     '</table>' +*/
+/*                     '</div>' +*/
+/*                     '</div>' +*/
+/*                     '</div>' +*/
+/*                     '</div>';*/
+/* */
+/*             $(".content").html(INNER_HTML);*/
+/* */
+/*             $('#allOffers').bootstrapTable({*/
+/*                 data: {{ offers_json | raw }},*/
+/*                 pageSize: 30,*/
+/*                 onClickRow: function (row, $element) {*/
+/*                     ROW_CLICKED = $element*/
+/*                 }*/
+/*             });*/
+/* */
 /*             $(".sidebar_action").removeClass("active");*/
 /*             $("#offers").addClass("active")*/
 /*         }*/
 /* */
+/*         function acceptOffer(offerId){*/
+/*             respondToOffer("true", offerId);*/
+/*         }*/
+/* */
+/*         function deleteOffer(offerId){*/
+/*             respondToOffer("false", offerId);*/
+/*         }*/
+/* */
+/*         function respondToOffer(accepted, offerId){*/
+/*             $.ajax({*/
+/*                 url: SERVER_ADDR + "respondToOffer",*/
+/*                 type: 'POST',*/
+/*                 dataType: "json",*/
+/*                 data: {*/
+/*                     username_toSearch: '{{ username }}',*/
+/*                     isAccepted: accepted,*/
+/*                     offer_id: offerId,*/
+/*                 },*/
+/*                 headers: {'Access-Control-Allow-Origin': '*'},*/
+/*                 crossDomain: true,*/
+/*                 complete: function (data) {*/
+/*                     window.location.reload(true)*/
+/*                 }*/
+/*             });*/
+/*         }*/
+/* */
 /*         function displayProducts(){*/
+/* */
+/*             var url = location.href;*/
+/*             location.href = "#crops";*/
+/* */
+/*             var INNER_HTML = '<div class="row">' +*/
+/*                     '<div class="col-lg-12">' +*/
+/*                     '<div class="panel panel-default">' +*/
+/*                     '<div class="panel-heading">Producer Offers</div>' +*/
+/*                     '<div class="panel-body">' +*/
+/*                     '<table id="allCrops" data-toggle="table" data-url="x" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="id" data-sort-order="desc">' +*/
+/*                     '<thead>' +*/
+/*                     '<tr>' +*/
+/*                     '<th data-field="id" data-sortable="true" style="max-width: 50px">Id</th>' +*/
+/*                     '<th data-field="cropProduct" data-sortable="true">Product</th>' +*/
+/*                     '<th data-field="totalAmount" data-sortable="true">Crop Amount</th>' +*/
+/*                     '<th data-field="amount" data-sortable="true">Available</th>' +*/
+/*                     '<th data-field="reserve" data-sortable="true">Crop Reserve</th>' +*/
+/*                     '<th data-field="price" data-sortable="true">Price</th>' +*/
+/*                     '<th data-field="cropPD" data-sortable="true">Production Date</th>' +*/
+/*                     '<th data-field="cropED" data-sortable="true">Expiration Date</th>' +*/
+/*                     '<th data-field="edit" data-sortable="true" class="alignright">Actions</th>' +*/
+/*                     '</tr>' +*/
+/*                     '</thead>' +*/
+/*                     '</table>' +*/
+/*                     '</div>' +*/
+/*                     '</div>' +*/
+/*                     '</div>' +*/
+/*                     '</div>';*/
+/* */
+/*             $(".content").html(INNER_HTML);*/
+/* */
+/*             $('#allCrops').bootstrapTable({*/
+/*                 data: {{ crops_json | raw }},*/
+/*                 pageSize: 30,*/
+/*                 onClickRow: function (row, $element) {*/
+/*                     ROW_CLICKED = $element*/
+/*                 }*/
+/*             });*/
+/* */
 /*             $(".sidebar_action").removeClass("active")*/
 /*             $("#products").addClass("active")*/
 /*         }*/
@@ -1101,7 +1380,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*         $( document ).ready(function() {*/
 /*             resize();*/
 /*             getUser();*/
-/*             displayDashboard();*/
+/* //            displayDashboard();*/
 /* */
 /*             var dateToday = new Date();*/
 /*             $('#rEdate').datepicker({*/
@@ -1110,6 +1389,22 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*             $('#rPdate').datepicker({*/
 /*                 format: 'dd/mm/yyyy',*/
 /*             });*/
+/* */
+/*             var hash = window.location.hash.substring(1);*/
+/*             console.log(hash)*/
+/*             if(!hash || hash === "" || hash === "dashboard" ){*/
+/*                 displayDashboard();*/
+/*             }else if(hash === "profile"){*/
+/*                 displayProfile();*/
+/*             }else if(hash === "product"){*/
+/*                 displayProduct();*/
+/*             }else if(hash === "offers"){*/
+/*                 displayOffers()*/
+/*             }else if(hash === "crops"){*/
+/*                 displayProducts();*/
+/*             }else{*/
+/*                 displayDashboard();*/
+/*             }*/
 /*         });*/
 /* */
 /* */
@@ -1271,7 +1566,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*             var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);*/
 /* */
 /*             {% for offer in offers %}*/
-/*             var myLatLng = {lat: {{ offer.user.registrationLat }}, lng: {{ offer.user.registrationLon }}};*/
+/*             var myLatLng = {lat: {{ offer.business.registrationLat }}, lng: {{ offer.business.registrationLon }}};*/
 /*             var marker = new google.maps.Marker({*/
 /*                 position: myLatLng,*/
 /*                 map: map,*/

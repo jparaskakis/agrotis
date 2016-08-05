@@ -2,7 +2,8 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\AgProducerProduct;
+use AppBundle\Entity\AgCrop;
+
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -68,13 +69,13 @@ class DefaultController extends Controller
 
             $em = $this->getDoctrine()->getManager();
             $query = $em->createQuery(
-                'SELECT p FROM AppBundle:AgProducerProduct p WHERE p.producer = :uid'
+                'SELECT p FROM AppBundle:AgCrop p WHERE p.producer = :uid'
             )->setParameter('uid',  $this->getUser()->getId());
             $products = $query->getResult();
 
             foreach($products as $product){
                 $query = $em->createQuery(
-                    'SELECT p FROM AppBundle:Offer p WHERE p.producerProduct = :uid'
+                    'SELECT p FROM AppBundle:AgOffer p WHERE p.crop = :uid'
                 )->setParameter('uid', $product->getId());
                 $offers = $query->getResult();
                 foreach($offers as $offer){
@@ -88,6 +89,82 @@ class DefaultController extends Controller
             );
             $Allproducts = $query->getResult();
 
+            $offersArray = array();
+//            $query = $em->createQuery('SELECT p FROM AppBundle:AgOffer p where p.producer = :prod_id ORDER BY p.isAccepted DESC')->setParameter("prod_id", $this->getUser()->getId());
+//            $allOffers = $query->getResult();
+
+            foreach($allOffers as $offer){
+                $obj = new \stdClass();
+
+                $obj->id = $offer->getId();
+                $obj->business = '<div class="username_" onclick="getSelectedUser('.$offer->getBusiness()->getId().')">'.$offer->getBusiness()->getUsername().'</div>';
+                $obj->cropProduct = $offer->getCrop()->getProduct()->getDescription();
+                $obj->cropId = $offer->getCrop()->getId();
+                $obj->cropPD = date_format($offer->getCrop()->getProducedDate(), 'Y-m-d H:i:s');
+                $obj->cropED = date_format($offer->getCrop()->getExpirationDate(), 'Y-m-d H:i:s');
+                $obj->amount = $offer->getAmount();
+                $obj->totalAmount = $offer->getCrop()->getAmount();
+                $obj->reserve = floatval($offer->getCrop()->getAmount()) - floatval($offer->getCrop()->getOnhold());
+                $obj->message = $offer->getMessage();
+                $obj->price = $offer->getPrice();
+
+                $now = new \DateTime();
+
+
+                if(!$offer->getIsAccepted() || $offer->getIsAccepted() == 0){
+                    $actions = '<div style="float:right;" id="delete_button_'.$offer->getId().'" class="deleteButton" onclick="deleteOffer('.$offer->getId().')"><i class="fa fa-trash-o" aria-hidden="true" style="margin:0px"></i></div>';
+                    $actions .= '<div style="float:right;" id="accept_button_'.$offer->getId().'" class="editButton" onclick="acceptOffer('.$offer->getId().')"><i class="fa fa-check" aria-hidden="true" style="margin:0px"></i></div>';
+                }else if($offer->getIsAccepted() == 1){
+                    $actions = "<green>Accepted on ".date_format($offer->getRdate(), 'Y-m-d H:i:s')."</green>";
+                }else{
+                    $actions = "<red>Rejected on ".date_format($offer->getRdate(), 'Y-m-d H:i:s')."</red>";
+                }
+
+                if(floatval($offer->getAmount()) > $obj->reserve){
+                    if($offer->getIsAccepted() != 1){
+                        $actions = "<red>Not enough reserve</red>";
+                    }
+                }
+
+                if($now > $offer->getCrop()->getExpirationDate()){
+                    if($offer->getIsAccepted() != 1){
+                        $actions = "<red>This crop has expired</red>";
+                    }
+                }
+
+                $obj->edit = $actions;
+                array_push($offersArray, $obj);
+            }
+
+            $cropsArray = array();
+            $query = $em->createQuery('SELECT p FROM AppBundle:AgCrop p where p.producer = :prod_id')->setParameter("prod_id", $this->getUser()->getId());
+            $allCrops = $query->getResult();
+
+            foreach($allCrops as $crop){
+                $obj = new \stdClass();
+
+                $obj->id = $crop->getId();
+                $obj->cropProduct = $crop->getProduct()->getDescription();
+                $obj->cropPD = date_format($crop->getProducedDate(), 'Y-m-d H:i:s');
+                $obj->cropED = date_format($crop->getExpirationDate(), 'Y-m-d H:i:s');
+                $obj->amount = $crop->getAmount();
+                $obj->totalAmount = $crop->getAmount();
+                $obj->reserve = floatval($crop->getAmount()) - floatval($crop->getOnhold());
+                $obj->price = $crop->getPrice();
+
+                $now = new \DateTime();
+
+
+                if($now > $crop->getExpirationDate()){
+                    if($offer->getIsAccepted() != 1){
+                        $actions = "<red>This crop has expired</red>";
+                    }
+                }
+
+                $obj->edit = $actions;
+                array_push($cropsArray, $obj);
+            }
+
 
             return $this->render('default/dashboard_prod.html.twig',
                 array(
@@ -95,6 +172,8 @@ class DefaultController extends Controller
                     "username" => $this->getUser()->getUsername(),
                     "offers" => $allOffers,
                     "products" => $Allproducts,
+                    'offers_json' => json_encode($offersArray),
+                    'crops_json' => json_encode($cropsArray),
                 ));
         }
         return $this->redirect($this->generateUrl('homepage'));
@@ -261,7 +340,7 @@ class DefaultController extends Controller
 
 
     /**
-     * @Route("/createProduct", name="createProduct")
+     * @Route("/createCrop", name="createProduct")
      */
     public function createProductAction(Request $request)
     {
@@ -278,26 +357,68 @@ class DefaultController extends Controller
         )->setParameter('pid', $_REQUEST['product']);
         $product = $query->getResult()[0];
 
-        $newProducerProduct = new AgProducerProduct();
+        $newCrop = new AgCrop();
 
-        $newProducerProduct->setProducer($user);
-        $newProducerProduct->setProduct($product);
+        $newCrop->setProducer($user);
+        $newCrop->setProduct($product);
 
         $date_p = \DateTime::createFromFormat("d/m/Y", $_REQUEST['pDate']);
-        $newProducerProduct->setProducedDate($date_p);
+        $newCrop->setProducedDate($date_p);
 
         $date_e = \DateTime::createFromFormat("d/m/Y", $_REQUEST['eDate']);
-        $newProducerProduct->setExpirationDate($date_e);
-        $newProducerProduct->setAmount($_REQUEST['amount']);
-        $newProducerProduct->setPrice($_REQUEST['price']);
+        $newCrop->setExpirationDate($date_e);
+        $newCrop->setAmount($_REQUEST['amount']);
+        $newCrop->setPrice($_REQUEST['price']);
 
-        $newProducerProduct->setOnhold(0);
+        $newCrop->setOnhold(0);
 
-        $em->persist($newProducerProduct);
+        $em->persist($newCrop);
         $em->flush();
 
         return $this->getSuccessResponse("1", "Product Created");
     }
+
+
+    /**
+     * @Route("/respondToOffer", name="respondToOffer")
+     */
+    public function respondToOfferAction(Request $request)
+    {
+
+
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p FROM AppBundle:AgUser p WHERE p.username = :username'
+        )->setParameter('username', $_REQUEST['username_toSearch']);
+        $user = $query->getResult()[0];
+
+
+        $query = $em->createQuery(
+            'SELECT p FROM AppBundle:AgOffer p WHERE p.id = :oid'
+        )->setParameter('oid', $_REQUEST['offer_id']);
+        $offer = $query->getResult()[0];
+
+        if($_REQUEST['isAccepted'] == "false"){
+            $offer->setIsAccepted(-1);
+        }else{
+            $offer->setIsAccepted(1);
+            $currentCropAmount = floatval($offer->getCrop()->getAmount());
+            $currentCropHold = floatval($offer->getCrop()->getOnhold());
+
+            if($offer->getAmount() <= ($currentCropAmount - $currentCropHold)){
+                $offer->getCrop()->setOnhold($currentCropHold + floatval($offer->getAmount()));
+            }else{
+                return $this->getErrorResponse("100", "Not enough reserve");
+            }
+
+        }
+        $offer->setRdate(new \DateTime());
+
+        $em->flush();
+
+        return $this->getSuccessResponse("1", "Offer updated");
+    }
+
 
 
     /**
@@ -455,7 +576,7 @@ class DefaultController extends Controller
 
         if($user->getAccountType()->getId() == 1){
             $query = $em->createQuery(
-                'SELECT p FROM AppBundle:AgProducerProduct p WHERE p.producer = :pid'
+                'SELECT p FROM AppBundle:AgCrop p WHERE p.producer = :pid'
             )->setParameter('pid', $user->getId());
             $products = $query->getResult();
 
@@ -471,7 +592,7 @@ class DefaultController extends Controller
                 $product_node->addAttribute('expiration_date', date_format($product->getExpirationDate(), 'Y-m-d H:i:s'));
 
                 $query = $em->createQuery(
-                    'SELECT p FROM AppBundle:Offer p WHERE p.producerProduct = :pid'
+                    'SELECT p FROM AppBundle:AgOffer p WHERE p.crop = :pid'
                 )->setParameter('pid', $product->getId());
                 $offers = $query->getResult();
 
@@ -479,10 +600,10 @@ class DefaultController extends Controller
                 foreach($offers as $offer){
                     $offerNode = $offersNode->addChild('Offer');
                     $offerNode->addAttribute('id', $offer->getId());
-                    $offerNode->addAttribute('user_id', $offer->getUser()->getId());
-                    $offerNode->addAttribute('user_name', $offer->getUser()->getUsername());
-                    $offerNode->addAttribute('offer_lat', $offer->getUser()->getRegistrationLat());
-                    $offerNode->addAttribute('offer_lon', $offer->getUser()->getRegistrationLon());
+                    $offerNode->addAttribute('user_id', $offer->getBusiness()->getId());
+                    $offerNode->addAttribute('user_name', $offer->getBusiness()->getUsername());
+                    $offerNode->addAttribute('offer_lat', $offer->getBusiness()->getRegistrationLat());
+                    $offerNode->addAttribute('offer_lon', $offer->getBusiness()->getRegistrationLon());
                     $offerNode->addAttribute('amount', $offer->getAmount());
                     $offerNode->addAttribute('offered_price', $offer->getPrice());
                     $offerNode->addAttribute('message', $offer->getMessage());
@@ -496,7 +617,7 @@ class DefaultController extends Controller
 
                     $reviewsNode = $offerNode->addChild('Reviews');
                     $query = $em->createQuery(
-                        'SELECT p FROM AppBundle:AgProducerProductReview p WHERE p.producerProduct = :pid'
+                        'SELECT p FROM AppBundle:AgCropReview p WHERE p.crop = :pid'
                     )->setParameter('pid', $product->getId());
                     $offersReviews = $query->getResult();
                     foreach($offersReviews as $review) {

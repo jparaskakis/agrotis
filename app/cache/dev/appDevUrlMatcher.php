@@ -298,10 +298,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // createProduct
-            if ($pathinfo === '/createProduct') {
+            if ($pathinfo === '/createCrop') {
                 return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createProductAction',  '_route' => 'createProduct',);
             }
 
+        }
+
+        // respondToOffer
+        if ($pathinfo === '/respondToOffer') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::respondToOfferAction',  '_route' => 'respondToOffer',);
         }
 
         // updateUser

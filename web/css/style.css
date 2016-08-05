@@ -352,3 +352,180 @@ input[type="range"]::-webkit-slider-thumb {
 .notification_highlight{
     color: rgba(113, 51, 138, 1) !important;
 }
+
+
+/*Tables*/
+.table {
+    background: #fff;
+}
+
+.fixed-table-container {
+    border: 1px solid #eee;
+}
+
+.fixed-table-container thead th {
+    background: #f7f7f8;
+    border-color: #ddd;
+    color: #5f6468;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.fixed-table-container tbody td {
+    border: 1px solid #eee;
+}
+
+.fixed-table-container tbody td:last-child {
+    border-right: none;
+}
+
+.table>thead>tr>th {
+    border-bottom: 1px solid #e6e7e8;
+    vertical-align: middle;
+    height: 50px;
+}
+
+.fixed-table-pagination .pagination {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.fixed-table-pagination .pagination-detail {
+    margin-top: 20px;
+}
+
+.username_{
+    color: #75A754;
+    cursor: pointer;
+}
+
+
+#allOffers .fa{
+    margin: 0px !important;
+    font-size: 15px;
+}
+
+.editButton{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: #5A9839;
+    border: 1px solid #5A9839;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    float: left;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+
+.editButton:hover{
+    background: white;
+    border: 1px solid #5A9839;
+    color: #5A9839;
+    cursor: pointer;
+}
+
+.activateButton{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: #ffcc00;
+    border: 1px solid #ffcc00;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    float: left;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.activateButton:hover, .cancel:hover{
+    background: white;
+    border: 1px solid #ffcc00;
+    color: #ffcc00;
+    cursor: pointer;
+}
+
+.deleteButton{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: #b83711;
+    border: 1px solid #b83711;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    float: left;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.deleteButton:hover{
+    background: white;
+    border: 1px solid #b83711;
+    color: #b83711;
+    cursor: pointer;
+}
+
+.empty_message{
+    width: 100%;
+    height:40px;
+    font-size: 15px;
+    color: #b83711;
+    line-height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.panel ul li {
+    font-size: 14px;
+}
+
+.panel ul li {
+    margin-bottom: 0px !important;
+}
+
+.panel ul li a {
+    color: #5A9839;
+    cursor: pointer;
+}
+
+.pagination > .disabled > a{
+    background-color: #edeeee !important;
+    color: #1A1A1A;
+}
+
+.bootstrap-table .btn-default{
+    padding: 5px;
+}
+
+.bootstrap-table .form-control{
+    height: 35px;
+}
+.bootstrap-table .btn-default:hover{
+    border: 1px solid #1A1A1A;
+    color: #1A1A1A;
+}
+
+.alignright{
+    text-align: right;
+}
+
+green{
+    color: #5A9839;
+}
+
+red{
+    color: #b83711;
+}
+
+.content .panel-heading{
+    text-align: center;
+    font-size: 19px;
+    color: #5A9839;
+}

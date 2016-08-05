@@ -1,0 +1,279 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * AgOffer
+ */
+class AgOffer
+{
+    /**
+     * @var integer
+     */
+    private $businessId;
+
+    /**
+     * @var integer
+     */
+    private $producerId;
+
+    /**
+     * @var integer
+     */
+    private $cropId;
+
+    /**
+     * @var float
+     */
+    private $amount;
+
+    /**
+     * @var float
+     */
+    private $price;
+
+    /**
+     * @var string
+     */
+    private $message;
+
+    /**
+     * @var \DateTime
+     */
+    private $cdate;
+
+    /**
+     * @var \DateTime
+     */
+    private $rdate;
+
+    /**
+     * @var integer
+     */
+    private $isAccepted;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Set businessId
+     *
+     * @param integer $businessId
+     * @return AgOffer
+     */
+    public function setBusinessId($businessId)
+    {
+        $this->businessId = $businessId;
+
+        return $this;
+    }
+
+    /**
+     * Get businessId
+     *
+     * @return integer 
+     */
+    public function getBusinessId()
+    {
+        return $this->businessId;
+    }
+
+    /**
+     * Set producerId
+     *
+     * @param integer $producerId
+     * @return AgOffer
+     */
+    public function setProducerId($producerId)
+    {
+        $this->producerId = $producerId;
+
+        return $this;
+    }
+
+    /**
+     * Get producerId
+     *
+     * @return integer 
+     */
+    public function getProducerId()
+    {
+        return $this->producerId;
+    }
+
+    /**
+     * Set cropId
+     *
+     * @param integer $cropId
+     * @return AgOffer
+     */
+    public function setCropId($cropId)
+    {
+        $this->cropId = $cropId;
+
+        return $this;
+    }
+
+    /**
+     * Get cropId
+     *
+     * @return integer 
+     */
+    public function getCropId()
+    {
+        return $this->cropId;
+    }
+
+    /**
+     * Set amount
+     *
+     * @param float $amount
+     * @return AgOffer
+     */
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Get amount
+     *
+     * @return float 
+     */
+    public function getAmount()
+    {
+        return $this->amount;
+    }
+
+    /**
+     * Set price
+     *
+     * @param float $price
+     * @return AgOffer
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return float 
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set message
+     *
+     * @param string $message
+     * @return AgOffer
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
+
+        return $this;
+    }
+
+    /**
+     * Get message
+     *
+     * @return string 
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * Set cdate
+     *
+     * @param \DateTime $cdate
+     * @return AgOffer
+     */
+    public function setCdate($cdate)
+    {
+        $this->cdate = $cdate;
+
+        return $this;
+    }
+
+    /**
+     * Get cdate
+     *
+     * @return \DateTime 
+     */
+    public function getCdate()
+    {
+        return $this->cdate;
+    }
+
+    /**
+     * Set rdate
+     *
+     * @param \DateTime $rdate
+     * @return AgOffer
+     */
+    public function setRdate($rdate)
+    {
+        $this->rdate = $rdate;
+
+        return $this;
+    }
+
+    /**
+     * Get rdate
+     *
+     * @return \DateTime 
+     */
+    public function getRdate()
+    {
+        return $this->rdate;
+    }
+
+    /**
+     * Set isAccepted
+     *
+     * @param integer $isAccepted
+     * @return AgOffer
+     */
+    public function setIsAccepted($isAccepted)
+    {
+        $this->isAccepted = $isAccepted;
+
+        return $this;
+    }
+
+    /**
+     * Get isAccepted
+     *
+     * @return integer 
+     */
+    public function getIsAccepted()
+    {
+        return $this->isAccepted;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
