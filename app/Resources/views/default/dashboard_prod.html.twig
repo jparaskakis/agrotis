@@ -425,6 +425,23 @@
             });
         }
 
+        function deleteCrop(crop_id){
+            $.ajax({
+                url: SERVER_ADDR + "deleteCrop",
+                type: 'POST',
+                dataType: "json",
+                data: {
+                    username_toSearch: '{{ username }}',
+                    crop_id: crop_id,
+                },
+                headers: {'Access-Control-Allow-Origin': '*'},
+                crossDomain: true,
+                complete: function (data) {
+                    window.location.reload(true)
+                }
+            });
+        }
+
         function displayProducts(){
 
             var url = location.href;

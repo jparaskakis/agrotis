@@ -56,12 +56,102 @@ class DefaultController extends Controller
         if($this->getUser()->getAccountType()->getId() == 2){
 
 
+            $em = $this->getDoctrine()->getManager();
+
+
+            $allOffers = array();
+
+            $em = $this->getDoctrine()->getManager();
+            $query = $em->createQuery(
+                'SELECT p FROM AppBundle:AgOffer p WHERE p.business = :uid'
+            )->setParameter('uid', $this->getUser()->getId());
+            $offers = $query->getResult();
+            foreach($offers as $offer){
+                array_push($allOffers, $offer);
+            }
+
+
+            $query = $em->createQuery(
+                'SELECT p FROM AppBundle:AgProduct p'
+            );
+            $Allproducts = $query->getResult();
+
+            $offersArray = array();
+
+            foreach($allOffers as $offer){
+                $obj = new \stdClass();
+
+                $obj->id = $offer->getId();
+                $obj->producer = '<div class="username_" onclick="getSelectedUser('.$offer->getProducer()->getId().')">'.$offer->getProducer()->getUsername().'</div>';
+                $obj->cropProduct = $offer->getCrop()->getProduct()->getDescription();
+                $obj->cropPD = date_format($offer->getCrop()->getProducedDate(), 'Y-m-d H:i:s');
+                $obj->cropED = date_format($offer->getCrop()->getExpirationDate(), 'Y-m-d H:i:s');
+                $obj->amount = $offer->getAmount();
+                $obj->message = $offer->getMessage();
+                $obj->price = $offer->getPrice();
+
+                $now = new \DateTime();
+
+
+                if(!$offer->getIsAccepted() || $offer->getIsAccepted() == 0){
+                    $actions = '<div style="float:right;" id="delete_button_'.$offer->getId().'" class="deleteButton" onclick="deleteOffer('.$offer->getId().')"><i class="fa fa-trash-o" aria-hidden="true" style="margin:0px"></i></div>';
+                    $actions .= '<div style="float:right;" id="edit_button_'.$offer->getId().'" class="activateButton" onclick="editOffer('.$offer->getId().')"><i class="fa fa-edit" aria-hidden="true" style="margin:0px"></i></div>';
+                }else if($offer->getIsAccepted() == 1){
+                    $actions = "<green>Accepted on ".date_format($offer->getRdate(), 'Y-m-d H:i:s')."</green>";
+                }else{
+                    $actions = "<red>Rejected on ".date_format($offer->getRdate(), 'Y-m-d H:i:s')."</red>";
+                }
+
+
+
+                if($now > $offer->getCrop()->getExpirationDate()){
+                    if($offer->getIsAccepted() != 1){
+                        $actions = "<red>This crop has expired</red>";
+                    }
+                }
+
+                $obj->edit = $actions;
+                array_push($offersArray, $obj);
+            }
+
+            $cropsArray = array();
+            $query = $em->createQuery('SELECT p FROM AppBundle:AgCrop p');
+            $allCrops = $query->getResult();
+
+            foreach($allCrops as $crop){
+                $obj = new \stdClass();
+
+                $obj->id = $crop->getId();
+                $obj->producer = '<div class="username_" onclick="getSelectedUser('.$crop->getProducer()->getId().')">'.$crop->getProducer()->getUsername().'</div>';
+                $obj->distance = round($this->distance($this->getUser()->getRegistrationLat(), $this->getUser()->getRegistrationLon(), $crop->getProducer()->getRegistrationLat(), $crop->getProducer()->getRegistrationLon(), "K"), 2)." Km";
+                $obj->cropProduct = $crop->getProduct()->getDescription();
+                $obj->cropPD = date_format($crop->getProducedDate(), 'Y-m-d H:i:s');
+                $obj->cropED = date_format($crop->getExpirationDate(), 'Y-m-d H:i:s');
+                $obj->amount = floatval($crop->getAmount()) - floatval($crop->getOnhold());
+                $obj->price = $crop->getPrice()."€ / ".$crop->getProduct()->getBaseUnit();
+
+                $now = new \DateTime();
+                $actions = '<div style="float:right;" id="make_offer_button_'.$crop->getId().'" class="editButton" onclick="makeOffer('.$crop->getId().')"><i class="fa fa-plus" aria-hidden="true" style="margin:0px"></i></div>';
+
+                if($now > $crop->getExpirationDate()){
+                    $actions = "<red>This crop has expired</red>";
+
+                }
+
+                $obj->edit = $actions;
+                array_push($cropsArray, $obj);
+            }
+
 
             return $this->render('default/dashboard_buis.html.twig',
                 array(
                     "avatar" => $this->getUser()->getAvatarUrl(),
                     "username" => $this->getUser()->getUsername(),
-
+                    "offers" => $allOffers,
+                    "crops" => $allCrops,
+                    "products" => $Allproducts,
+                    'offers_json' => json_encode($offersArray),
+                    'crops_json' => json_encode($cropsArray),
                 ));
         }else if($this->getUser()->getAccountType()->getId() == 1){
 
@@ -90,8 +180,6 @@ class DefaultController extends Controller
             $Allproducts = $query->getResult();
 
             $offersArray = array();
-//            $query = $em->createQuery('SELECT p FROM AppBundle:AgOffer p where p.producer = :prod_id ORDER BY p.isAccepted DESC')->setParameter("prod_id", $this->getUser()->getId());
-//            $allOffers = $query->getResult();
 
             foreach($allOffers as $offer){
                 $obj = new \stdClass();
@@ -148,17 +236,15 @@ class DefaultController extends Controller
                 $obj->cropPD = date_format($crop->getProducedDate(), 'Y-m-d H:i:s');
                 $obj->cropED = date_format($crop->getExpirationDate(), 'Y-m-d H:i:s');
                 $obj->amount = $crop->getAmount();
-                $obj->totalAmount = $crop->getAmount();
-                $obj->reserve = floatval($crop->getAmount()) - floatval($crop->getOnhold());
+                $obj->totalAmount = floatval($crop->getAmount()) - floatval($crop->getOnhold());
+                $obj->reserve = floatval($crop->getOnhold());
                 $obj->price = $crop->getPrice();
 
                 $now = new \DateTime();
-
+                $actions = '<div style="float:right;" id="delete_button_'.$crop->getId().'" class="deleteButton" onclick="deleteCrop('.$crop->getId().')"><i class="fa fa-trash-o" aria-hidden="true" style="margin:0px"></i></div>';
 
                 if($now > $crop->getExpirationDate()){
-                    if($offer->getIsAccepted() != 1){
-                        $actions = "<red>This crop has expired</red>";
-                    }
+                    $actions = "<red>This crop has expired</red>";
                 }
 
                 $obj->edit = $actions;
@@ -422,6 +508,25 @@ class DefaultController extends Controller
 
 
     /**
+     * @Route("/deleteCrop", name="deleteCrop")
+     */
+    public function deleteCropAction(Request $request)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p FROM AppBundle:AgCrop p WHERE p.id = :oid'
+        )->setParameter('oid', $_REQUEST['crop_id']);
+        $crop = $query->getResult()[0];
+
+        $em->remove($crop);
+        $em->flush();
+
+        return $this->getSuccessResponse("1", "Crop Deleted");
+    }
+
+
+    /**
      * @Route("/updateUser", name="updateUser")
      */
     public function updateUserAction(Request $request)
@@ -644,6 +749,24 @@ class DefaultController extends Controller
         return $rootNode;
 
 
+    }
+
+    function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+
+        $theta = $lon1 - $lon2;
+        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+        $dist = acos($dist);
+        $dist = rad2deg($dist);
+        $miles = $dist * 60 * 1.1515;
+        $unit = strtoupper($unit);
+
+        if ($unit == "K") {
+            return ($miles * 1.609344);
+        } else if ($unit == "N") {
+            return ($miles * 0.8684);
+        } else {
+            return $miles;
+        }
     }
 
 

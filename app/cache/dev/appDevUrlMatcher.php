@@ -309,6 +309,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::respondToOfferAction',  '_route' => 'respondToOffer',);
         }
 
+        // deleteCrop
+        if ($pathinfo === '/deleteCrop') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::deleteCropAction',  '_route' => 'deleteCrop',);
+        }
+
         // updateUser
         if ($pathinfo === '/updateUser') {
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::updateUserAction',  '_route' => 'updateUser',);
