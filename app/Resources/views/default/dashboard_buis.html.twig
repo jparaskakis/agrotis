@@ -187,7 +187,35 @@
                 <li id="product" class="sidebar_action" onclick="displayProduct()">Add Crop<span class="menu-icon fa fa-plus"></span></li>
                 <li id="offers" class="sidebar_action" onclick="displayOffers()">View Offers<span class="menu-icon fa fa-location-arrow"></span></li>
                 <li id="products" class="sidebar_action" onclick="displayProducts()">View Crops<span class="menu-icon fa fa-tasks"></span></li>
+                <li id="products" class="sidebar_action" onclick="logout()">Logout<span class="menu-icon fa fa-close"></span></li>
             </ul>
+            <div class="sidebar_filter">
+                <div class="info">Filter Crops</div>
+                <div class="info_tag">Filter by Product</div>
+                <select id="filter_product">
+                    <option value="0">Select product to filter</option>
+                    {% for product in products %}
+                        <option value="{{ product.id }}">{{ product.description }}</option>
+                    {% endfor %}
+                </select>
+                <div class="info_tag">Filter by Producer</div>
+                <select id="filter_producer">
+                    <option value="0">Select producer to filter</option>
+                    {% for producer in producers %}
+                        <option value="{{ producer.id }}">{{ producer.username }}</option>
+                    {% endfor %}
+                </select>
+                <div class="info_tag">Filter by range</div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <input type="text" id="filter_min_distance" name="filter_min_distance" class="form-control" placeholder="Min Range"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="filter_max_distance" name="filter_max_distance" class="form-control" placeholder="Max Range"/>
+                    </div>
+                </div>
+                <div class="apply_filter" onclick="applyFilters()">Apply Filters</div>
+            </div>
             <p class="position_bottom center grey">2016 © Agrot-IS. All rights reserved.</p></div>
     </div>
     <div class="content">
@@ -209,6 +237,22 @@
             var SERVER_ADDR = "http://www.agrot-is.net/";
         }else{
             var SERVER_ADDR = "http://agrot-is.net/";
+        }
+
+        function applyFilters(){
+
+            var product_id = $("#filter_product").val()
+            var producer_id = $("#filter_producer").val()
+            var min = $("#filter_min_distance").val()
+            var max = $("#filter_max_distance").val()
+            var url = window.location.href;
+
+
+            var newURL = "http://localhost:8000/dashboard";
+            newURL += '?product_id='+product_id+"&producer_id="+producer_id+"&min="+min+"&max="+max;
+
+            window.location.href = newURL;
+//            window.location.reload()
         }
 
         function displayDashboard(){
@@ -273,21 +317,17 @@
 
 
             if (today < producedDate) {
-                $("#rPdate").addClass("error_input")
-                console.log("PRODUCED DATE IN FUTURE")
+                $("#rPdate").addClass("error_input");
                 return;
             } else {
-                console.log("PRODUCED DATE OK")
                 $("#rPdate").removeClass("error_input")
             }
 
             if (today > expirationDate) {
-                $("#rEdate").addClass("error_input")
-                console.log("EXPIRATION DATE IN PAST")
+                $("#rEdate").addClass("error_input");
                 return;
             } else {
-                $("#rEdate").removeClass("error_input")
-                console.log("EXPIRATION DATE OK")
+                $("#rEdate").removeClass("error_input");
 
             }
 
@@ -498,7 +538,7 @@
 
             var hash = window.location.hash.substring(1);
             console.log(hash)
-            if(!hash || hash === "" || hash === "dashboard" ){
+            if(hash === "dashboard" ){
                 displayDashboard();
             }else if(hash === "profile"){
                 displayProfile();
@@ -509,8 +549,16 @@
             }else if(hash === "crops"){
                 displayProducts();
             }else{
-                displayDashboard();
+//                displayDashboard();
+                var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';
+                $(".content").html(INNER_HTML);
+                getLocation();
+                $(".sidebar_action").removeClass("active");
+                $("#dashboard").addClass("active")
             }
+
+
+            $(".agcontainer .sidebar").css("min-height", "865px")
         });
 
 
@@ -671,13 +719,43 @@
 
             var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
+            var icon = {
+                url: '{{ asset('images/logo.png') }}', // url
+                scaledSize: new google.maps.Size(40, 40), // scaled size
+                origin: new google.maps.Point(0,0), // origin
+                anchor: new google.maps.Point(20, 20) // anchor
+            };
+
+            {% set index = 1 %}
             {% for crop in crops %}
-            var myLatLng = {lat: {{ crop.producer.registrationLat }}, lng: {{ crop.producer.registrationLon }}};
-            var marker = new google.maps.Marker({
-                position: myLatLng,
+
+
+            var contentString_{{ index }} = '<div id="content" style="width:500px !important">'+
+                    '<div id="siteNotice">'+
+                    '{{ info[crop.producer.id] |raw}}'+
+                    '</div>'+
+                    '</div>';
+
+
+            var infowindow_{{ index }} = new google.maps.InfoWindow({
+                content: contentString_{{ index }}
+            });
+
+
+            var myLatLng_{{ index }} = {lat: {{ crop.producer.registrationLat }}, lng: {{ crop.producer.registrationLon }}};
+            var marker_{{ index }} = new google.maps.Marker({
+                position: myLatLng_{{ index }},
                 map: map,
+                icon: icon,
+                animation: google.maps.Animation.DROP,
                 title: '{{ crop.product.description }}'
             });
+
+            marker_{{ index }}.addListener('click', function() {
+                infowindow_{{ index }}.open(map, marker_{{ index }});
+            });
+
+            {% set index = index + 1 %}
             {% endfor %}
         }
 
@@ -733,6 +811,9 @@
             $(id).focus();
         }
 
+        function logout(){
+            window.location = "/logout"
+        }
 
 
 

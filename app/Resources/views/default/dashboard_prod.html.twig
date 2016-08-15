@@ -10,7 +10,7 @@
 {% block footer %}{% endblock %}
 
 {% block body %}
-
+    <div class="uploading_progress"><div id="uploadBar"><progress id="myProgressBar" value="0" max="100"></progress></div></div>
 
     <div class="modal fade" id="profile_modal" role="dialog">
         <div class="modal-dialog" style="width: 800px;">
@@ -86,23 +86,21 @@
 
 
     <div class="modal fade" id="add_product_modal" role="dialog">
-        <div class="modal-dialog" style="width: 400px;">
+        <div class="modal-dialog" style="width: 700px;">
             <div id="create_product_loading" class="loader_"><div class="centered_logo rotating"></div><div class="centered_message"></div></div>
             <!-- Modal content-->
             <div class="modal-content" style="height: 700px">
                 <div class="error_message"></div>
-                <form id="profile_form" style="width: 400px;margin-top: 40px;">
+                <form id="profile_form" style="width: 700px;margin-top: 40px;">
                     <fieldset>
                         <legend><div class="modal_logo"></div><div class="modal_action">Add new Crop</div></legend>
+                        <div id="crop_image"><i class="fa fa-cloud-upload"></i> </div>
                         <div class="form-group">
-                            <div class="col-md-12" style="margin-top: 10px;">
+                            <div class="col-md-8 col-md-offset-4" style="margin-top: 10px;">
                                 <label for="p_producer">Producer</label><label id="username_error" class="error_register">Username Exists</label>
                                 <input type="text" id="p_producer" name="p_producer" disabled class="form-control" placeholder="Username" value="{{ username }}"/>
                             </div>
-
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12" style="margin-top: 10px;">
+                            <div class="col-md-8 col-md-offset-4" style="margin-top: 10px;">
                                 <label for="p_product">Product</label>
                                 <select id="p_product">
                                     <option value="0">Please select product</option>
@@ -113,29 +111,27 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-12" style="margin-top: 10px;">
+                            <div class="col-md-6" style="margin-top: 10px;">
                                 <label for="p_price">Price</label><label id="password_error" class="error_register">Password Cannot be empty</label>
                                 <input type="text" id="p_price" name="p_price" class="form-control" placeholder="Price per Unit"/>
                             </div>
-                        </div>
-                        <div class="form-group" >
-                            <div class="col-md-12" style="margin-top: 10px;">
+                            <div class="col-md-6" style="margin-top: 10px;">
                                 <label for="p_amount">Amount</label><label id="password_error" class="error_register">Password Cannot be empty</label>
                                 <input  type="text" id="p_amount" name="p_amount" class="form-control" placeholder="Amount"/>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-12" style="margin-top: 10px;">
+                        <div class="form-group" >
+                            <div class="col-md-6" style="margin-top: 10px;">
                                 <label for="rPdate">Produced Date</label>
                                 <input type="text" class="new_request_input_date" id="rPdate" placeholder="  /       /  "><i class="fa fa-calendar" style="font-size: 20px; margin-left: 10px; line-height: 30px; float: left;" onclick="showCal('#rPdate')"></i>
                             </div>
-
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12" style="margin-top: 10px;">
+                            <div class="col-md-6" style="margin-top: 10px;">
                                 <label for="rPdate">Expiration Date</label>
                                 <input type="text" class="new_request_input_date" id="rEdate" placeholder="  /       /  "><i class="fa fa-calendar" style="font-size: 20px; margin-left: 10px; line-height: 30px; float: left;" onclick="showCal('#rEdate')"></i>
                             </div>
+                        </div>
+                        <div class="form-group">
+
 
                         </div>
 
@@ -187,6 +183,7 @@
                 <li id="product" class="sidebar_action" onclick="displayProduct()">Add Crop<span class="menu-icon fa fa-plus"></span></li>
                 <li id="offers" class="sidebar_action" onclick="displayOffers()">View Offers<span class="menu-icon fa fa-location-arrow"></span></li>
                 <li id="products" class="sidebar_action" onclick="displayProducts()">View Crops<span class="menu-icon fa fa-tasks"></span></li>
+                <li id="products" class="sidebar_action" onclick="logout()">Logout<span class="menu-icon fa fa-close"></span></li>
             </ul>
             <p class="position_bottom center grey">2016 © Agrot-IS. All rights reserved.</p></div>
         </div>
@@ -337,19 +334,64 @@
             });
         }
 
-        function displayProduct(){
+        var CROP_ID_SELECTED;
+        function displayProduct(id){
 
-            var url = location.href;
-            location.href = "#product";
+            if(id){
+                CROP_ID_SELECTED = id;
+                jQuery.ajax({
+                    url: SERVER_ADDR+"getCrop",
+                    type: 'POST',
+                    dataType: "json",
+                    data: {
+                        crop_id: CROP_ID_SELECTED,
+                    },
+                    headers: {'Access-Control-Allow-Origin': '*'},
+                    crossDomain: true,
+                    complete: function (data) {
+                        $(".assign_button").removeClass("disabled");
 
-            var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';
-            $(".content").html(INNER_HTML);
-            getLocation();
+                        var result1 = data.responseText;
+                        if (window.DOMParser) {
+                            parser = new DOMParser();
+                            xmlDoc = parser.parseFromString(result1, "text/xml");
+                        }
+                        else {
+                            xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+                            xmlDoc.async = false;
+                            xmlDoc.loadXML(result1);
+                        }
+                        var crop = xmlDoc.getElementsByTagName("Crop")[0];
+                        $("#p_producer").val(crop.getAttribute("producer_username"));
+                        $("#p_product").val(crop.getAttribute("product_id"));
+                        $("#p_price").val(crop.getAttribute("price"));
+                        $("#p_amount").val(crop.getAttribute("amount"));
+                        $("#rPdate").val(crop.getAttribute("pDate"));
+                        $("#rEdate").val(crop.getAttribute("eDate"));
 
-            $("#add_product_modal").modal('show')
+                        $("#add_product_modal").modal('show')
 
-            $(".sidebar_action").removeClass("active");
-            $("#product").addClass("active")
+                    }
+                });
+
+            }else{
+                CROP_ID_SELECTED = "new"
+
+                var url = location.href;
+                location.href = "#product";
+
+                var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';
+                $(".content").html(INNER_HTML);
+                getLocation();
+
+
+                $("#add_product_modal").modal('show')
+
+                $(".sidebar_action").removeClass("active");
+                $("#product").addClass("active")
+
+            }
+
         }
 
         function displayOffers(){
@@ -735,5 +777,103 @@
         function showCal(id) {
             $(id).focus();
         }
+
+        function logout(){
+            window.location = "/logout"
+        }
+
+        function uploadThumbnail() {
+            $('#icon').trigger('click');
+        }
+
+
+        $(function () {
+            $("#icon").change(function () {
+
+                var fileName = $(this).val();
+                readURL(this);
+
+                var files = this.files;
+                var formData = tests.formdata ? new FormData() : null;
+                for (var i = 0; i < files.length; i++) {
+                    if (tests.formdata) formData.append('thumbnail', files[i]);
+                }
+
+                var file = files[0];
+                name = file.name;
+                size = file.size;
+                type = file.type;
+                getFileDimension(file);
+
+
+                formData.append('username_toSearch', "{{ username }}");
+                formData.append('crop_id', PID);
+                formData.append('filesize', file.size);
+
+
+                if (tests.formdata) {
+                    presentLoader();
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/uploader');
+                    xhr.onload = function () {
+
+                    };
+
+                    if (tests.progress) {
+                        xhr.upload.onprogress = function (event) {
+                            if (event.lengthComputable) {
+                                var complete = (event.loaded / event.total * 100 | 0);
+                                document.getElementById("myProgressBar").value = complete;
+
+
+                            }
+                        }
+                    }
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            removeLoader()
+                        }
+                    };
+                    xhr.send(formData);
+                }
+
+
+            });
+        });
+
+        var ICON_IMAGE = null
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                ICON_IMAGE = input.files[0]
+                reader.onload = function (e) {
+                    //TODO: Change here the image
+//                    $('.uploadAsset').css('background-image', "url(" + e.target.result + ")");
+//                    $('.uploadAsset').html('<div class="triangle1"></div><div class="triangle2"></div>')
+                }
+
+                reader.readAsDataURL(input.files[input.files.length - 1]);
+
+            }
+        }
+
+        function getFileDimension(file) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#testImg').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function presentLoader() {
+            $(".uploading_progress").css("display", "block");
+        }
+
+        function removeLoader() {
+            $(".uploading_progress").css("display", "none");
+        }
+
     </script>
 {% endblock %}

@@ -24,57 +24,57 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_92b5516b98d625cba8265d56df58cef1024df07437ecb543485f63239a1623ab = $this->env->getExtension("native_profiler");
-        $__internal_92b5516b98d625cba8265d56df58cef1024df07437ecb543485f63239a1623ab->enter($__internal_92b5516b98d625cba8265d56df58cef1024df07437ecb543485f63239a1623ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/dashboard_prod.html.twig"));
+        $__internal_403a2dbd5d84dea8d4a6954c221c1517c0675d9290dd958715cf5834b9da6333 = $this->env->getExtension("native_profiler");
+        $__internal_403a2dbd5d84dea8d4a6954c221c1517c0675d9290dd958715cf5834b9da6333->enter($__internal_403a2dbd5d84dea8d4a6954c221c1517c0675d9290dd958715cf5834b9da6333_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/dashboard_prod.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_92b5516b98d625cba8265d56df58cef1024df07437ecb543485f63239a1623ab->leave($__internal_92b5516b98d625cba8265d56df58cef1024df07437ecb543485f63239a1623ab_prof);
+        $__internal_403a2dbd5d84dea8d4a6954c221c1517c0675d9290dd958715cf5834b9da6333->leave($__internal_403a2dbd5d84dea8d4a6954c221c1517c0675d9290dd958715cf5834b9da6333_prof);
 
     }
 
     // line 3
     public function block_body_id($context, array $blocks = array())
     {
-        $__internal_46f6f0b113de645a1267057eb492d445b44b76bff4b8a9aac83f7c0b65e42bb5 = $this->env->getExtension("native_profiler");
-        $__internal_46f6f0b113de645a1267057eb492d445b44b76bff4b8a9aac83f7c0b65e42bb5->enter($__internal_46f6f0b113de645a1267057eb492d445b44b76bff4b8a9aac83f7c0b65e42bb5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body_id"));
+        $__internal_5c69fb16daa1f449248309357459b79e206e6a7fe33be492766bc671c26d2ea9 = $this->env->getExtension("native_profiler");
+        $__internal_5c69fb16daa1f449248309357459b79e206e6a7fe33be492766bc671c26d2ea9->enter($__internal_5c69fb16daa1f449248309357459b79e206e6a7fe33be492766bc671c26d2ea9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body_id"));
 
         echo "dashboard";
         
-        $__internal_46f6f0b113de645a1267057eb492d445b44b76bff4b8a9aac83f7c0b65e42bb5->leave($__internal_46f6f0b113de645a1267057eb492d445b44b76bff4b8a9aac83f7c0b65e42bb5_prof);
+        $__internal_5c69fb16daa1f449248309357459b79e206e6a7fe33be492766bc671c26d2ea9->leave($__internal_5c69fb16daa1f449248309357459b79e206e6a7fe33be492766bc671c26d2ea9_prof);
 
     }
 
     // line 9
     public function block_header($context, array $blocks = array())
     {
-        $__internal_5d5c798666751d8151ca44d07b7b03a202b575948d43a12fe5074283883bc229 = $this->env->getExtension("native_profiler");
-        $__internal_5d5c798666751d8151ca44d07b7b03a202b575948d43a12fe5074283883bc229->enter($__internal_5d5c798666751d8151ca44d07b7b03a202b575948d43a12fe5074283883bc229_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_07037152bbf8a6a2bcf34bbe312063a48abc8521b181d9e39a97ea43dfbca8c4 = $this->env->getExtension("native_profiler");
+        $__internal_07037152bbf8a6a2bcf34bbe312063a48abc8521b181d9e39a97ea43dfbca8c4->enter($__internal_07037152bbf8a6a2bcf34bbe312063a48abc8521b181d9e39a97ea43dfbca8c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         
-        $__internal_5d5c798666751d8151ca44d07b7b03a202b575948d43a12fe5074283883bc229->leave($__internal_5d5c798666751d8151ca44d07b7b03a202b575948d43a12fe5074283883bc229_prof);
+        $__internal_07037152bbf8a6a2bcf34bbe312063a48abc8521b181d9e39a97ea43dfbca8c4->leave($__internal_07037152bbf8a6a2bcf34bbe312063a48abc8521b181d9e39a97ea43dfbca8c4_prof);
 
     }
 
     // line 10
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_6f396f4335e0db7e0e673292fea7d94281e049f65769d33e6949083b79ded735 = $this->env->getExtension("native_profiler");
-        $__internal_6f396f4335e0db7e0e673292fea7d94281e049f65769d33e6949083b79ded735->enter($__internal_6f396f4335e0db7e0e673292fea7d94281e049f65769d33e6949083b79ded735_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_1c089bffb22ff143730806c2ee54bedd5e1ed00b9d03e4c936c8366f77f677e9 = $this->env->getExtension("native_profiler");
+        $__internal_1c089bffb22ff143730806c2ee54bedd5e1ed00b9d03e4c936c8366f77f677e9->enter($__internal_1c089bffb22ff143730806c2ee54bedd5e1ed00b9d03e4c936c8366f77f677e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         
-        $__internal_6f396f4335e0db7e0e673292fea7d94281e049f65769d33e6949083b79ded735->leave($__internal_6f396f4335e0db7e0e673292fea7d94281e049f65769d33e6949083b79ded735_prof);
+        $__internal_1c089bffb22ff143730806c2ee54bedd5e1ed00b9d03e4c936c8366f77f677e9->leave($__internal_1c089bffb22ff143730806c2ee54bedd5e1ed00b9d03e4c936c8366f77f677e9_prof);
 
     }
 
     // line 12
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f2d17560bc5bea7a37045520489a053d527b46e0e50e889a0e28a9cf3f57b268 = $this->env->getExtension("native_profiler");
-        $__internal_f2d17560bc5bea7a37045520489a053d527b46e0e50e889a0e28a9cf3f57b268->enter($__internal_f2d17560bc5bea7a37045520489a053d527b46e0e50e889a0e28a9cf3f57b268_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0523b6b88f342da7ad72cfe7d4e01854c7555aa712736a55c10569067ed1ffe9 = $this->env->getExtension("native_profiler");
+        $__internal_0523b6b88f342da7ad72cfe7d4e01854c7555aa712736a55c10569067ed1ffe9->enter($__internal_0523b6b88f342da7ad72cfe7d4e01854c7555aa712736a55c10569067ed1ffe9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 13
-        echo "
+        echo "    <div class=\"uploading_progress\"><div id=\"uploadBar\"><progress id=\"myProgressBar\" value=\"0\" max=\"100\"></progress></div></div>
 
     <div class=\"modal fade\" id=\"profile_modal\" role=\"dialog\">
         <div class=\"modal-dialog\" style=\"width: 800px;\">
@@ -150,35 +150,33 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
 
     <div class=\"modal fade\" id=\"add_product_modal\" role=\"dialog\">
-        <div class=\"modal-dialog\" style=\"width: 400px;\">
+        <div class=\"modal-dialog\" style=\"width: 700px;\">
             <div id=\"create_product_loading\" class=\"loader_\"><div class=\"centered_logo rotating\"></div><div class=\"centered_message\"></div></div>
             <!-- Modal content-->
             <div class=\"modal-content\" style=\"height: 700px\">
                 <div class=\"error_message\"></div>
-                <form id=\"profile_form\" style=\"width: 400px;margin-top: 40px;\">
+                <form id=\"profile_form\" style=\"width: 700px;margin-top: 40px;\">
                     <fieldset>
                         <legend><div class=\"modal_logo\"></div><div class=\"modal_action\">Add new Crop</div></legend>
+                        <div id=\"crop_image\"><i class=\"fa fa-cloud-upload\"></i> </div>
                         <div class=\"form-group\">
-                            <div class=\"col-md-12\" style=\"margin-top: 10px;\">
+                            <div class=\"col-md-8 col-md-offset-4\" style=\"margin-top: 10px;\">
                                 <label for=\"p_producer\">Producer</label><label id=\"username_error\" class=\"error_register\">Username Exists</label>
                                 <input type=\"text\" id=\"p_producer\" name=\"p_producer\" disabled class=\"form-control\" placeholder=\"Username\" value=\"";
-        // line 100
+        // line 101
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "\"/>
                             </div>
-
-                        </div>
-                        <div class=\"form-group\">
-                            <div class=\"col-md-12\" style=\"margin-top: 10px;\">
+                            <div class=\"col-md-8 col-md-offset-4\" style=\"margin-top: 10px;\">
                                 <label for=\"p_product\">Product</label>
                                 <select id=\"p_product\">
                                     <option value=\"0\">Please select product</option>
                                     ";
-        // line 109
+        // line 107
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 110
+            // line 108
             echo "                                        <option value=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "id", array()), "html", null, true);
             echo "\">";
@@ -189,34 +187,32 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 112
+        // line 110
         echo "                                </select>
                             </div>
                         </div>
                         <div class=\"form-group\">
-                            <div class=\"col-md-12\" style=\"margin-top: 10px;\">
+                            <div class=\"col-md-6\" style=\"margin-top: 10px;\">
                                 <label for=\"p_price\">Price</label><label id=\"password_error\" class=\"error_register\">Password Cannot be empty</label>
                                 <input type=\"text\" id=\"p_price\" name=\"p_price\" class=\"form-control\" placeholder=\"Price per Unit\"/>
                             </div>
-                        </div>
-                        <div class=\"form-group\" >
-                            <div class=\"col-md-12\" style=\"margin-top: 10px;\">
+                            <div class=\"col-md-6\" style=\"margin-top: 10px;\">
                                 <label for=\"p_amount\">Amount</label><label id=\"password_error\" class=\"error_register\">Password Cannot be empty</label>
                                 <input  type=\"text\" id=\"p_amount\" name=\"p_amount\" class=\"form-control\" placeholder=\"Amount\"/>
                             </div>
                         </div>
-                        <div class=\"form-group\">
-                            <div class=\"col-md-12\" style=\"margin-top: 10px;\">
+                        <div class=\"form-group\" >
+                            <div class=\"col-md-6\" style=\"margin-top: 10px;\">
                                 <label for=\"rPdate\">Produced Date</label>
                                 <input type=\"text\" class=\"new_request_input_date\" id=\"rPdate\" placeholder=\"  /       /  \"><i class=\"fa fa-calendar\" style=\"font-size: 20px; margin-left: 10px; line-height: 30px; float: left;\" onclick=\"showCal('#rPdate')\"></i>
                             </div>
-
-                        </div>
-                        <div class=\"form-group\">
-                            <div class=\"col-md-12\" style=\"margin-top: 10px;\">
+                            <div class=\"col-md-6\" style=\"margin-top: 10px;\">
                                 <label for=\"rPdate\">Expiration Date</label>
                                 <input type=\"text\" class=\"new_request_input_date\" id=\"rEdate\" placeholder=\"  /       /  \"><i class=\"fa fa-calendar\" style=\"font-size: 20px; margin-left: 10px; line-height: 30px; float: left;\" onclick=\"showCal('#rEdate')\"></i>
                             </div>
+                        </div>
+                        <div class=\"form-group\">
+
 
                         </div>
 
@@ -230,28 +226,28 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
     <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">
     <link rel=\"stylesheet\" href=\"";
-        // line 151
+        // line 147
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/app.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 152
+        // line 148
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/style.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 153
+        // line 149
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/bootstrap-datepicker3.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 154
+        // line 150
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/bootstrap-datepicker3.standalone.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 155
+        // line 151
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/bootstrap-table.css"), "html", null, true);
         echo "\">
 
     <link rel=\"stylesheet\" href=\"";
-        // line 157
+        // line 153
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/modal.css"), "html", null, true);
         echo "\">
     <!-- Fonts -->
@@ -259,45 +255,45 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
     <link rel=\"stylesheet\" href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css\">
 
     ";
-        // line 162
+        // line 158
         if (twig_in_filter("localhost", $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "host", array()))) {
-            // line 163
+            // line 159
             echo "        <script src=\"http://maps.googleapis.com/maps/api/js\"></script>
     ";
         } else {
-            // line 165
+            // line 161
             echo "        <script async defer src=\"https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation\" type=\"text/javascript\"></script>
     ";
         }
-        // line 167
+        // line 163
         echo "    ";
-        // line 168
+        // line 164
         echo "
     <script src=\"";
-        // line 169
+        // line 165
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery-1.11.0.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>
     <script src=\"";
-        // line 171
+        // line 167
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/modernizr.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 172
+        // line 168
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap-datepicker.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 173
+        // line 169
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap-table.js"), "html", null, true);
         echo "\"></script>
 
     <link rel=\"stylesheet\" href=\"";
-        // line 175
+        // line 171
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/modal.css"), "html", null, true);
         echo "\">
 
     <link rel=\"stylesheet\" href=\"";
-        // line 177
+        // line 173
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/ag_dashboard.css"), "html", null, true);
         echo "\">
 
@@ -305,11 +301,11 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
     <div class=\"agcontainer\">
         <div class=\"sidebar\">
             <div class=\"avatar\" style=\"background: url('";
-        // line 182
+        // line 178
         echo twig_escape_filter($this->env, (isset($context["avatar"]) ? $context["avatar"] : $this->getContext($context, "avatar")), "html", null, true);
         echo "')\"></div>
             <div class=\"line\">";
-        // line 183
+        // line 179
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "</div>
             <ul class=\"sidebar_actions\">
@@ -318,6 +314,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 <li id=\"product\" class=\"sidebar_action\" onclick=\"displayProduct()\">Add Crop<span class=\"menu-icon fa fa-plus\"></span></li>
                 <li id=\"offers\" class=\"sidebar_action\" onclick=\"displayOffers()\">View Offers<span class=\"menu-icon fa fa-location-arrow\"></span></li>
                 <li id=\"products\" class=\"sidebar_action\" onclick=\"displayProducts()\">View Crops<span class=\"menu-icon fa fa-tasks\"></span></li>
+                <li id=\"products\" class=\"sidebar_action\" onclick=\"logout()\">Logout<span class=\"menu-icon fa fa-close\"></span></li>
             </ul>
             <p class=\"position_bottom center grey\">2016 © Agrot-IS. All rights reserved.</p></div>
         </div>
@@ -430,7 +427,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 301
+        // line 298
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     product: product,
@@ -471,19 +468,64 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
             });
         }
 
-        function displayProduct(){
+        var CROP_ID_SELECTED;
+        function displayProduct(id){
 
-            var url = location.href;
-            location.href = \"#product\";
+            if(id){
+                CROP_ID_SELECTED = id;
+                jQuery.ajax({
+                    url: SERVER_ADDR+\"getCrop\",
+                    type: 'POST',
+                    dataType: \"json\",
+                    data: {
+                        crop_id: CROP_ID_SELECTED,
+                    },
+                    headers: {'Access-Control-Allow-Origin': '*'},
+                    crossDomain: true,
+                    complete: function (data) {
+                        \$(\".assign_button\").removeClass(\"disabled\");
 
-            var INNER_HTML = '<div id=\"googleMap\" style=\"width:100%;height:100%;\" ></div>';
-            \$(\".content\").html(INNER_HTML);
-            getLocation();
+                        var result1 = data.responseText;
+                        if (window.DOMParser) {
+                            parser = new DOMParser();
+                            xmlDoc = parser.parseFromString(result1, \"text/xml\");
+                        }
+                        else {
+                            xmlDoc = new ActiveXObject(\"Microsoft.XMLDOM\");
+                            xmlDoc.async = false;
+                            xmlDoc.loadXML(result1);
+                        }
+                        var crop = xmlDoc.getElementsByTagName(\"Crop\")[0];
+                        \$(\"#p_producer\").val(crop.getAttribute(\"producer_username\"));
+                        \$(\"#p_product\").val(crop.getAttribute(\"product_id\"));
+                        \$(\"#p_price\").val(crop.getAttribute(\"price\"));
+                        \$(\"#p_amount\").val(crop.getAttribute(\"amount\"));
+                        \$(\"#rPdate\").val(crop.getAttribute(\"pDate\"));
+                        \$(\"#rEdate\").val(crop.getAttribute(\"eDate\"));
 
-            \$(\"#add_product_modal\").modal('show')
+                        \$(\"#add_product_modal\").modal('show')
 
-            \$(\".sidebar_action\").removeClass(\"active\");
-            \$(\"#product\").addClass(\"active\")
+                    }
+                });
+
+            }else{
+                CROP_ID_SELECTED = \"new\"
+
+                var url = location.href;
+                location.href = \"#product\";
+
+                var INNER_HTML = '<div id=\"googleMap\" style=\"width:100%;height:100%;\" ></div>';
+                \$(\".content\").html(INNER_HTML);
+                getLocation();
+
+
+                \$(\"#add_product_modal\").modal('show')
+
+                \$(\".sidebar_action\").removeClass(\"active\");
+                \$(\"#product\").addClass(\"active\")
+
+            }
+
         }
 
         function displayOffers(){
@@ -523,7 +565,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
             \$('#allOffers').bootstrapTable({
                 data: ";
-        // line 391
+        // line 433
         echo (isset($context["offers_json"]) ? $context["offers_json"] : $this->getContext($context, "offers_json"));
         echo ",
                 pageSize: 30,
@@ -551,7 +593,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 416
+        // line 458
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     isAccepted: accepted,
@@ -572,7 +614,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 434
+        // line 476
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     crop_id: crop_id,
@@ -619,7 +661,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
             \$('#allCrops').bootstrapTable({
                 data: ";
-        // line 478
+        // line 520
         echo (isset($context["crops_json"]) ? $context["crops_json"] : $this->getContext($context, "crops_json"));
         echo ",
                 pageSize: 30,
@@ -684,7 +726,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 dataType: \"json\",
                 data: {
                     username: '";
-        // line 540
+        // line 582
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                 },
@@ -747,7 +789,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 600
+        // line 642
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     username: username,
@@ -827,11 +869,11 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
             var map=new google.maps.Map(document.getElementById(\"googleMap\"),mapProp);
 
             ";
-        // line 677
+        // line 719
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["offers"]) ? $context["offers"] : $this->getContext($context, "offers")));
         foreach ($context['_seq'] as $context["_key"] => $context["offer"]) {
-            // line 678
+            // line 720
             echo "            var myLatLng = {lat: ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["offer"], "business", array()), "registrationLat", array()), "html", null, true);
             echo ", lng: ";
@@ -841,7 +883,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
                 position: myLatLng,
                 map: map,
                 title: '";
-            // line 682
+            // line 724
             echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "message", array()), "html", null, true);
             echo "'
             });
@@ -850,7 +892,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offer'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 685
+        // line 727
         echo "        }
 
         function showPosition(position) {
@@ -904,10 +946,111 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
         function showCal(id) {
             \$(id).focus();
         }
+
+        function logout(){
+            window.location = \"/logout\"
+        }
+
+        function uploadThumbnail() {
+            \$('#icon').trigger('click');
+        }
+
+
+        \$(function () {
+            \$(\"#icon\").change(function () {
+
+                var fileName = \$(this).val();
+                readURL(this);
+
+                var files = this.files;
+                var formData = tests.formdata ? new FormData() : null;
+                for (var i = 0; i < files.length; i++) {
+                    if (tests.formdata) formData.append('thumbnail', files[i]);
+                }
+
+                var file = files[0];
+                name = file.name;
+                size = file.size;
+                type = file.type;
+                getFileDimension(file);
+
+
+                formData.append('username_toSearch', \"";
+        // line 809
+        echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
+        echo "\");
+                formData.append('crop_id', PID);
+                formData.append('filesize', file.size);
+
+
+                if (tests.formdata) {
+                    presentLoader();
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/uploader');
+                    xhr.onload = function () {
+
+                    };
+
+                    if (tests.progress) {
+                        xhr.upload.onprogress = function (event) {
+                            if (event.lengthComputable) {
+                                var complete = (event.loaded / event.total * 100 | 0);
+                                document.getElementById(\"myProgressBar\").value = complete;
+
+
+                            }
+                        }
+                    }
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            removeLoader()
+                        }
+                    };
+                    xhr.send(formData);
+                }
+
+
+            });
+        });
+
+        var ICON_IMAGE = null
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                ICON_IMAGE = input.files[0]
+                reader.onload = function (e) {
+                    //TODO: Change here the image
+//                    \$('.uploadAsset').css('background-image', \"url(\" + e.target.result + \")\");
+//                    \$('.uploadAsset').html('<div class=\"triangle1\"></div><div class=\"triangle2\"></div>')
+                }
+
+                reader.readAsDataURL(input.files[input.files.length - 1]);
+
+            }
+        }
+
+        function getFileDimension(file) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                \$('#testImg').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function presentLoader() {
+            \$(\".uploading_progress\").css(\"display\", \"block\");
+        }
+
+        function removeLoader() {
+            \$(\".uploading_progress\").css(\"display\", \"none\");
+        }
+
     </script>
 ";
         
-        $__internal_f2d17560bc5bea7a37045520489a053d527b46e0e50e889a0e28a9cf3f57b268->leave($__internal_f2d17560bc5bea7a37045520489a053d527b46e0e50e889a0e28a9cf3f57b268_prof);
+        $__internal_0523b6b88f342da7ad72cfe7d4e01854c7555aa712736a55c10569067ed1ffe9->leave($__internal_0523b6b88f342da7ad72cfe7d4e01854c7555aa712736a55c10569067ed1ffe9_prof);
 
     }
 
@@ -923,7 +1066,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 
     public function getDebugInfo()
     {
-        return array (  854 => 685,  845 => 682,  835 => 678,  831 => 677,  751 => 600,  688 => 540,  623 => 478,  576 => 434,  555 => 416,  527 => 391,  434 => 301,  313 => 183,  309 => 182,  301 => 177,  296 => 175,  291 => 173,  287 => 172,  283 => 171,  278 => 169,  275 => 168,  273 => 167,  269 => 165,  265 => 163,  263 => 162,  255 => 157,  250 => 155,  246 => 154,  242 => 153,  238 => 152,  234 => 151,  193 => 112,  182 => 110,  178 => 109,  166 => 100,  77 => 13,  71 => 12,  60 => 10,  49 => 9,  37 => 3,  11 => 1,);
+        return array (  980 => 809,  896 => 727,  887 => 724,  877 => 720,  873 => 719,  793 => 642,  730 => 582,  665 => 520,  618 => 476,  597 => 458,  569 => 433,  431 => 298,  309 => 179,  305 => 178,  297 => 173,  292 => 171,  287 => 169,  283 => 168,  279 => 167,  274 => 165,  271 => 164,  269 => 163,  265 => 161,  261 => 159,  259 => 158,  251 => 153,  246 => 151,  242 => 150,  238 => 149,  234 => 148,  230 => 147,  191 => 110,  180 => 108,  176 => 107,  167 => 101,  77 => 13,  71 => 12,  60 => 10,  49 => 9,  37 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -938,7 +1081,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /* {% block footer %}{% endblock %}*/
 /* */
 /* {% block body %}*/
-/* */
+/*     <div class="uploading_progress"><div id="uploadBar"><progress id="myProgressBar" value="0" max="100"></progress></div></div>*/
 /* */
 /*     <div class="modal fade" id="profile_modal" role="dialog">*/
 /*         <div class="modal-dialog" style="width: 800px;">*/
@@ -1014,23 +1157,21 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /* */
 /* */
 /*     <div class="modal fade" id="add_product_modal" role="dialog">*/
-/*         <div class="modal-dialog" style="width: 400px;">*/
+/*         <div class="modal-dialog" style="width: 700px;">*/
 /*             <div id="create_product_loading" class="loader_"><div class="centered_logo rotating"></div><div class="centered_message"></div></div>*/
 /*             <!-- Modal content-->*/
 /*             <div class="modal-content" style="height: 700px">*/
 /*                 <div class="error_message"></div>*/
-/*                 <form id="profile_form" style="width: 400px;margin-top: 40px;">*/
+/*                 <form id="profile_form" style="width: 700px;margin-top: 40px;">*/
 /*                     <fieldset>*/
 /*                         <legend><div class="modal_logo"></div><div class="modal_action">Add new Crop</div></legend>*/
+/*                         <div id="crop_image"><i class="fa fa-cloud-upload"></i> </div>*/
 /*                         <div class="form-group">*/
-/*                             <div class="col-md-12" style="margin-top: 10px;">*/
+/*                             <div class="col-md-8 col-md-offset-4" style="margin-top: 10px;">*/
 /*                                 <label for="p_producer">Producer</label><label id="username_error" class="error_register">Username Exists</label>*/
 /*                                 <input type="text" id="p_producer" name="p_producer" disabled class="form-control" placeholder="Username" value="{{ username }}"/>*/
 /*                             </div>*/
-/* */
-/*                         </div>*/
-/*                         <div class="form-group">*/
-/*                             <div class="col-md-12" style="margin-top: 10px;">*/
+/*                             <div class="col-md-8 col-md-offset-4" style="margin-top: 10px;">*/
 /*                                 <label for="p_product">Product</label>*/
 /*                                 <select id="p_product">*/
 /*                                     <option value="0">Please select product</option>*/
@@ -1041,29 +1182,27 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*                             </div>*/
 /*                         </div>*/
 /*                         <div class="form-group">*/
-/*                             <div class="col-md-12" style="margin-top: 10px;">*/
+/*                             <div class="col-md-6" style="margin-top: 10px;">*/
 /*                                 <label for="p_price">Price</label><label id="password_error" class="error_register">Password Cannot be empty</label>*/
 /*                                 <input type="text" id="p_price" name="p_price" class="form-control" placeholder="Price per Unit"/>*/
 /*                             </div>*/
-/*                         </div>*/
-/*                         <div class="form-group" >*/
-/*                             <div class="col-md-12" style="margin-top: 10px;">*/
+/*                             <div class="col-md-6" style="margin-top: 10px;">*/
 /*                                 <label for="p_amount">Amount</label><label id="password_error" class="error_register">Password Cannot be empty</label>*/
 /*                                 <input  type="text" id="p_amount" name="p_amount" class="form-control" placeholder="Amount"/>*/
 /*                             </div>*/
 /*                         </div>*/
-/*                         <div class="form-group">*/
-/*                             <div class="col-md-12" style="margin-top: 10px;">*/
+/*                         <div class="form-group" >*/
+/*                             <div class="col-md-6" style="margin-top: 10px;">*/
 /*                                 <label for="rPdate">Produced Date</label>*/
 /*                                 <input type="text" class="new_request_input_date" id="rPdate" placeholder="  /       /  "><i class="fa fa-calendar" style="font-size: 20px; margin-left: 10px; line-height: 30px; float: left;" onclick="showCal('#rPdate')"></i>*/
 /*                             </div>*/
-/* */
-/*                         </div>*/
-/*                         <div class="form-group">*/
-/*                             <div class="col-md-12" style="margin-top: 10px;">*/
+/*                             <div class="col-md-6" style="margin-top: 10px;">*/
 /*                                 <label for="rPdate">Expiration Date</label>*/
 /*                                 <input type="text" class="new_request_input_date" id="rEdate" placeholder="  /       /  "><i class="fa fa-calendar" style="font-size: 20px; margin-left: 10px; line-height: 30px; float: left;" onclick="showCal('#rEdate')"></i>*/
 /*                             </div>*/
+/*                         </div>*/
+/*                         <div class="form-group">*/
+/* */
 /* */
 /*                         </div>*/
 /* */
@@ -1115,6 +1254,7 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*                 <li id="product" class="sidebar_action" onclick="displayProduct()">Add Crop<span class="menu-icon fa fa-plus"></span></li>*/
 /*                 <li id="offers" class="sidebar_action" onclick="displayOffers()">View Offers<span class="menu-icon fa fa-location-arrow"></span></li>*/
 /*                 <li id="products" class="sidebar_action" onclick="displayProducts()">View Crops<span class="menu-icon fa fa-tasks"></span></li>*/
+/*                 <li id="products" class="sidebar_action" onclick="logout()">Logout<span class="menu-icon fa fa-close"></span></li>*/
 /*             </ul>*/
 /*             <p class="position_bottom center grey">2016 © Agrot-IS. All rights reserved.</p></div>*/
 /*         </div>*/
@@ -1265,19 +1405,64 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*             });*/
 /*         }*/
 /* */
-/*         function displayProduct(){*/
+/*         var CROP_ID_SELECTED;*/
+/*         function displayProduct(id){*/
 /* */
-/*             var url = location.href;*/
-/*             location.href = "#product";*/
+/*             if(id){*/
+/*                 CROP_ID_SELECTED = id;*/
+/*                 jQuery.ajax({*/
+/*                     url: SERVER_ADDR+"getCrop",*/
+/*                     type: 'POST',*/
+/*                     dataType: "json",*/
+/*                     data: {*/
+/*                         crop_id: CROP_ID_SELECTED,*/
+/*                     },*/
+/*                     headers: {'Access-Control-Allow-Origin': '*'},*/
+/*                     crossDomain: true,*/
+/*                     complete: function (data) {*/
+/*                         $(".assign_button").removeClass("disabled");*/
 /* */
-/*             var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';*/
-/*             $(".content").html(INNER_HTML);*/
-/*             getLocation();*/
+/*                         var result1 = data.responseText;*/
+/*                         if (window.DOMParser) {*/
+/*                             parser = new DOMParser();*/
+/*                             xmlDoc = parser.parseFromString(result1, "text/xml");*/
+/*                         }*/
+/*                         else {*/
+/*                             xmlDoc = new ActiveXObject("Microsoft.XMLDOM");*/
+/*                             xmlDoc.async = false;*/
+/*                             xmlDoc.loadXML(result1);*/
+/*                         }*/
+/*                         var crop = xmlDoc.getElementsByTagName("Crop")[0];*/
+/*                         $("#p_producer").val(crop.getAttribute("producer_username"));*/
+/*                         $("#p_product").val(crop.getAttribute("product_id"));*/
+/*                         $("#p_price").val(crop.getAttribute("price"));*/
+/*                         $("#p_amount").val(crop.getAttribute("amount"));*/
+/*                         $("#rPdate").val(crop.getAttribute("pDate"));*/
+/*                         $("#rEdate").val(crop.getAttribute("eDate"));*/
 /* */
-/*             $("#add_product_modal").modal('show')*/
+/*                         $("#add_product_modal").modal('show')*/
 /* */
-/*             $(".sidebar_action").removeClass("active");*/
-/*             $("#product").addClass("active")*/
+/*                     }*/
+/*                 });*/
+/* */
+/*             }else{*/
+/*                 CROP_ID_SELECTED = "new"*/
+/* */
+/*                 var url = location.href;*/
+/*                 location.href = "#product";*/
+/* */
+/*                 var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';*/
+/*                 $(".content").html(INNER_HTML);*/
+/*                 getLocation();*/
+/* */
+/* */
+/*                 $("#add_product_modal").modal('show')*/
+/* */
+/*                 $(".sidebar_action").removeClass("active");*/
+/*                 $("#product").addClass("active")*/
+/* */
+/*             }*/
+/* */
 /*         }*/
 /* */
 /*         function displayOffers(){*/
@@ -1663,6 +1848,104 @@ class __TwigTemplate_8a3bddda4de61d217475988ff3d51f7f742bb3310059bc890e87dd9b162
 /*         function showCal(id) {*/
 /*             $(id).focus();*/
 /*         }*/
+/* */
+/*         function logout(){*/
+/*             window.location = "/logout"*/
+/*         }*/
+/* */
+/*         function uploadThumbnail() {*/
+/*             $('#icon').trigger('click');*/
+/*         }*/
+/* */
+/* */
+/*         $(function () {*/
+/*             $("#icon").change(function () {*/
+/* */
+/*                 var fileName = $(this).val();*/
+/*                 readURL(this);*/
+/* */
+/*                 var files = this.files;*/
+/*                 var formData = tests.formdata ? new FormData() : null;*/
+/*                 for (var i = 0; i < files.length; i++) {*/
+/*                     if (tests.formdata) formData.append('thumbnail', files[i]);*/
+/*                 }*/
+/* */
+/*                 var file = files[0];*/
+/*                 name = file.name;*/
+/*                 size = file.size;*/
+/*                 type = file.type;*/
+/*                 getFileDimension(file);*/
+/* */
+/* */
+/*                 formData.append('username_toSearch', "{{ username }}");*/
+/*                 formData.append('crop_id', PID);*/
+/*                 formData.append('filesize', file.size);*/
+/* */
+/* */
+/*                 if (tests.formdata) {*/
+/*                     presentLoader();*/
+/*                     var xhr = new XMLHttpRequest();*/
+/*                     xhr.open('POST', '/uploader');*/
+/*                     xhr.onload = function () {*/
+/* */
+/*                     };*/
+/* */
+/*                     if (tests.progress) {*/
+/*                         xhr.upload.onprogress = function (event) {*/
+/*                             if (event.lengthComputable) {*/
+/*                                 var complete = (event.loaded / event.total * 100 | 0);*/
+/*                                 document.getElementById("myProgressBar").value = complete;*/
+/* */
+/* */
+/*                             }*/
+/*                         }*/
+/*                     }*/
+/* */
+/*                     xhr.onreadystatechange = function () {*/
+/*                         if (xhr.readyState == 4) {*/
+/*                             removeLoader()*/
+/*                         }*/
+/*                     };*/
+/*                     xhr.send(formData);*/
+/*                 }*/
+/* */
+/* */
+/*             });*/
+/*         });*/
+/* */
+/*         var ICON_IMAGE = null*/
+/*         function readURL(input) {*/
+/* */
+/*             if (input.files && input.files[0]) {*/
+/*                 var reader = new FileReader();*/
+/*                 ICON_IMAGE = input.files[0]*/
+/*                 reader.onload = function (e) {*/
+/*                     //TODO: Change here the image*/
+/* //                    $('.uploadAsset').css('background-image', "url(" + e.target.result + ")");*/
+/* //                    $('.uploadAsset').html('<div class="triangle1"></div><div class="triangle2"></div>')*/
+/*                 }*/
+/* */
+/*                 reader.readAsDataURL(input.files[input.files.length - 1]);*/
+/* */
+/*             }*/
+/*         }*/
+/* */
+/*         function getFileDimension(file) {*/
+/*             var reader = new FileReader();*/
+/*             reader.onload = function (e) {*/
+/*                 $('#testImg').attr('src', e.target.result);*/
+/*             }*/
+/*             reader.readAsDataURL(file);*/
+/*         }*/
+/* */
+/*         function presentLoader() {*/
+/*             $(".uploading_progress").css("display", "block");*/
+/*         }*/
+/* */
+/*         function removeLoader() {*/
+/*             $(".uploading_progress").css("display", "none");*/
+/*         }*/
+/* */
 /*     </script>*/
 /* {% endblock %}*/
 /* */

@@ -314,9 +314,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::deleteCropAction',  '_route' => 'deleteCrop',);
         }
 
-        // updateUser
-        if ($pathinfo === '/updateUser') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::updateUserAction',  '_route' => 'updateUser',);
+        if (0 === strpos($pathinfo, '/up')) {
+            // updateUser
+            if ($pathinfo === '/updateUser') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::updateUserAction',  '_route' => 'updateUser',);
+            }
+
+            // uploadFile
+            if ($pathinfo === '/uploadFile') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::uploadFileAction',  '_route' => 'uploadFile',);
+            }
+
+        }
+
+        // getCrop
+        if ($pathinfo === '/getCrop') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::getCropAction',  '_route' => 'getCrop',);
         }
 
         // nelmio_api_doc_index

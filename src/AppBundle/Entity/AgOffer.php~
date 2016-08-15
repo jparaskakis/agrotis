@@ -10,21 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
 class AgOffer
 {
     /**
-     * @var integer
-     */
-    private $businessId;
-
-    /**
-     * @var integer
-     */
-    private $producerId;
-
-    /**
-     * @var integer
-     */
-    private $cropId;
-
-    /**
      * @var float
      */
     private $amount;
@@ -59,75 +44,21 @@ class AgOffer
      */
     private $id;
 
+    /**
+     * @var \AppBundle\Entity\AgUser
+     */
+    private $producer;
 
     /**
-     * Set businessId
-     *
-     * @param integer $businessId
-     * @return AgOffer
+     * @var \AppBundle\Entity\AgCrop
      */
-    public function setBusinessId($businessId)
-    {
-        $this->businessId = $businessId;
-
-        return $this;
-    }
+    private $crop;
 
     /**
-     * Get businessId
-     *
-     * @return integer 
+     * @var \AppBundle\Entity\AgUser
      */
-    public function getBusinessId()
-    {
-        return $this->businessId;
-    }
+    private $business;
 
-    /**
-     * Set producerId
-     *
-     * @param integer $producerId
-     * @return AgOffer
-     */
-    public function setProducerId($producerId)
-    {
-        $this->producerId = $producerId;
-
-        return $this;
-    }
-
-    /**
-     * Get producerId
-     *
-     * @return integer 
-     */
-    public function getProducerId()
-    {
-        return $this->producerId;
-    }
-
-    /**
-     * Set cropId
-     *
-     * @param integer $cropId
-     * @return AgOffer
-     */
-    public function setCropId($cropId)
-    {
-        $this->cropId = $cropId;
-
-        return $this;
-    }
-
-    /**
-     * Get cropId
-     *
-     * @return integer 
-     */
-    public function getCropId()
-    {
-        return $this->cropId;
-    }
 
     /**
      * Set amount
@@ -275,5 +206,74 @@ class AgOffer
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set producer
+     *
+     * @param \AppBundle\Entity\AgUser $producer
+     * @return AgOffer
+     */
+    public function setProducer(\AppBundle\Entity\AgUser $producer = null)
+    {
+        $this->producer = $producer;
+
+        return $this;
+    }
+
+    /**
+     * Get producer
+     *
+     * @return \AppBundle\Entity\AgUser 
+     */
+    public function getProducer()
+    {
+        return $this->producer;
+    }
+
+    /**
+     * Set crop
+     *
+     * @param \AppBundle\Entity\AgCrop $crop
+     * @return AgOffer
+     */
+    public function setCrop(\AppBundle\Entity\AgCrop $crop = null)
+    {
+        $this->crop = $crop;
+
+        return $this;
+    }
+
+    /**
+     * Get crop
+     *
+     * @return \AppBundle\Entity\AgCrop 
+     */
+    public function getCrop()
+    {
+        return $this->crop;
+    }
+
+    /**
+     * Set business
+     *
+     * @param \AppBundle\Entity\AgUser $business
+     * @return AgOffer
+     */
+    public function setBusiness(\AppBundle\Entity\AgUser $business = null)
+    {
+        $this->business = $business;
+
+        return $this;
+    }
+
+    /**
+     * Get business
+     *
+     * @return \AppBundle\Entity\AgUser 
+     */
+    public function getBusiness()
+    {
+        return $this->business;
     }
 }

@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\AgCrop;
 
+use AppBundle\Entity\AgCropAsset;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -56,9 +57,6 @@ class DefaultController extends Controller
         if($this->getUser()->getAccountType()->getId() == 2){
 
 
-            $em = $this->getDoctrine()->getManager();
-
-
             $allOffers = array();
 
             $em = $this->getDoctrine()->getManager();
@@ -71,9 +69,7 @@ class DefaultController extends Controller
             }
 
 
-            $query = $em->createQuery(
-                'SELECT p FROM AppBundle:AgProduct p'
-            );
+            $query = $em->createQuery('SELECT p FROM AppBundle:AgProduct p');
             $Allproducts = $query->getResult();
 
             $offersArray = array();
@@ -115,10 +111,64 @@ class DefaultController extends Controller
             }
 
             $cropsArray = array();
+            $infoArray = array();
             $query = $em->createQuery('SELECT p FROM AppBundle:AgCrop p');
-            $allCrops = $query->getResult();
+            $allCrops_ = $query->getResult();
+            $allCrops = array();
+            foreach($allCrops_ as $crop){
+                $producer_to_find = 0;
+                $product_to_find = 0;
+                $min = -1;
+                $max = PHP_INT_MAX;
+                $distance = round($this->distance($this->getUser()->getRegistrationLat(), $this->getUser()->getRegistrationLon(), $crop->getProducer()->getRegistrationLat(), $crop->getProducer()->getRegistrationLon(), "K"), 2);
+                if(isset($_REQUEST['producer_id']) && $_REQUEST['producer_id'] != "0"){
+                    $producer_to_find = intval($_REQUEST['producer_id']);
+                }
+                if(isset($_REQUEST['product_id']) && $_REQUEST['product_id'] != "0"){
+                    $product_to_find = intval($_REQUEST['product_id']);
+                }
+                if(isset($_REQUEST['min']) && $_REQUEST['min'] != "" && intval($_REQUEST['min']) != 0){
+                    $min = intval($_REQUEST['min']);
+                }
+                if(isset($_REQUEST['max']) && $_REQUEST['min'] != "" && intval($_REQUEST['max']) != 0){
+                    $max = intval($_REQUEST['max']);
+                }
+
+
+                if($producer_to_find == 0 && $product_to_find == 0){
+                    if($distance > $min && $distance < $max){
+                        array_push($allCrops, $crop);
+                    }
+                }else if($producer_to_find == 0 && $product_to_find != 0){
+                    if($distance > $min && $distance < $max && $crop->getProduct()->getId() == $product_to_find){
+                        array_push($allCrops, $crop);
+                    }
+                }else if($producer_to_find != 0 && $product_to_find == 0){
+                    if($distance > $min && $distance < $max && $crop->getProducer()->getId() == $producer_to_find){
+                        array_push($allCrops, $crop);
+                    }
+                }else if($producer_to_find != 0 && $product_to_find != 0){
+                    if($distance > $min && $distance  < $max && $crop->getProducer()->getId() == $producer_to_find && $crop->getProduct()->getId() == $product_to_find){
+                        array_push($allCrops, $crop);
+                    }
+                }
+            }
 
             foreach($allCrops as $crop){
+                $distance = round($this->distance($this->getUser()->getRegistrationLat(), $this->getUser()->getRegistrationLon(), $crop->getProducer()->getRegistrationLat(), $crop->getProducer()->getRegistrationLon(), "K"), 2);
+
+                if(!array_key_exists( $crop->getProducer()->getId(),$infoArray)){
+                    $infoArray[$crop->getProducer()->getId()] = '<div class="info_line"><div class="crop_image"></div><div class="crop_info">'.$crop->getProduct()->getDescription().' by '.$crop->getProducer()->getUsername().' at '.$crop->getPrice().'€ / '.$crop->getProduct()->getBaseUnit().' ('.$distance.')</div><div class="crop_make_offer"><div style="float:right;" id="make_offer_button_'.$crop->getId().'" class="editButton" onclick="makeOffer('.$crop->getId().')"><i class="fa fa-plus" aria-hidden="true" style="margin:0px"></i></div></div></div>';
+                }else{
+                    $infoArray[$crop->getProducer()->getId()] .= '<div class="info_line"><div class="crop_image"></div><div class="crop_info">'.$crop->getProduct()->getDescription().' by '.$crop->getProducer()->getUsername().' at '.$crop->getPrice().'€ / '.$crop->getProduct()->getBaseUnit().' ('.$distance.')</div><div class="crop_make_offer"><div style="float:right;" id="make_offer_button_'.$crop->getId().'" class="editButton" onclick="makeOffer('.$crop->getId().')"><i class="fa fa-plus" aria-hidden="true" style="margin:0px"></i></div></div></div>';
+                }
+            }
+
+            $query = $em->createQuery('SELECT p FROM AppBundle:AgUser p WHERE p.accountType = 1');
+            $allProducers = $query->getResult();
+
+            foreach($allCrops_ as $crop){
+
                 $obj = new \stdClass();
 
                 $obj->id = $crop->getId();
@@ -138,8 +188,9 @@ class DefaultController extends Controller
 
                 }
 
+
+
                 $obj->edit = $actions;
-                array_push($cropsArray, $obj);
             }
 
 
@@ -150,6 +201,8 @@ class DefaultController extends Controller
                     "offers" => $allOffers,
                     "crops" => $allCrops,
                     "products" => $Allproducts,
+                    "producers" => $allProducers,
+                    "info" => $infoArray,
                     'offers_json' => json_encode($offersArray),
                     'crops_json' => json_encode($cropsArray),
                 ));
@@ -241,7 +294,8 @@ class DefaultController extends Controller
                 $obj->price = $crop->getPrice();
 
                 $now = new \DateTime();
-                $actions = '<div style="float:right;" id="delete_button_'.$crop->getId().'" class="deleteButton" onclick="deleteCrop('.$crop->getId().')"><i class="fa fa-trash-o" aria-hidden="true" style="margin:0px"></i></div>';
+                $actions = '<div style="float:right;" id="edit_button_'.$crop->getId().'" class="editButton" onclick="displayProduct('.$crop->getId().')"><i class="fa fa-edit" aria-hidden="true" style="margin:0px"></i></div>';
+                $actions .= '<div style="float:right;" id="delete_button_'.$crop->getId().'" class="deleteButton" onclick="deleteCrop('.$crop->getId().')"><i class="fa fa-trash-o" aria-hidden="true" style="margin:0px"></i></div>';
 
                 if($now > $crop->getExpirationDate()){
                     $actions = "<red>This crop has expired</red>";
@@ -599,6 +653,72 @@ class DefaultController extends Controller
 
     }
 
+    /**
+     * @Route("/uploadFile", name="uploadFile")
+     */
+    public function uploadFileAction(Request $request)
+    {
+
+
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT p FROM AppBundle:AgUser p WHERE p.username = :username'
+        )->setParameter('username', $_REQUEST['username_toSearch']);
+        $user = $query->getResult()[0];
+
+        $query = $em->createQuery(
+            'SELECT p FROM AppBundle:AgCrop p WHERE p.id = :crop_id'
+        )->setParameter('crop_id', $_REQUEST['crop_id']);
+        $crop = $query->getResult()[0];
+
+
+        $info = pathinfo($_FILES['crop_asset']['name']);
+        $ext = $info['extension']; // get the extension of the file
+        $filename = $info['filename'];
+        $filename = str_replace(")","_",$filename);
+        $filename = str_replace("(","_",$filename);
+
+        $newname = $filename . "." . $ext;
+
+
+        if (!file_exists('/var/www/html/agrotis_assets/' . $this->getUser()->getId())) {
+            mkdir('/var/www/html/agrotis_assets/' . $this->getUser()->getId(), 0777, true);
+        }
+        $target = '/var/www/html/agrotis_assets/' . $this->getUser()->getId() . "/" . $newname;
+        move_uploaded_file($_FILES['atAsset']['tmp_name'], $target);
+        $dbURL = $newname;
+
+        $dbURL_store = "http://" . $_SERVER['SERVER_ADDR'] . "/agrotis_assets/" . $this->getUser()->getId() . "/" . $dbURL;
+
+        $asset = new AgCropAsset();
+        $asset->setProducer($user);
+        $asset->setCrop($crop);
+        $asset->setSize($_REQUEST['file_size']);
+        $asset->setUrl($dbURL_store);
+
+        $em->persist($asset);
+        $em->flush();
+
+        return $this->getSuccessResponse("1", "Image Uploaded");
+    }
+
+
+    /**
+     * @Route("/getCrop", name="getCrop")
+     */
+    public function getCropAction(Request $request)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $query = $em->createQuery(
+            'SELECT p FROM AppBundle:AgCrop p WHERE p.id = :crop_id'
+        )->setParameter('crop_id', $_REQUEST['crop_id']);
+        $crop = $query->getResult()[0];
+
+        return $this->displayXML($this->getCropAsXML($crop));
+    }
+
 
 
     function getErrorResponse($code, $message)
@@ -738,16 +858,34 @@ class DefaultController extends Controller
                     }
                 }
             }
-
-
-
-
         }else{
 
         }
-
         return $rootNode;
 
+
+    }
+
+    function getCropAsXML($crop)
+    {
+        $rootNode = new \SimpleXMLElement('<Crops></Crops>');
+
+
+        $itemNode = $rootNode->addChild('Crop');
+        $itemNode->addAttribute('id', $crop->getId());
+        $itemNode->addAttribute('producer_username', $crop->getProducer()->getUsername());
+        $itemNode->addAttribute('producer_id', $crop->getProducer()->getId());
+        $itemNode->addAttribute('product_description', $crop->getProduct()->getDescription());
+        $itemNode->addAttribute('product_id', $crop->getProduct()->getId());
+        $itemNode->addAttribute('price', $crop->getPrice());
+        $itemNode->addAttribute('amount', $crop->getAmount());
+        $itemNode->addAttribute('on_hold', $crop->getOnhold());
+        $itemNode->addAttribute('description', $crop->getDescription());
+        $itemNode->addAttribute('pDate', date_format($crop->getProducedDate(), 'Y-m-d H:i:s'));
+        $itemNode->addAttribute('eDate', date_format($crop->getExpirationDate(), 'Y-m-d H:i:s'));
+
+
+        return $rootNode;
 
     }
 

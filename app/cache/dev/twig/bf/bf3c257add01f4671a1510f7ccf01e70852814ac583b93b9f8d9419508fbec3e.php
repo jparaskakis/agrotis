@@ -24,54 +24,54 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f4f18343a9d354ae69cd15111dd0503f7d3bb6532d7279289e8981f16eeefab4 = $this->env->getExtension("native_profiler");
-        $__internal_f4f18343a9d354ae69cd15111dd0503f7d3bb6532d7279289e8981f16eeefab4->enter($__internal_f4f18343a9d354ae69cd15111dd0503f7d3bb6532d7279289e8981f16eeefab4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/dashboard_buis.html.twig"));
+        $__internal_8e2346b834184464eebdc3375a66b1ed6c44c21634873fe6fe986039e8bcc2ab = $this->env->getExtension("native_profiler");
+        $__internal_8e2346b834184464eebdc3375a66b1ed6c44c21634873fe6fe986039e8bcc2ab->enter($__internal_8e2346b834184464eebdc3375a66b1ed6c44c21634873fe6fe986039e8bcc2ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/dashboard_buis.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f4f18343a9d354ae69cd15111dd0503f7d3bb6532d7279289e8981f16eeefab4->leave($__internal_f4f18343a9d354ae69cd15111dd0503f7d3bb6532d7279289e8981f16eeefab4_prof);
+        $__internal_8e2346b834184464eebdc3375a66b1ed6c44c21634873fe6fe986039e8bcc2ab->leave($__internal_8e2346b834184464eebdc3375a66b1ed6c44c21634873fe6fe986039e8bcc2ab_prof);
 
     }
 
     // line 3
     public function block_body_id($context, array $blocks = array())
     {
-        $__internal_dd2da8d76084cc7c22b2d9724278cf0eac5b4199ce23dbb3435ef2f08f84d0ef = $this->env->getExtension("native_profiler");
-        $__internal_dd2da8d76084cc7c22b2d9724278cf0eac5b4199ce23dbb3435ef2f08f84d0ef->enter($__internal_dd2da8d76084cc7c22b2d9724278cf0eac5b4199ce23dbb3435ef2f08f84d0ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body_id"));
+        $__internal_c663668796b320743d96b7c6163b4ba7d5f9373432f315493a00f95a77d3b42e = $this->env->getExtension("native_profiler");
+        $__internal_c663668796b320743d96b7c6163b4ba7d5f9373432f315493a00f95a77d3b42e->enter($__internal_c663668796b320743d96b7c6163b4ba7d5f9373432f315493a00f95a77d3b42e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body_id"));
 
         echo "dashboard";
         
-        $__internal_dd2da8d76084cc7c22b2d9724278cf0eac5b4199ce23dbb3435ef2f08f84d0ef->leave($__internal_dd2da8d76084cc7c22b2d9724278cf0eac5b4199ce23dbb3435ef2f08f84d0ef_prof);
+        $__internal_c663668796b320743d96b7c6163b4ba7d5f9373432f315493a00f95a77d3b42e->leave($__internal_c663668796b320743d96b7c6163b4ba7d5f9373432f315493a00f95a77d3b42e_prof);
 
     }
 
     // line 9
     public function block_header($context, array $blocks = array())
     {
-        $__internal_7b0d23e912347dec93b4abab7b8d9e8416daa08bfe6a06d7d1a13eb36230a39d = $this->env->getExtension("native_profiler");
-        $__internal_7b0d23e912347dec93b4abab7b8d9e8416daa08bfe6a06d7d1a13eb36230a39d->enter($__internal_7b0d23e912347dec93b4abab7b8d9e8416daa08bfe6a06d7d1a13eb36230a39d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_a9152c0771b749dd79184f1e7ef79808a71f674fb302a7c2797530bd2d6f48a2 = $this->env->getExtension("native_profiler");
+        $__internal_a9152c0771b749dd79184f1e7ef79808a71f674fb302a7c2797530bd2d6f48a2->enter($__internal_a9152c0771b749dd79184f1e7ef79808a71f674fb302a7c2797530bd2d6f48a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         
-        $__internal_7b0d23e912347dec93b4abab7b8d9e8416daa08bfe6a06d7d1a13eb36230a39d->leave($__internal_7b0d23e912347dec93b4abab7b8d9e8416daa08bfe6a06d7d1a13eb36230a39d_prof);
+        $__internal_a9152c0771b749dd79184f1e7ef79808a71f674fb302a7c2797530bd2d6f48a2->leave($__internal_a9152c0771b749dd79184f1e7ef79808a71f674fb302a7c2797530bd2d6f48a2_prof);
 
     }
 
     // line 10
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_9b021210fdaff2c39e5b1f24f5afcf111bc7e6dd664859d92e4f69f005393a1c = $this->env->getExtension("native_profiler");
-        $__internal_9b021210fdaff2c39e5b1f24f5afcf111bc7e6dd664859d92e4f69f005393a1c->enter($__internal_9b021210fdaff2c39e5b1f24f5afcf111bc7e6dd664859d92e4f69f005393a1c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_66a2ecba29d7d80e422c84ca883180dfb0001b3f96ad61d63662f5e890d4a4a3 = $this->env->getExtension("native_profiler");
+        $__internal_66a2ecba29d7d80e422c84ca883180dfb0001b3f96ad61d63662f5e890d4a4a3->enter($__internal_66a2ecba29d7d80e422c84ca883180dfb0001b3f96ad61d63662f5e890d4a4a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         
-        $__internal_9b021210fdaff2c39e5b1f24f5afcf111bc7e6dd664859d92e4f69f005393a1c->leave($__internal_9b021210fdaff2c39e5b1f24f5afcf111bc7e6dd664859d92e4f69f005393a1c_prof);
+        $__internal_66a2ecba29d7d80e422c84ca883180dfb0001b3f96ad61d63662f5e890d4a4a3->leave($__internal_66a2ecba29d7d80e422c84ca883180dfb0001b3f96ad61d63662f5e890d4a4a3_prof);
 
     }
 
     // line 12
     public function block_body($context, array $blocks = array())
     {
-        $__internal_a342f592a623771ed9cefc48f11f08376d16f64a6513c6b17ec9bf3300e9c7b3 = $this->env->getExtension("native_profiler");
-        $__internal_a342f592a623771ed9cefc48f11f08376d16f64a6513c6b17ec9bf3300e9c7b3->enter($__internal_a342f592a623771ed9cefc48f11f08376d16f64a6513c6b17ec9bf3300e9c7b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_716ff8ab36e9eebebfaaf7e300909a43c4f8ebda5729cabecc5e9aa9548c6b43 = $this->env->getExtension("native_profiler");
+        $__internal_716ff8ab36e9eebebfaaf7e300909a43c4f8ebda5729cabecc5e9aa9548c6b43->enter($__internal_716ff8ab36e9eebebfaaf7e300909a43c4f8ebda5729cabecc5e9aa9548c6b43_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 13
         echo "
@@ -318,7 +318,63 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
                 <li id=\"product\" class=\"sidebar_action\" onclick=\"displayProduct()\">Add Crop<span class=\"menu-icon fa fa-plus\"></span></li>
                 <li id=\"offers\" class=\"sidebar_action\" onclick=\"displayOffers()\">View Offers<span class=\"menu-icon fa fa-location-arrow\"></span></li>
                 <li id=\"products\" class=\"sidebar_action\" onclick=\"displayProducts()\">View Crops<span class=\"menu-icon fa fa-tasks\"></span></li>
+                <li id=\"products\" class=\"sidebar_action\" onclick=\"logout()\">Logout<span class=\"menu-icon fa fa-close\"></span></li>
             </ul>
+            <div class=\"sidebar_filter\">
+                <div class=\"info\">Filter Crops</div>
+                <div class=\"info_tag\">Filter by Product</div>
+                <select id=\"filter_product\">
+                    <option value=\"0\">Select product to filter</option>
+                    ";
+        // line 197
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
+        foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
+            // line 198
+            echo "                        <option value=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "id", array()), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "description", array()), "html", null, true);
+            echo "</option>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 200
+        echo "                </select>
+                <div class=\"info_tag\">Filter by Producer</div>
+                <select id=\"filter_producer\">
+                    <option value=\"0\">Select producer to filter</option>
+                    ";
+        // line 204
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["producers"]) ? $context["producers"] : $this->getContext($context, "producers")));
+        foreach ($context['_seq'] as $context["_key"] => $context["producer"]) {
+            // line 205
+            echo "                        <option value=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["producer"], "id", array()), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["producer"], "username", array()), "html", null, true);
+            echo "</option>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['producer'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 207
+        echo "                </select>
+                <div class=\"info_tag\">Filter by range</div>
+                <div class=\"form-group\">
+                    <div class=\"col-md-6\">
+                        <input type=\"text\" id=\"filter_min_distance\" name=\"filter_min_distance\" class=\"form-control\" placeholder=\"Min Range\"/>
+                    </div>
+                    <div class=\"col-md-6\">
+                        <input type=\"text\" id=\"filter_max_distance\" name=\"filter_max_distance\" class=\"form-control\" placeholder=\"Max Range\"/>
+                    </div>
+                </div>
+                <div class=\"apply_filter\" onclick=\"applyFilters()\">Apply Filters</div>
+            </div>
             <p class=\"position_bottom center grey\">2016 © Agrot-IS. All rights reserved.</p></div>
     </div>
     <div class=\"content\">
@@ -340,6 +396,22 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
             var SERVER_ADDR = \"http://www.agrot-is.net/\";
         }else{
             var SERVER_ADDR = \"http://agrot-is.net/\";
+        }
+
+        function applyFilters(){
+
+            var product_id = \$(\"#filter_product\").val()
+            var producer_id = \$(\"#filter_producer\").val()
+            var min = \$(\"#filter_min_distance\").val()
+            var max = \$(\"#filter_max_distance\").val()
+            var url = window.location.href;
+
+
+            var newURL = \"http://localhost:8000/dashboard\";
+            newURL += '?product_id='+product_id+\"&producer_id=\"+producer_id+\"&min=\"+min+\"&max=\"+max;
+
+            window.location.href = newURL;
+//            window.location.reload()
         }
 
         function displayDashboard(){
@@ -404,21 +476,17 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 
 
             if (today < producedDate) {
-                \$(\"#rPdate\").addClass(\"error_input\")
-                console.log(\"PRODUCED DATE IN FUTURE\")
+                \$(\"#rPdate\").addClass(\"error_input\");
                 return;
             } else {
-                console.log(\"PRODUCED DATE OK\")
                 \$(\"#rPdate\").removeClass(\"error_input\")
             }
 
             if (today > expirationDate) {
-                \$(\"#rEdate\").addClass(\"error_input\")
-                console.log(\"EXPIRATION DATE IN PAST\")
+                \$(\"#rEdate\").addClass(\"error_input\");
                 return;
             } else {
-                \$(\"#rEdate\").removeClass(\"error_input\")
-                console.log(\"EXPIRATION DATE OK\")
+                \$(\"#rEdate\").removeClass(\"error_input\");
 
             }
 
@@ -430,7 +498,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 301
+        // line 341
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     product: product,
@@ -520,7 +588,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 
             \$('#allOffers').bootstrapTable({
                 data: ";
-        // line 388
+        // line 428
         echo (isset($context["offers_json"]) ? $context["offers_json"] : $this->getContext($context, "offers_json"));
         echo ",
                 pageSize: 30,
@@ -548,7 +616,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 413
+        // line 453
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     isAccepted: accepted,
@@ -569,7 +637,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 431
+        // line 471
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     crop_id: crop_id,
@@ -616,7 +684,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 
             \$('#allCrops').bootstrapTable({
                 data: ";
-        // line 475
+        // line 515
         echo (isset($context["crops_json"]) ? $context["crops_json"] : $this->getContext($context, "crops_json"));
         echo ",
                 pageSize: 30,
@@ -644,7 +712,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 
             var hash = window.location.hash.substring(1);
             console.log(hash)
-            if(!hash || hash === \"\" || hash === \"dashboard\" ){
+            if(hash === \"dashboard\" ){
                 displayDashboard();
             }else if(hash === \"profile\"){
                 displayProfile();
@@ -655,8 +723,16 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
             }else if(hash === \"crops\"){
                 displayProducts();
             }else{
-                displayDashboard();
+//                displayDashboard();
+                var INNER_HTML = '<div id=\"googleMap\" style=\"width:100%;height:100%;\" ></div>';
+                \$(\".content\").html(INNER_HTML);
+                getLocation();
+                \$(\".sidebar_action\").removeClass(\"active\");
+                \$(\"#dashboard\").addClass(\"active\")
             }
+
+
+            \$(\".agcontainer .sidebar\").css(\"min-height\", \"865px\")
         });
 
 
@@ -681,7 +757,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
                 dataType: \"json\",
                 data: {
                     username: '";
-        // line 537
+        // line 585
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                 },
@@ -744,7 +820,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
                 dataType: \"json\",
                 data: {
                     username_toSearch: '";
-        // line 597
+        // line 645
         echo twig_escape_filter($this->env, (isset($context["username"]) ? $context["username"] : $this->getContext($context, "username")), "html", null, true);
         echo "',
                     username: username,
@@ -823,31 +899,98 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 
             var map=new google.maps.Map(document.getElementById(\"googleMap\"),mapProp);
 
+            var icon = {
+                url: '";
+        // line 723
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/logo.png"), "html", null, true);
+        echo "', // url
+                scaledSize: new google.maps.Size(40, 40), // scaled size
+                origin: new google.maps.Point(0,0), // origin
+                anchor: new google.maps.Point(20, 20) // anchor
+            };
+
             ";
-        // line 674
+        // line 729
+        $context["index"] = 1;
+        // line 730
+        echo "            ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["crops"]) ? $context["crops"] : $this->getContext($context, "crops")));
         foreach ($context['_seq'] as $context["_key"] => $context["crop"]) {
-            // line 675
-            echo "            var myLatLng = {lat: ";
+            // line 731
+            echo "
+
+            var contentString_";
+            // line 733
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo " = '<div id=\"content\" style=\"width:500px !important\">'+
+                    '<div id=\"siteNotice\">'+
+                    '";
+            // line 735
+            echo $this->getAttribute((isset($context["info"]) ? $context["info"] : $this->getContext($context, "info")), $this->getAttribute($this->getAttribute($context["crop"], "producer", array()), "id", array()), array(), "array");
+            echo "'+
+                    '</div>'+
+                    '</div>';
+
+
+            var infowindow_";
+            // line 740
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo " = new google.maps.InfoWindow({
+                content: contentString_";
+            // line 741
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo "
+            });
+
+
+            var myLatLng_";
+            // line 745
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo " = {lat: ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["crop"], "producer", array()), "registrationLat", array()), "html", null, true);
             echo ", lng: ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["crop"], "producer", array()), "registrationLon", array()), "html", null, true);
             echo "};
-            var marker = new google.maps.Marker({
-                position: myLatLng,
+            var marker_";
+            // line 746
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo " = new google.maps.Marker({
+                position: myLatLng_";
+            // line 747
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo ",
                 map: map,
+                icon: icon,
+                animation: google.maps.Animation.DROP,
                 title: '";
-            // line 679
+            // line 751
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["crop"], "product", array()), "description", array()), "html", null, true);
             echo "'
             });
+
+            marker_";
+            // line 754
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo ".addListener('click', function() {
+                infowindow_";
+            // line 755
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo ".open(map, marker_";
+            echo twig_escape_filter($this->env, (isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")), "html", null, true);
+            echo ");
+            });
+
             ";
+            // line 758
+            $context["index"] = ((isset($context["index"]) ? $context["index"] : $this->getContext($context, "index")) + 1);
+            // line 759
+            echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['crop'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 682
+        // line 760
         echo "        }
 
         function showPosition(position) {
@@ -902,6 +1045,9 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
             \$(id).focus();
         }
 
+        function logout(){
+            window.location = \"/logout\"
+        }
 
 
 
@@ -909,7 +1055,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
     </script>
 ";
         
-        $__internal_a342f592a623771ed9cefc48f11f08376d16f64a6513c6b17ec9bf3300e9c7b3->leave($__internal_a342f592a623771ed9cefc48f11f08376d16f64a6513c6b17ec9bf3300e9c7b3_prof);
+        $__internal_716ff8ab36e9eebebfaaf7e300909a43c4f8ebda5729cabecc5e9aa9548c6b43->leave($__internal_716ff8ab36e9eebebfaaf7e300909a43c4f8ebda5729cabecc5e9aa9548c6b43_prof);
 
     }
 
@@ -925,7 +1071,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 
     public function getDebugInfo()
     {
-        return array (  851 => 682,  842 => 679,  832 => 675,  828 => 674,  748 => 597,  685 => 537,  620 => 475,  573 => 431,  552 => 413,  524 => 388,  434 => 301,  313 => 183,  309 => 182,  301 => 177,  296 => 175,  291 => 173,  287 => 172,  283 => 171,  278 => 169,  275 => 168,  273 => 167,  269 => 165,  265 => 163,  263 => 162,  255 => 157,  250 => 155,  246 => 154,  242 => 153,  238 => 152,  234 => 151,  193 => 112,  182 => 110,  178 => 109,  166 => 100,  77 => 13,  71 => 12,  60 => 10,  49 => 9,  37 => 3,  11 => 1,);
+        return array (  994 => 760,  988 => 759,  986 => 758,  978 => 755,  974 => 754,  968 => 751,  961 => 747,  957 => 746,  949 => 745,  942 => 741,  938 => 740,  930 => 735,  925 => 733,  921 => 731,  916 => 730,  914 => 729,  905 => 723,  824 => 645,  761 => 585,  688 => 515,  641 => 471,  620 => 453,  592 => 428,  502 => 341,  366 => 207,  355 => 205,  351 => 204,  345 => 200,  334 => 198,  330 => 197,  313 => 183,  309 => 182,  301 => 177,  296 => 175,  291 => 173,  287 => 172,  283 => 171,  278 => 169,  275 => 168,  273 => 167,  269 => 165,  265 => 163,  263 => 162,  255 => 157,  250 => 155,  246 => 154,  242 => 153,  238 => 152,  234 => 151,  193 => 112,  182 => 110,  178 => 109,  166 => 100,  77 => 13,  71 => 12,  60 => 10,  49 => 9,  37 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -1117,7 +1263,35 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 /*                 <li id="product" class="sidebar_action" onclick="displayProduct()">Add Crop<span class="menu-icon fa fa-plus"></span></li>*/
 /*                 <li id="offers" class="sidebar_action" onclick="displayOffers()">View Offers<span class="menu-icon fa fa-location-arrow"></span></li>*/
 /*                 <li id="products" class="sidebar_action" onclick="displayProducts()">View Crops<span class="menu-icon fa fa-tasks"></span></li>*/
+/*                 <li id="products" class="sidebar_action" onclick="logout()">Logout<span class="menu-icon fa fa-close"></span></li>*/
 /*             </ul>*/
+/*             <div class="sidebar_filter">*/
+/*                 <div class="info">Filter Crops</div>*/
+/*                 <div class="info_tag">Filter by Product</div>*/
+/*                 <select id="filter_product">*/
+/*                     <option value="0">Select product to filter</option>*/
+/*                     {% for product in products %}*/
+/*                         <option value="{{ product.id }}">{{ product.description }}</option>*/
+/*                     {% endfor %}*/
+/*                 </select>*/
+/*                 <div class="info_tag">Filter by Producer</div>*/
+/*                 <select id="filter_producer">*/
+/*                     <option value="0">Select producer to filter</option>*/
+/*                     {% for producer in producers %}*/
+/*                         <option value="{{ producer.id }}">{{ producer.username }}</option>*/
+/*                     {% endfor %}*/
+/*                 </select>*/
+/*                 <div class="info_tag">Filter by range</div>*/
+/*                 <div class="form-group">*/
+/*                     <div class="col-md-6">*/
+/*                         <input type="text" id="filter_min_distance" name="filter_min_distance" class="form-control" placeholder="Min Range"/>*/
+/*                     </div>*/
+/*                     <div class="col-md-6">*/
+/*                         <input type="text" id="filter_max_distance" name="filter_max_distance" class="form-control" placeholder="Max Range"/>*/
+/*                     </div>*/
+/*                 </div>*/
+/*                 <div class="apply_filter" onclick="applyFilters()">Apply Filters</div>*/
+/*             </div>*/
 /*             <p class="position_bottom center grey">2016 © Agrot-IS. All rights reserved.</p></div>*/
 /*     </div>*/
 /*     <div class="content">*/
@@ -1139,6 +1313,22 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 /*             var SERVER_ADDR = "http://www.agrot-is.net/";*/
 /*         }else{*/
 /*             var SERVER_ADDR = "http://agrot-is.net/";*/
+/*         }*/
+/* */
+/*         function applyFilters(){*/
+/* */
+/*             var product_id = $("#filter_product").val()*/
+/*             var producer_id = $("#filter_producer").val()*/
+/*             var min = $("#filter_min_distance").val()*/
+/*             var max = $("#filter_max_distance").val()*/
+/*             var url = window.location.href;*/
+/* */
+/* */
+/*             var newURL = "http://localhost:8000/dashboard";*/
+/*             newURL += '?product_id='+product_id+"&producer_id="+producer_id+"&min="+min+"&max="+max;*/
+/* */
+/*             window.location.href = newURL;*/
+/* //            window.location.reload()*/
 /*         }*/
 /* */
 /*         function displayDashboard(){*/
@@ -1203,21 +1393,17 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 /* */
 /* */
 /*             if (today < producedDate) {*/
-/*                 $("#rPdate").addClass("error_input")*/
-/*                 console.log("PRODUCED DATE IN FUTURE")*/
+/*                 $("#rPdate").addClass("error_input");*/
 /*                 return;*/
 /*             } else {*/
-/*                 console.log("PRODUCED DATE OK")*/
 /*                 $("#rPdate").removeClass("error_input")*/
 /*             }*/
 /* */
 /*             if (today > expirationDate) {*/
-/*                 $("#rEdate").addClass("error_input")*/
-/*                 console.log("EXPIRATION DATE IN PAST")*/
+/*                 $("#rEdate").addClass("error_input");*/
 /*                 return;*/
 /*             } else {*/
-/*                 $("#rEdate").removeClass("error_input")*/
-/*                 console.log("EXPIRATION DATE OK")*/
+/*                 $("#rEdate").removeClass("error_input");*/
 /* */
 /*             }*/
 /* */
@@ -1428,7 +1614,7 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 /* */
 /*             var hash = window.location.hash.substring(1);*/
 /*             console.log(hash)*/
-/*             if(!hash || hash === "" || hash === "dashboard" ){*/
+/*             if(hash === "dashboard" ){*/
 /*                 displayDashboard();*/
 /*             }else if(hash === "profile"){*/
 /*                 displayProfile();*/
@@ -1439,8 +1625,16 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 /*             }else if(hash === "crops"){*/
 /*                 displayProducts();*/
 /*             }else{*/
-/*                 displayDashboard();*/
+/* //                displayDashboard();*/
+/*                 var INNER_HTML = '<div id="googleMap" style="width:100%;height:100%;" ></div>';*/
+/*                 $(".content").html(INNER_HTML);*/
+/*                 getLocation();*/
+/*                 $(".sidebar_action").removeClass("active");*/
+/*                 $("#dashboard").addClass("active")*/
 /*             }*/
+/* */
+/* */
+/*             $(".agcontainer .sidebar").css("min-height", "865px")*/
 /*         });*/
 /* */
 /* */
@@ -1601,13 +1795,43 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 /* */
 /*             var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);*/
 /* */
+/*             var icon = {*/
+/*                 url: '{{ asset('images/logo.png') }}', // url*/
+/*                 scaledSize: new google.maps.Size(40, 40), // scaled size*/
+/*                 origin: new google.maps.Point(0,0), // origin*/
+/*                 anchor: new google.maps.Point(20, 20) // anchor*/
+/*             };*/
+/* */
+/*             {% set index = 1 %}*/
 /*             {% for crop in crops %}*/
-/*             var myLatLng = {lat: {{ crop.producer.registrationLat }}, lng: {{ crop.producer.registrationLon }}};*/
-/*             var marker = new google.maps.Marker({*/
-/*                 position: myLatLng,*/
+/* */
+/* */
+/*             var contentString_{{ index }} = '<div id="content" style="width:500px !important">'+*/
+/*                     '<div id="siteNotice">'+*/
+/*                     '{{ info[crop.producer.id] |raw}}'+*/
+/*                     '</div>'+*/
+/*                     '</div>';*/
+/* */
+/* */
+/*             var infowindow_{{ index }} = new google.maps.InfoWindow({*/
+/*                 content: contentString_{{ index }}*/
+/*             });*/
+/* */
+/* */
+/*             var myLatLng_{{ index }} = {lat: {{ crop.producer.registrationLat }}, lng: {{ crop.producer.registrationLon }}};*/
+/*             var marker_{{ index }} = new google.maps.Marker({*/
+/*                 position: myLatLng_{{ index }},*/
 /*                 map: map,*/
+/*                 icon: icon,*/
+/*                 animation: google.maps.Animation.DROP,*/
 /*                 title: '{{ crop.product.description }}'*/
 /*             });*/
+/* */
+/*             marker_{{ index }}.addListener('click', function() {*/
+/*                 infowindow_{{ index }}.open(map, marker_{{ index }});*/
+/*             });*/
+/* */
+/*             {% set index = index + 1 %}*/
 /*             {% endfor %}*/
 /*         }*/
 /* */
@@ -1663,6 +1887,9 @@ class __TwigTemplate_338eb4cd99a80ea6e651c323a447d687dd7d312d062c187917e8014ea75
 /*             $(id).focus();*/
 /*         }*/
 /* */
+/*         function logout(){*/
+/*             window.location = "/logout"*/
+/*         }*/
 /* */
 /* */
 /* */
