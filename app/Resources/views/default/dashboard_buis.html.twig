@@ -162,7 +162,7 @@
     {% if 'localhost' in app.request.host  %}
         <script src="http://maps.googleapis.com/maps/api/js"></script>
     {% else %}
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9J_3yPsTcTvsXQhUniIOkSzP2RHc1p2Y&callback=getLocation" type="text/javascript"></script>
     {% endif %}
     {#<script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>#}
 
@@ -184,7 +184,6 @@
             <ul class="sidebar_actions">
                 <li id="dashboard" class="sidebar_action" onclick="displayDashboard()">Dashboard<span class="menu-icon fa fa-tachometer"></span></li>
                 <li id="profile" class="sidebar_action" onclick="displayProfile()">Profile<span class="menu-icon fa fa-user"></span></li>
-                <li id="product" class="sidebar_action" onclick="displayProduct()">Add Crop<span class="menu-icon fa fa-plus"></span></li>
                 <li id="offers" class="sidebar_action" onclick="displayOffers()">View Offers<span class="menu-icon fa fa-location-arrow"></span></li>
                 <li id="products" class="sidebar_action" onclick="displayProducts()">View Crops<span class="menu-icon fa fa-tasks"></span></li>
                 <li id="products" class="sidebar_action" onclick="logout()">Logout<span class="menu-icon fa fa-close"></span></li>
@@ -230,25 +229,18 @@
         var USER_OBJ = null;
         var PRODUCTS_OBJ = null;
 
-        var host = location.host;
-        if(host.indexOf("localhost") != -1 || host.indexOf("127.0.0.1") != -1 ){
-            var SERVER_ADDR = "http://localhost:8000/";
-        }else if(host.indexOf("www") != -1){
-            var SERVER_ADDR = "http://www.agrot-is.net/";
-        }else{
-            var SERVER_ADDR = "http://agrot-is.net/";
-        }
+        var SERVER_ADDR = "http://www.agrot-is.net/";
 
         function applyFilters(){
 
-            var product_id = $("#filter_product").val()
-            var producer_id = $("#filter_producer").val()
-            var min = $("#filter_min_distance").val()
-            var max = $("#filter_max_distance").val()
+            var product_id = $("#filter_product").val();
+            var producer_id = $("#filter_producer").val();
+            var min = $("#filter_min_distance").val();
+            var max = $("#filter_max_distance").val();
             var url = window.location.href;
 
 
-            var newURL = "http://localhost:8000/dashboard";
+            var newURL = url.split("?")[0];
             newURL += '?product_id='+product_id+"&producer_id="+producer_id+"&min="+min+"&max="+max;
 
             window.location.href = newURL;
@@ -578,14 +570,12 @@
 
         function getUser(){
             $.ajax({
-                url: SERVER_ADDR + "getUser",
-                type: 'POST',
-                dataType: "json",
+                url: "http://www.agrot-is.net/" + "getUser",
+                type: 'GET',
+                dataType: "JSON",
                 data: {
                     username: '{{ username }}',
                 },
-                headers: {'Access-Control-Allow-Origin': '*'},
-                crossDomain: true,
                 complete: function (data) {
                     var result1 = data.responseText;
                     if (window.DOMParser) {
@@ -597,6 +587,7 @@
                         xmlDoc.async = false;
                         xmlDoc.loadXML(result1);
                     }
+
                     USER_OBJ = xmlDoc.getElementsByTagName("User")[0];
                     PRODUCTS_OBJ = xmlDoc.getElementsByTagName("Product")[0];
 

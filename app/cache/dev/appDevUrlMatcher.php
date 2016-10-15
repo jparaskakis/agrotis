@@ -327,9 +327,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // getCrop
-        if ($pathinfo === '/getCrop') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::getCropAction',  '_route' => 'getCrop',);
+        if (0 === strpos($pathinfo, '/getCrop')) {
+            // getCrop
+            if ($pathinfo === '/getCrop') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::getCropAction',  '_route' => 'getCrop',);
+            }
+
+            // getCrops
+            if ($pathinfo === '/getCrops') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::getCropsAction',  '_route' => 'getCrops',);
+            }
+
         }
 
         // nelmio_api_doc_index

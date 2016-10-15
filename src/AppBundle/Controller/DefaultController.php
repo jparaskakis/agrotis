@@ -191,6 +191,7 @@ class DefaultController extends Controller
 
 
                 $obj->edit = $actions;
+                array_push($cropsArray, $obj);
             }
 
 
@@ -719,6 +720,21 @@ class DefaultController extends Controller
         return $this->displayXML($this->getCropAsXML($crop));
     }
 
+    /**
+     * @Route("/getCrops", name="getCrops")
+     */
+    public function getCropsAction(Request $request)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $query = $em->createQuery(
+            'SELECT p FROM AppBundle:AgCrop p'
+        );
+        $crop = $query->getResult();
+
+        return $this->displayXML($this->getCropsAsXML($crop));
+    }
 
 
     function getErrorResponse($code, $message)
@@ -883,6 +899,32 @@ class DefaultController extends Controller
         $itemNode->addAttribute('description', $crop->getDescription());
         $itemNode->addAttribute('pDate', date_format($crop->getProducedDate(), 'Y-m-d H:i:s'));
         $itemNode->addAttribute('eDate', date_format($crop->getExpirationDate(), 'Y-m-d H:i:s'));
+
+
+        return $rootNode;
+
+    }
+
+    function getCropsAsXML($crops)
+    {
+        $rootNode = new \SimpleXMLElement('<Crops></Crops>');
+
+        foreach($crops as $crop){
+            $itemNode = $rootNode->addChild('Crop');
+            $itemNode->addAttribute('id', $crop->getId());
+            $itemNode->addAttribute('producer_username', $crop->getProducer()->getUsername());
+            $itemNode->addAttribute('producer_id', $crop->getProducer()->getId());
+            $itemNode->addAttribute('product_description', $crop->getProduct()->getDescription());
+            $itemNode->addAttribute('product_id', $crop->getProduct()->getId());
+            $itemNode->addAttribute('price', $crop->getPrice());
+            $itemNode->addAttribute('amount', $crop->getAmount());
+            $itemNode->addAttribute('on_hold', $crop->getOnhold());
+            $itemNode->addAttribute('description', $crop->getDescription());
+            $itemNode->addAttribute('pDate', date_format($crop->getProducedDate(), 'Y-m-d H:i:s'));
+            $itemNode->addAttribute('eDate', date_format($crop->getExpirationDate(), 'Y-m-d H:i:s'));
+        }
+
+
 
 
         return $rootNode;

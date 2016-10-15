@@ -158,7 +158,7 @@
     {% if 'localhost' in app.request.host  %}
         <script src="http://maps.googleapis.com/maps/api/js"></script>
     {% else %}
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9J_3yPsTcTvsXQhUniIOkSzP2RHc1p2Y&callback=getLocation" type="text/javascript"></script>
     {% endif %}
     {#<script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSf9vDJJY8WbZ3xPfvOPkz1F6bAMM4unU&callback=getLocation" type="text/javascript"></script>#}
 
@@ -199,15 +199,7 @@
         var USER_OBJ = null;
         var PRODUCTS_OBJ = null;
 
-        var host = location.host;
-        if(host.indexOf("localhost") != -1 || host.indexOf("127.0.0.1") != -1 ){
-            var SERVER_ADDR = "http://localhost:8000/";
-        }else if(host.indexOf("www") != -1){
-            var SERVER_ADDR = "http://www.agrot-is.net/";
-        }else{
-            var SERVER_ADDR = "http://agrot-is.net/";
-        }
-
+        var SERVER_ADDR = "http://www.agrot-is.net/";
         function displayDashboard(){
             var url = location.href;
             location.href = "#dashboard";
@@ -581,8 +573,6 @@
                 data: {
                     username: '{{ username }}',
                 },
-                headers: {'Access-Control-Allow-Origin': '*'},
-                crossDomain: true,
                 complete: function (data) {
                     var result1 = data.responseText;
                     if (window.DOMParser) {
